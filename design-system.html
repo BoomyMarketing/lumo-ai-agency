@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumo — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Brand */
+    --primary: #B3FF00;
+    --primary-dark: #c8ff26;
+    --primary-glow: rgba(179,255,0,0.4);
+    --secondary: #7C3AED;
+    --accent: #00F5FF;
+    /* Backgrounds */
+    --bg: #0D0D14;
+    --bg-surface: #13131F;
+    --bg-soft: #09090F;
+    --dark: #13131F;
+    --hero-bg: linear-gradient(160deg, #09090F 0%, #13131F 60%, #0D0D14 100%);
+    /* Text */
+    --text-heading: #F0F0FF;
+    --text: rgba(240,240,255,0.85);
+    --text-muted: #6B7280;
+    --text-on-primary: #0D0D14;
+    --logo-color: #B3FF00;
+    /* Borders */
+    --border-color: rgba(179,255,0,0.15);
+    /* Gradients */
+    --gradient-primary: var(--primary);
+    /* Shape */
+    --radius: 14px;
+    --radius-sm: 8px;
+    --radius-lg: 20px;
+    --radius-btn: 50px;
+    /* Shadows */
+    --shadow: 0 4px 24px rgba(0,0,0,0.6);
+    --shadow-lg: 0 0 40px rgba(179,255,0,0.2);
+    --shadow-primary: 0 8px 30px rgba(179,255,0,0.45);
+    /* Motion */
+    --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+    /* Fonts */
+    --font-heading: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── LAYOUT ── */
+  .ds-header {
+    background: var(--hero-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 60px 40px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ds-header::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 300px;
+    background: radial-gradient(ellipse at center, rgba(179,255,0,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .ds-logo {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -2px;
+    position: relative;
+    z-index: 1;
+  }
+  .ds-tagline { font-size: 15px; color: var(--text-muted); margin-top: 10px; position: relative; z-index: 1; font-family: var(--font-body); letter-spacing: 0.02em; }
+  .ds-meta { margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+  .ds-meta-pill {
+    background: rgba(179,255,0,0.08);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-btn);
+    padding: 5px 14px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: monospace;
+  }
+
+  .ds-nav {
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 40px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+  }
+  .ds-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 14px 16px;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: var(--transition);
+  }
+  .ds-nav a:hover { color: var(--primary); border-bottom-color: var(--primary); }
+
+  .ds-main { max-width: 1100px; margin: 0 auto; padding: 48px 40px 80px; }
+
+  .ds-section { margin-bottom: 72px; }
+  .ds-section-title {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .ds-section-desc { color: var(--text-muted); font-size: 13px; margin-bottom: 28px; font-family: monospace; }
+
+  /* ── COLORS ── */
+  .color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+  .color-swatch {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface);
+  }
+  .color-block { height: 110px; width: 100%; }
+  .color-info { padding: 10px 12px; }
+  .color-name { font-size: 11px; font-weight: 600; color: var(--text-heading); font-family: monospace; }
+  .color-hex { font-size: 11px; color: var(--text-muted); font-family: monospace; margin-top: 2px; }
+
+  /* ── TYPOGRAPHY ── */
+  .type-samples { display: flex; flex-direction: column; gap: 16px; }
+  .type-row {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+  .type-label { font-size: 10px; font-weight: 600; color: var(--text-muted); font-family: monospace; text-transform: uppercase; letter-spacing: 0.08em; }
+  .t-h1 { font-family: var(--font-heading); font-size: 52px; font-weight: 800; color: var(--text-heading); line-height: 1.0; letter-spacing: -2px; }
+  .t-h2 { font-family: var(--font-heading); font-size: 38px; font-weight: 700; color: var(--text-heading); line-height: 1.1; letter-spacing: -1px; }
+  .t-h3 { font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-heading); line-height: 1.2; }
+  .t-h4 { font-family: var(--font-heading); font-size: 20px; font-weight: 600; color: var(--text-heading); }
+  .t-body { font-size: 16px; color: var(--text); }
+  .t-small { font-size: 13px; color: var(--text-muted); }
+  .t-mono { font-family: monospace; font-size: 13px; color: var(--primary); }
+  .t-accent { font-family: var(--font-body); font-size: 16px; color: var(--accent); font-weight: 500; }
+
+  /* ── BUTTONS ── */
+  .btn-grid { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 28px;
+    border-radius: var(--radius-btn);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: var(--primary);
+    color: var(--text-on-primary);
+    box-shadow: var(--shadow-primary);
+  }
+  .btn-primary:hover { background: var(--primary-dark); box-shadow: 0 12px 40px rgba(179,255,0,0.6); transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--primary);
+    border: 1.5px solid rgba(179,255,0,0.4);
+  }
+  .btn-ghost:hover { border-color: var(--primary); background: rgba(179,255,0,0.08); }
+  .btn-accent {
+    background: transparent;
+    color: var(--accent);
+    border: 1.5px solid rgba(0,245,255,0.4);
+  }
+  .btn-accent:hover { border-color: var(--accent); background: rgba(0,245,255,0.08); }
+  .btn-secondary {
+    background: var(--secondary);
+    color: #fff;
+  }
+  .btn-sm { padding: 9px 18px; font-size: 12px; }
+  .btn-label { font-size: 11px; color: var(--text-muted); font-family: monospace; white-space: nowrap; margin-top: 6px; text-align: center; }
+  .btn-item { display: flex; flex-direction: column; align-items: center; }
+
+  /* ── CARDS ── */
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--primary);
+    opacity: 0;
+    transition: var(--transition);
+  }
+  .card:hover { box-shadow: var(--shadow-lg); border-color: rgba(179,255,0,0.3); }
+  .card:hover::before { opacity: 1; }
+  .card-icon {
+    width: 48px; height: 48px;
+    background: rgba(179,255,0,0.12);
+    border: 1px solid rgba(179,255,0,0.25);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; margin-bottom: 16px;
+    color: var(--primary);
+    font-family: monospace; font-weight: 700; font-size: 14px;
+  }
+  .card-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--text-heading); margin-bottom: 10px; }
+  .card-text { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .card-pricing { text-align: center; }
+  .card-pricing .price { font-family: var(--font-heading); font-size: 38px; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
+  .card-pricing .price-label { font-size: 12px; color: var(--text-muted); font-family: monospace; }
+  .card-pricing ul { list-style: none; margin: 16px 0; text-align: left; }
+  .card-pricing ul li { padding: 7px 0; font-size: 13px; color: var(--text); border-bottom: 1px solid var(--border-color); }
+  .card-pricing ul li::before { content: '→ '; color: var(--primary); font-weight: 700; }
+  .card-aside { background: rgba(179,255,0,0.04); border: 1px solid rgba(179,255,0,0.2); }
+  .aside-heading { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--primary); font-weight: 700; font-family: monospace; margin-bottom: 12px; }
+
+  /* ── COMPONENTS ── */
+  .comp-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start; margin-bottom: 28px; }
+
+  .badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px; font-weight: 700;
+    font-family: monospace;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .badge-primary { background: rgba(179,255,0,0.15); color: var(--primary); border: 1px solid rgba(179,255,0,0.25); }
+  .badge-accent { background: rgba(0,245,255,0.12); color: var(--accent); border: 1px solid rgba(0,245,255,0.25); }
+  .badge-secondary { background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.25); }
+  .badge-muted { background: rgba(107,114,128,0.15); color: var(--text-muted); border: 1px solid rgba(107,114,128,0.25); }
+
+  .faq-item {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    margin-bottom: 8px;
+  }
+  .faq-q {
+    padding: 16px 20px;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    color: var(--text-heading);
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .faq-q::after { content: '+'; color: var(--primary); font-size: 18px; font-weight: 300; font-family: monospace; }
+  .faq-a { padding: 0 20px 16px; font-size: 14px; color: var(--text); line-height: 1.6; }
+
+  .nearby-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pill {
+    background: rgba(179,255,0,0.06);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: monospace;
+    transition: var(--transition);
+  }
+  .pill:hover { border-color: var(--primary); color: var(--primary); background: rgba(179,255,0,0.1); }
+
+  .breadcrumb { display: flex; gap: 6px; align-items: center; font-size: 12px; color: var(--text-muted); font-family: monospace; }
+  .breadcrumb a { color: var(--primary); text-decoration: none; }
+  .breadcrumb span { color: var(--text-muted); }
+
+  .stats-bar {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    text-align: center;
+  }
+  .stat-val { font-family: var(--font-heading); font-size: 30px; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
+  .stat-lbl { font-size: 12px; color: var(--text-muted); margin-top: 2px; font-family: monospace; }
+
+  /* ── GRADIENTS & SHADOWS ── */
+  .grad-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+  .grad-block {
+    border-radius: var(--radius);
+    height: 100px;
+    display: flex; align-items: flex-end;
+    padding: 12px;
+    font-size: 11px; font-weight: 700;
+    font-family: monospace;
+    position: relative;
+    overflow: hidden;
+  }
+  .shadow-demo {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 24px;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    font-family: monospace;
+  }
+
+  /* ── TOKENS TABLE ── */
+  .tokens-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    font-family: monospace;
+  }
+  .tokens-table th {
+    background: var(--bg-soft);
+    color: var(--text-muted);
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .tokens-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text);
+    vertical-align: middle;
+  }
+  .tokens-table tr:hover td { background: rgba(179,255,0,0.03); }
+  .token-name { color: var(--primary); }
+  .token-dot { width: 20px; height: 20px; border-radius: 4px; display: inline-block; vertical-align: middle; border: 1px solid rgba(255,255,255,0.1); }
+  .token-section-row td { background: var(--bg-soft); color: var(--text-muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; padding: 6px 14px; }
+
+  /* ── FOOTER ── */
+  .ds-footer {
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="ds-header">
+  <div class="ds-logo">LUMO</div>
+  <p class="ds-tagline">AI-Powered Growth for Forward-Thinking Businesses</p>
+  <div class="ds-meta">
+    <span class="ds-meta-pill">lumo.agency</span>
+    <span class="ds-meta-pill">Austin, TX</span>
+    <span class="ds-meta-pill">Syne + Inter</span>
+    <span class="ds-meta-pill">dark-mode native</span>
+    <span class="ds-meta-pill">Design System v1.0</span>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="ds-nav">
+  <a href="#colors">Colors</a>
+  <a href="#typography">Typography</a>
+  <a href="#buttons">Buttons</a>
+  <a href="#cards">Cards</a>
+  <a href="#components">Components</a>
+  <a href="#gradients">Gradients & Shadows</a>
+  <a href="#tokens">Design Tokens</a>
+</nav>
+
+<main class="ds-main">
+
+  <!-- COLORS -->
+  <section class="ds-section" id="colors">
+    <h2 class="ds-section-title">Color Palette</h2>
+    <p class="ds-section-desc">// All brand colors and CSS custom property names</p>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-block" style="background:#B3FF00;"></div>
+        <div class="color-info"><div class="color-name">--primary</div><div class="color-hex">#B3FF00</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-block" style="background:#c8ff26;"></div>
+        <div class="color-info"><div class="color-name">--primary-dark</div><div class="color-hex">#c8ff26</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-block" style="background:#7C3AED;"></div>
+        <div class="color-info"><div class="color-name">--secondary</div><div class="color-hex">#7C3AED</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-block" style="background:#00F5FF;"></div>
+        <div class="color-info"><div class="color-name">--accent</div><div class="color-hex">#00F5FF</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-block" style="background:#0D0D14;"></div>
+        <div class="color-info"><div class="color-name">--bg</div><div class="color-hex">#0D0D14</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-block" style="background:#13131F;"></div>
+        <div class="color-info"><div class="color-name">--bg-surface</div><div class="color-hex">#13131F</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-block" style="background:#09090F;"></div>
+        <div class="color-info"><div class="color-name">--bg-soft</div><div class="color-hex">#09090F</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-block" style="background:#F0F0FF;"></div>
+        <div class="color-info"><div class="color-name">--text-heading</div><div class="color-hex">#F0F0FF</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-block" style="background:rgba(240,240,255,0.85);"></div>
+        <div class="color-info"><div class="color-name">--text</div><div class="color-hex">rgba(240,240,255,.85)</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-block" style="background:#6B7280;"></div>
+        <div class="color-info"><div class="color-name">--text-muted</div><div class="color-hex">#6B7280</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section class="ds-section" id="typography">
+    <h2 class="ds-section-title">Typography</h2>
+    <p class="ds-section-desc">// heading_font: Syne 800 — body_font: Inter — monospace accents throughout</p>
+    <div class="type-samples">
+      <div class="type-row">
+        <div class="type-label">H1 / 52px<br>Syne 800</div>
+        <div class="t-h1">AI That Actually Works</div>
+      </div>
+      <div class="type-row">
+        <div class="type-label">H2 / 38px<br>Syne 700</div>
+        <div class="t-h2">Scale with Intelligence</div>
+      </div>
+      <div class="type-row">
+        <div class="type-label">H3 / 26px<br>Syne 700</div>
+        <div class="t-h3">AI Automation Agency Austin</div>
+      </div>
+      <div class="type-row">
+        <div class="type-label">H4 / 20px<br>Syne 600</div>
+        <div class="t-h4">Our Core Solutions</div>
+      </div>
+      <div class="type-row">
+        <div class="type-label">Body / 16px<br>Inter 400</div>
+        <div class="t-body">We help forward-thinking businesses unlock growth through AI automation, machine learning pipelines, and data-driven marketing strategies deployed at scale from Austin to everywhere.</div>
+      </div>
+      <div class="type-row">
+        <div class="type-label">Small / 13px<br>Inter muted</div>
+        <div class="t-small">Results based on aggregated client data. Individual outcomes will vary based on industry, starting baseline, and implementation quality.</div>
+      </div>
+      <div class="type-row">
+        <div class="type-label">Mono / 13px<br>system-mono</div>
+        <div class="t-mono">--primary: #B3FF00; → model.train(data);</div>
+      </div>
+      <div class="type-row">
+        <div class="type-label">Accent / 16px<br>Inter cyan</div>
+        <div class="t-accent">→ 200+ AI automations built and deployed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUTTONS -->
+  <section class="ds-section" id="buttons">
+    <h2 class="ds-section-title">Buttons</h2>
+    <p class="ds-section-desc">// hover all buttons to see interaction states — radius: 50px pill shape</p>
+    <div class="btn-grid">
+      <div class="btn-item">
+        <button class="btn btn-primary">Get Started</button>
+        <div class="btn-label">.btn-primary</div>
+      </div>
+      <div class="btn-item">
+        <button class="btn btn-ghost">View Solutions</button>
+        <div class="btn-label">.btn-ghost (neon border)</div>
+      </div>
+      <div class="btn-item">
+        <button class="btn btn-accent">Book a Demo</button>
+        <div class="btn-label">.btn-accent (cyan)</div>
+      </div>
+      <div class="btn-item">
+        <button class="btn btn-secondary">Learn More</button>
+        <div class="btn-label">.btn-secondary</div>
+      </div>
+      <div class="btn-item">
+        <button class="btn btn-primary btn-sm">Deploy Now</button>
+        <div class="btn-label">.btn-primary.btn-sm</div>
+      </div>
+      <div class="btn-item">
+        <button class="btn btn-ghost btn-sm">Docs →</button>
+        <div class="btn-label">.btn-ghost.btn-sm</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section class="ds-section" id="cards">
+    <h2 class="ds-section-title">Cards</h2>
+    <p class="ds-section-desc">// service card / pricing card / data sidebar — hover to see glow state</p>
+    <div class="cards-grid">
+      <!-- Service Card -->
+      <div class="card">
+        <div class="card-icon">AI</div>
+        <div class="card-title">AI Marketing Automation</div>
+        <div class="card-text">Deploy intelligent automation pipelines that qualify leads, personalise outreach, and optimise campaigns 24/7 — without adding headcount.</div>
+        <div style="margin-top:18px;"><button class="btn btn-ghost btn-sm">Explore →</button></div>
+      </div>
+      <!-- Pricing Card -->
+      <div class="card card-pricing">
+        <div style="margin-bottom:8px;"><span class="badge badge-accent">MOST POPULAR</span></div>
+        <div class="card-title">Growth</div>
+        <div class="price">$3,000<span style="font-size:16px;color:var(--text-muted);font-family:monospace;">/mo</span></div>
+        <ul>
+          <li>Full AI automation stack</li>
+          <li>Real-time analytics dashboard</li>
+          <li>Custom ML model deployment</li>
+          <li>Dedicated AI engineer</li>
+        </ul>
+        <button class="btn btn-primary" style="width:100%;margin-top:4px;">Start Building</button>
+      </div>
+      <!-- Aside Card -->
+      <div class="card card-aside">
+        <div class="aside-heading">// system_stats</div>
+        <div class="stats-bar" style="background:transparent;border:none;padding:0;gap:8px;">
+          <div><div class="stat-val">200+</div><div class="stat-lbl">automations</div></div>
+          <div><div class="stat-val">150+</div><div class="stat-lbl">clients_scaled</div></div>
+          <div><div class="stat-val">$30M</div><div class="stat-lbl">revenue_unlocked</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPONENTS -->
+  <section class="ds-section" id="components">
+    <h2 class="ds-section-title">Components</h2>
+    <p class="ds-section-desc">// UI atoms — badges, FAQ, pills, breadcrumbs, stats</p>
+
+    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// badges</h3>
+    <div class="comp-row">
+      <span class="badge badge-primary">AI-Native</span>
+      <span class="badge badge-accent">LIVE</span>
+      <span class="badge badge-secondary">ML Model</span>
+      <span class="badge badge-muted">Austin TX</span>
+      <span class="badge badge-primary">✓ Deployed</span>
+    </div>
+
+    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// faq</h3>
+    <div class="faq-item">
+      <div class="faq-q">How quickly can you deploy an AI automation?</div>
+      <div class="faq-a">Most automation pipelines go live within 2–3 weeks. Complex custom ML deployments typically take 4–8 weeks depending on data requirements and integration depth.</div>
+    </div>
+    <div class="faq-item" style="margin-bottom:24px;">
+      <div class="faq-q">What industries does Lumo specialise in?</div>
+      <div class="faq-a">We work across SaaS, e-commerce, fintech, and professional services. Our AI systems are industry-agnostic and trained on your specific business data for maximum relevance.</div>
+    </div>
+
+    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// nearby_cities</h3>
+    <div class="comp-row">
+      <div class="nearby-pills">
+        <a href="#" class="pill">Round Rock</a>
+        <a href="#" class="pill">Cedar Park</a>
+        <a href="#" class="pill">Georgetown</a>
+        <a href="#" class="pill">San Marcos</a>
+      </div>
+    </div>
+
+    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// breadcrumb</h3>
+    <div class="comp-row">
+      <nav class="breadcrumb">
+        <a href="#">home</a>
+        <span>/</span>
+        <a href="#">services</a>
+        <span>/</span>
+        <a href="#">austin</a>
+        <span>/</span>
+        <span style="color:var(--text);">ai-automation-agency-austin</span>
+      </nav>
+    </div>
+
+    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// stats_bar</h3>
+    <div class="stats-bar">
+      <div><div class="stat-val">200+</div><div class="stat-lbl">AI Automations Built</div></div>
+      <div><div class="stat-val">150+</div><div class="stat-lbl">Clients Scaled</div></div>
+      <div><div class="stat-val">$30M+</div><div class="stat-lbl">Revenue Unlocked</div></div>
+    </div>
+  </section>
+
+  <!-- GRADIENTS & SHADOWS -->
+  <section class="ds-section" id="gradients">
+    <h2 class="ds-section-title">Gradients &amp; Shadows</h2>
+    <p class="ds-section-desc">// visual output of gradient and shadow tokens</p>
+    <div class="grad-grid" style="margin-bottom:20px;">
+      <div class="grad-block" style="background:#B3FF00;color:#0D0D14;">--gradient-primary (#B3FF00)</div>
+      <div class="grad-block" style="background:linear-gradient(160deg, #09090F 0%, #13131F 60%, #0D0D14 100%);color:rgba(179,255,0,0.7);">--hero-bg</div>
+      <div class="grad-block" style="background:radial-gradient(ellipse at top,rgba(179,255,0,0.3),transparent 70%);">--primary-glow radial</div>
+      <div class="grad-block" style="background:linear-gradient(135deg,#7C3AED,#B3FF00);color:#0D0D14;">secondary → primary</div>
+    </div>
+    <div class="grad-grid">
+      <div class="shadow-demo" style="box-shadow:0 4px 24px rgba(0,0,0,0.6);">--shadow<br>0 4px 24px rgba(0,0,0,0.6)</div>
+      <div class="shadow-demo" style="box-shadow:0 0 40px rgba(179,255,0,0.2);">--shadow-lg<br>0 0 40px rgba(179,255,0,0.2)</div>
+      <div class="shadow-demo" style="box-shadow:0 8px 30px rgba(179,255,0,0.45);">--shadow-primary<br>0 8px 30px rgba(179,255,0,0.45)</div>
+    </div>
+  </section>
+
+  <!-- TOKENS TABLE -->
+  <section class="ds-section" id="tokens">
+    <h2 class="ds-section-title">Design Tokens</h2>
+    <p class="ds-section-desc">// complete :root CSS custom properties reference</p>
+    <table class="tokens-table">
+      <thead>
+        <tr><th>Token</th><th>Value</th><th>Preview</th></tr>
+      </thead>
+      <tbody>
+        <tr class="token-section-row"><td colspan="3">Brand Colors</td></tr>
+        <tr><td class="token-name">--primary</td><td>#B3FF00</td><td><span class="token-dot" style="background:#B3FF00;"></span></td></tr>
+        <tr><td class="token-name">--primary-dark</td><td>#c8ff26</td><td><span class="token-dot" style="background:#c8ff26;"></span></td></tr>
+        <tr><td class="token-name">--primary-glow</td><td>rgba(179,255,0,0.4)</td><td><span class="token-dot" style="background:rgba(179,255,0,0.4);"></span></td></tr>
+        <tr><td class="token-name">--secondary</td><td>#7C3AED</td><td><span class="token-dot" style="background:#7C3AED;"></span></td></tr>
+        <tr><td class="token-name">--accent</td><td>#00F5FF</td><td><span class="token-dot" style="background:#00F5FF;"></span></td></tr>
+        <tr class="token-section-row"><td colspan="3">Backgrounds</td></tr>
+        <tr><td class="token-name">--bg</td><td>#0D0D14</td><td><span class="token-dot" style="background:#0D0D14;border-color:#333;"></span></td></tr>
+        <tr><td class="token-name">--bg-surface</td><td>#13131F</td><td><span class="token-dot" style="background:#13131F;border-color:#333;"></span></td></tr>
+        <tr><td class="token-name">--bg-soft</td><td>#09090F</td><td><span class="token-dot" style="background:#09090F;border-color:#333;"></span></td></tr>
+        <tr><td class="token-name">--dark</td><td>#13131F</td><td><span class="token-dot" style="background:#13131F;border-color:#333;"></span></td></tr>
+        <tr><td class="token-name">--hero-bg</td><td>linear-gradient(160deg,#09090F,#13131F,#0D0D14)</td><td><span class="token-dot" style="background:linear-gradient(160deg,#09090F,#13131F,#0D0D14);border-color:#333;"></span></td></tr>
+        <tr class="token-section-row"><td colspan="3">Text</td></tr>
+        <tr><td class="token-name">--text-heading</td><td>#F0F0FF</td><td><span class="token-dot" style="background:#F0F0FF;"></span></td></tr>
+        <tr><td class="token-name">--text</td><td>rgba(240,240,255,0.85)</td><td><span class="token-dot" style="background:rgba(240,240,255,0.85);"></span></td></tr>
+        <tr><td class="token-name">--text-muted</td><td>#6B7280</td><td><span class="token-dot" style="background:#6B7280;"></span></td></tr>
+        <tr><td class="token-name">--text-on-primary</td><td>#0D0D14</td><td><span class="token-dot" style="background:#0D0D14;border-color:#333;"></span></td></tr>
+        <tr><td class="token-name">--logo-color</td><td>#B3FF00</td><td><span class="token-dot" style="background:#B3FF00;"></span></td></tr>
+        <tr class="token-section-row"><td colspan="3">Borders &amp; Gradients</td></tr>
+        <tr><td class="token-name">--border-color</td><td>rgba(179,255,0,0.15)</td><td><span class="token-dot" style="background:rgba(179,255,0,0.15);border-color:#333;"></span></td></tr>
+        <tr><td class="token-name">--gradient-primary</td><td>var(--primary) → #B3FF00</td><td><span class="token-dot" style="background:#B3FF00;"></span></td></tr>
+        <tr class="token-section-row"><td colspan="3">Shape</td></tr>
+        <tr><td class="token-name">--radius</td><td>14px</td><td>—</td></tr>
+        <tr><td class="token-name">--radius-sm</td><td>8px</td><td>—</td></tr>
+        <tr><td class="token-name">--radius-lg</td><td>20px</td><td>—</td></tr>
+        <tr><td class="token-name">--radius-btn</td><td>50px (pill)</td><td>—</td></tr>
+        <tr class="token-section-row"><td colspan="3">Shadows</td></tr>
+        <tr><td class="token-name">--shadow</td><td>0 4px 24px rgba(0,0,0,0.6)</td><td>—</td></tr>
+        <tr><td class="token-name">--shadow-lg</td><td>0 0 40px rgba(179,255,0,0.2)</td><td>—</td></tr>
+        <tr><td class="token-name">--shadow-primary</td><td>0 8px 30px rgba(179,255,0,0.45)</td><td>—</td></tr>
+        <tr class="token-section-row"><td colspan="3">Motion</td></tr>
+        <tr><td class="token-name">--transition</td><td>0.25s cubic-bezier(0.4,0,0.2,1)</td><td>—</td></tr>
+        <tr class="token-section-row"><td colspan="3">Typography</td></tr>
+        <tr><td class="token-name">--font-heading</td><td>'Syne', sans-serif (wght 800)</td><td>—</td></tr>
+        <tr><td class="token-name">--font-body</td><td>'Inter', sans-serif</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer class="ds-footer">
+  lumo.agency · Austin, TX · AI-Native Design System v1.0 · Generated 2026-03-09
+</footer>
+
+</body>
+</html>

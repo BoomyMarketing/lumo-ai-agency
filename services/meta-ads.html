@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumo manages Meta Ads across Facebook and Instagram with AI-driven audience targeting, creative testing, and conversion optimization. ROAS-focused paid social for US businesses." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Lumo Agency" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Meta Ads Agency — Facebook & Instagram Ads | Lumo" />
+  <meta property="og:description" content="AI-powered Meta Ads management for Facebook and Instagram. Creative testing, Advantage+ campaigns, and pixel optimization. Starting at $1,200/mo." />
+  <meta property="og:url" content="https://lumo.agency/services/meta-ads.html" />
+  <meta property="og:image" content="https://lumo.agency/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://lumo.agency/services/meta-ads.html" />
+  <title>Meta Ads Agency — Facebook &amp; Instagram Ads | Lumo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Meta Ads Management",
+        "provider": {"@type": "Organization", "name": "Lumo Agency", "url": "https://lumo.agency"},
+        "description": "Facebook and Instagram advertising management with AI-driven audience targeting, creative testing, and Advantage+ campaign optimization for US businesses.",
+        "areaServed": {"@type": "Country", "name": "United States"},
+        "url": "https://lumo.agency/services/meta-ads.html",
+        "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "1200", "priceSpecification": {"@type": "UnitPriceSpecification", "priceType": "monthly"}}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lumo.agency/"},
+          {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://lumo.agency/services.html"},
+          {"@type": "ListItem", "position": 3, "name": "Meta Ads", "item": "https://lumo.agency/services/meta-ads.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Does Lumo manage both Facebook and Instagram ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We manage campaigns across the full Meta platform including Facebook Feed, Instagram Feed, Stories, Reels, and Messenger placements. We use Advantage+ placements for most campaigns to let Meta's AI optimize delivery across placements, and we manually control placements when the data supports it."}},
+          {"@type": "Question", "name": "How important is creative in Meta Ads?", "acceptedAnswer": {"@type": "Answer", "text": "Creative is the single largest variable in Meta Ads performance — more than audience targeting or bid strategy. We run structured creative testing frameworks that systematically test hooks, formats, and calls to action to identify winning creative combinations. Every client gets a minimum of 3–5 creative variants per ad set at launch."}},
+          {"@type": "Question", "name": "What is Advantage+ and should I be using it?", "acceptedAnswer": {"@type": "Answer", "text": "Meta Advantage+ Shopping and Advantage+ Audience campaigns use Meta's AI to automate audience targeting and placement decisions. For most e-commerce clients, Advantage+ Shopping outperforms traditional campaign structures. For lead generation, the results are more mixed. We test both approaches and use data to decide what's right for your account."}},
+          {"@type": "Question", "name": "How does Lumo handle Meta pixel and tracking setup?", "acceptedAnswer": {"@type": "Answer", "text": "We implement the Meta Conversions API alongside the pixel for server-side event tracking — which is now essential in a world of iOS privacy restrictions and ad blockers. Proper Conversions API setup typically improves reported ROAS by 15–30% by recovering attribution that browser-based tracking misses."}},
+          {"@type": "Question", "name": "What ad spend do you recommend for Meta Ads?", "acceptedAnswer": {"@type": "Answer", "text": "We recommend a minimum of $3,000/mo in ad spend to give Meta's algorithms enough data to optimize effectively. For Advantage+ Shopping campaigns, $5,000+/mo gives the AI system the volume it needs to exit the learning phase quickly and start optimizing for profit-generating conversions."}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{--bg:#0D0D14;--bg-card:#13131F;--bg-dark:#09090F;--primary:#B3FF00;--secondary:#7C3AED;--accent:#00F5FF;--text:#F0F0FF;--muted:#6B7280;--border:rgba(179,255,0,0.15);--glow-lime:0 0 30px rgba(179,255,0,0.35);--glow-violet:0 0 30px rgba(124,58,237,0.45);--radius-sm:8px;--radius:14px;--radius-lg:20px;--transition:0.25s cubic-bezier(0.4,0,0.2,1);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+    h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.15;}
+    a{color:inherit;text-decoration:none;}
+    button{font-family:inherit;cursor:pointer;border:none;background:none;}
+    ul{list-style:none;}
+    .section-pad{padding:100px 0;}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:700;font-size:0.95rem;letter-spacing:0.02em;transition:var(--transition);white-space:nowrap;}
+    .btn-lime{background:var(--primary);color:#0D0D14;}
+    .btn-lime:hover{background:#c8ff26;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,255,0,0.45);}
+    .btn-ghost{background:transparent;color:var(--text);border:1.5px solid rgba(240,240,255,0.2);}
+    .btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s ease,border-color 0.3s ease;}
+    #navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+    .nav-logo{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
+    .nav-links{display:flex;align-items:center;gap:36px;}
+    .nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);letter-spacing:0.02em;}
+    .nav-links a:hover,.nav-links a.active{color:var(--primary);}
+    .nav-cta{display:flex;align-items:center;gap:16px;}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;}
+    .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition);}
+    .mobile-menu{display:none;flex-direction:column;background:rgba(13,13,20,0.98);border-top:1px solid var(--border);padding:8px 24px 16px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--muted);font-size:0.95rem;font-weight:500;transition:color var(--transition);}
+    .mobile-menu a:last-child{border-bottom:none;}
+    .mobile-menu a:hover{color:var(--primary);}
+    @media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}}
+    .page-hero{padding:140px 0 80px;position:relative;overflow:hidden;}
+    .blob-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+    .blob{position:absolute;border-radius:50%;filter:blur(80px);will-change:transform;}
+    .blob-lime{width:500px;height:500px;background:radial-gradient(circle,rgba(179,255,0,0.18) 0%,transparent 70%);top:-80px;left:-80px;animation:drift-a 18s ease-in-out infinite;}
+    .blob-violet{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%);bottom:0;right:-60px;animation:drift-b 22s ease-in-out infinite;}
+    @keyframes drift-a{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(60px,50px) scale(1.08);}}
+    @keyframes drift-b{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,-40px) scale(1.06);}}
+    .hero-noise{position:absolute;inset:0;background-image:linear-gradient(rgba(179,255,0,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(179,255,0,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+    .page-hero-inner{position:relative;z-index:2;}
+    .breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--muted);margin-bottom:28px;}
+    .breadcrumb a:hover{color:var(--primary);}
+    .breadcrumb-sep{color:rgba(179,255,0,0.3);}
+    .section-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--primary);margin-bottom:16px;}
+    .section-eyebrow::before{content:'';display:block;width:24px;height:2px;background:var(--primary);border-radius:2px;}
+    .section-h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4.5vw,3.2rem);color:var(--text);margin-bottom:16px;}
+    .page-hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,6vw,5rem);color:var(--text);line-height:1.08;margin-bottom:24px;}
+    .page-hero h1 .hl-lime{color:var(--primary);text-shadow:0 0 30px rgba(179,255,0,0.45);}
+    .page-hero p.lead{font-size:1.1rem;color:var(--muted);max-width:600px;margin-bottom:36px;}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border:1px solid var(--primary);border-radius:50px;font-size:0.78rem;font-weight:600;color:var(--primary);letter-spacing:0.06em;text-transform:uppercase;background:rgba(179,255,0,0.06);margin-bottom:24px;}
+    .stats-strip{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.06);border-bottom:1px solid rgba(179,255,0,0.06);}
+    .stats-row{display:grid;grid-template-columns:repeat(3,1fr);}
+    .stat-item{padding:50px 40px;text-align:center;position:relative;}
+    .stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:25%;bottom:25%;width:1px;background:rgba(179,255,0,0.08);}
+    .stat-num{font-size:clamp(2.2rem,3.5vw,3rem);font-weight:900;color:var(--primary);line-height:1;text-shadow:0 0 20px rgba(179,255,0,0.3);}
+    .stat-label{font-size:0.82rem;color:var(--muted);margin-top:8px;font-weight:500;}
+    @media(max-width:600px){.stats-row{grid-template-columns:1fr;}.stat-item::after{display:none;}.stat-item{padding:32px 24px;}}
+    .intro-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:start;}
+    @media(max-width:900px){.intro-grid{grid-template-columns:1fr;gap:40px;}}
+    .intro-text h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--text);margin-bottom:20px;}
+    .intro-text p{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:16px;}
+    .deliverables-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;}
+    .deliverables-card h3{font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--primary);margin-bottom:20px;}
+    .deliverable-item{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:0.87rem;color:var(--text);}
+    .del-check{width:20px;height:20px;border-radius:6px;background:rgba(179,255,0,0.1);border:1px solid rgba(179,255,0,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+    .del-check svg{width:10px;height:10px;color:var(--primary);}
+    #process{background:var(--bg-dark);}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+    @media(max-width:768px){.process-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:460px){.process-grid{grid-template-columns:1fr;}}
+    .process-step{text-align:center;}
+    .step-num{width:52px;height:52px;border-radius:50%;background:rgba(179,255,0,0.1);border:2px solid rgba(179,255,0,0.35);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:800;color:var(--primary);margin:0 auto 20px;}
+    .step-card{background:var(--bg-card);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:24px 20px;transition:border-color 0.28s,box-shadow 0.28s,transform 0.28s;}
+    .process-step:hover .step-card{border-color:rgba(0,245,255,0.3);box-shadow:0 0 24px rgba(0,245,255,0.1);transform:translateY(-4px);}
+    .step-icon{font-size:1.5rem;margin-bottom:12px;}
+    .step-title{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px;}
+    .step-desc{font-size:0.82rem;color:var(--muted);line-height:1.6;}
+    .pricing-teaser{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px;text-align:center;}
+    .pricing-teaser h3{font-family:'Syne',sans-serif;font-size:1.8rem;color:var(--text);margin-bottom:12px;}
+    .pricing-teaser p{color:var(--muted);font-size:0.92rem;margin-bottom:24px;}
+    .price-display{font-size:clamp(2.5rem,4vw,3.5rem);font-weight:900;color:var(--primary);line-height:1;margin-bottom:6px;text-shadow:0 0 20px rgba(179,255,0,0.3);}
+    #faq{background:var(--bg-dark);}
+    .faq-list{display:flex;flex-direction:column;max-width:800px;margin:0 auto;}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.06);}
+    .faq-item:first-child{border-top:1px solid rgba(255,255,255,0.06);}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 0;cursor:pointer;gap:16px;}
+    .faq-q-text{font-size:0.98rem;font-weight:600;color:var(--text);}
+    .faq-icon{width:28px;height:28px;border-radius:8px;background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.25s,background 0.25s;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);background:rgba(179,255,0,0.18);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
+    .faq-a p{font-size:0.9rem;color:var(--muted);line-height:1.75;padding-bottom:20px;}
+    .faq-item.open .faq-a{max-height:300px;}
+    .cta-band{background:linear-gradient(135deg,rgba(179,255,0,0.04) 0%,rgba(124,58,237,0.06) 100%);border-top:1px solid rgba(179,255,0,0.08);text-align:center;padding:100px 0;}
+    .cta-band h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+    .cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+    .footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    .footer-brand .nav-logo{margin-bottom:16px;display:block;}
+    .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:24px;}
+    .social-links{display:flex;gap:10px;}
+    .social-link{width:38px;height:38px;border-radius:10px;background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.25);display:flex;align-items:center;justify-content:center;color:var(--secondary);font-size:0.9rem;transition:background 0.25s,border-color 0.25s,transform 0.25s,box-shadow 0.25s;}
+    .social-link:hover{background:rgba(124,58,237,0.25);border-color:var(--secondary);transform:translateY(-3px);box-shadow:var(--glow-violet);color:#fff;}
+    .footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:20px;}
+    .footer-col ul{display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;}
+    .footer-col a:hover{color:var(--primary);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+    .footer-bottom p{font-size:0.8rem;color:var(--muted);}
+    .footer-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--muted);background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.12);padding:5px 12px;border-radius:50px;}
+    .footer-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--primary);box-shadow:0 0 6px rgba(179,255,0,0.8);animation:blink 2s infinite;}
+    @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+    @media(max-width:900px){.footer-inner{grid-template-columns:1fr 1fr;}}
+    @media(max-width:560px){.footer-inner{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+    #scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s,box-shadow 0.3s;border:none;}
+    #scroll-top.visible{opacity:1;transform:translateY(0);}
+    #scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);transform:translateY(-3px);}
+  </style>
+</head>
+<body>
+
+<header>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/index.html" class="nav-logo" aria-label="Lumo — Home">Lumo.</a>
+        <ul class="nav-links" role="list">
+          <li><a href="/services.html" class="active">Services</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta"><a href="/contact.html" class="btn btn-lime">Get Proposal</a></div>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" role="menu" aria-hidden="true">
+      <a href="/services.html" role="menuitem">Services</a>
+      <a href="/about.html" role="menuitem">About</a>
+      <a href="/pricing.html" role="menuitem">Pricing</a>
+      <a href="/contact.html" role="menuitem">Contact</a>
+      <a href="/contact.html" class="btn btn-lime" style="margin-top:12px;justify-content:center;" role="menuitem">Get Proposal</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero" aria-label="Meta Ads Management">
+    <div class="blob-wrap" aria-hidden="true"><div class="blob blob-lime"></div><div class="blob blob-violet"></div></div>
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="container page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="/services.html">Services</a>
+        <span class="breadcrumb-sep">›</span>
+        <span aria-current="page">Meta Ads</span>
+      </nav>
+      <div class="hero-badge">&#128247; Facebook &amp; Instagram Ads</div>
+      <h1>Meta Ads That Convert<br/><span class="hl-lime">at Every Stage</span></h1>
+      <p class="lead">Creative-led Meta advertising with AI-powered audience targeting and Conversions API tracking. Lumo turns Facebook and Instagram into predictable revenue machines for US brands — not just awareness channels.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/contact.html" class="btn btn-lime">Get a Free Ad Account Review <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/pricing.html" class="btn btn-ghost">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-strip" aria-label="Meta Ads results">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item"><div class="stat-num">5.4x</div><div class="stat-label">Average ROAS across Meta ad accounts</div></div>
+        <div class="stat-item"><div class="stat-num">-42%</div><div class="stat-label">Average CPL reduction vs. prior management</div></div>
+        <div class="stat-item"><div class="stat-num">3–5</div><div class="stat-label">Creative variants tested per ad set at launch</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" id="intro" aria-labelledby="intro-h2">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p class="section-eyebrow">What We Manage</p>
+          <h2 id="intro-h2">Meta Ads That Treat Creative as Infrastructure</h2>
+          <p>The brands winning on Meta in 2026 are winning because of creative — not audience targeting. Since iOS 14 restricted signal quality, Meta's algorithm relies heavily on the creative itself to find buyers. Lumo's Meta practice is built around systematic creative production and testing: we launch more variants, kill losers faster, and scale winners harder than your competitors.</p>
+          <p>Our campaign architecture uses Meta Advantage+ where it's been proven to outperform, and manual campaign structures where the data demands precision. We implement the Conversions API alongside pixel tracking to recover attribution lost to ad blockers and iOS restrictions — giving Meta's algorithm the clean data it needs to optimize effectively.</p>
+          <p>Every client account is managed by a dedicated strategist who reviews performance weekly and adjusts creative, audiences, budgets, and bidding based on real-time data. We don't set campaigns and check in monthly. We watch the numbers like operators because we're accountable to your ROAS targets, not your impression counts.</p>
+          <p>Lumo serves US-based e-commerce brands, SaaS companies, service businesses, and lead generation clients across B2B and B2C. Our approach is calibrated to your business model — DTC brands need different creative and funnel architecture than B2B SaaS companies, and we build accordingly.</p>
+        </div>
+        <div class="deliverables-card">
+          <h3>What You Get</h3>
+          <div class="deliverable-item"><div class="del-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></div>Full ad account audit + restructure</div>
+          <div class="deliverable-item"><div class="del-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></div>Conversions API + pixel implementation</div>
+          <div class="deliverable-item"><div class="del-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></div>Creative strategy + production briefs</div>
+          <div class="deliverable-item"><div class="del-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></div>Audience research + custom audiences</div>
+          <div class="deliverable-item"><div class="del-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></div>Advantage+ + manual campaign builds</div>
+          <div class="deliverable-item"><div class="del-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></div>Weekly creative testing + iteration</div>
+          <div class="deliverable-item"><div class="del-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 6l3 3 5-5"/></svg></div>Monthly performance reporting + roadmap</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section-pad" aria-labelledby="process-h2">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:60px;">
+        <p class="section-eyebrow" style="justify-content:center;">How It Works</p>
+        <h2 class="section-h2" id="process-h2">Our <span style="color:var(--primary);">Meta Ads Process</span></h2>
+      </div>
+      <div class="process-grid">
+        <article class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-card">
+            <div class="step-icon">&#128270;</div>
+            <h3 class="step-title">Account Audit</h3>
+            <p class="step-desc">We audit your current account structure, tracking setup, creative library, audience strategy, and attribution — identifying exactly what's costing you ROAS.</p>
+          </div>
+        </article>
+        <article class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-card">
+            <div class="step-icon">&#127775;</div>
+            <h3 class="step-title">Creative Strategy</h3>
+            <p class="step-desc">We define creative angles, ad formats, hook frameworks, and a testing matrix — ensuring you launch with a systematic approach to finding winning creative, not guessing.</p>
+          </div>
+        </article>
+        <article class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-card">
+            <div class="step-icon">&#128640;</div>
+            <h3 class="step-title">Launch + Test</h3>
+            <p class="step-desc">Campaigns go live with structured creative tests running in parallel. We monitor CPC, CTR, conversion rate, and ROAS daily during the first two weeks post-launch.</p>
+          </div>
+        </article>
+        <article class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-card">
+            <div class="step-icon">&#128200;</div>
+            <h3 class="step-title">Scale Winners</h3>
+            <p class="step-desc">We kill underperforming creative quickly, scale budgets on proven winners, and continuously feed new creative into the testing pipeline to prevent audience fatigue.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" id="pricing" aria-labelledby="pricing-h2">
+    <div class="container" style="max-width:700px;">
+      <div class="pricing-teaser">
+        <p class="section-eyebrow" style="justify-content:center;">Transparent Pricing</p>
+        <h3 id="pricing-h2">Meta Ads Management</h3>
+        <div class="price-display">from $1,200<span style="font-size:1.2rem;font-weight:500;color:var(--muted);">/mo</span></div>
+        <p>Management fee covers strategy, campaign management, and weekly optimization. Ad spend is separate and goes directly to Meta. Growth plan includes creative consulting; Scale includes full creative production support.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
+          <a href="/contact.html" class="btn btn-lime">Get Free Account Review</a>
+          <a href="/pricing.html" class="btn btn-ghost">View All Plans</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section-pad" aria-labelledby="faq-h2">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:60px;">
+        <p class="section-eyebrow" style="justify-content:center;">Common Questions</p>
+        <h2 class="section-h2" id="faq-h2">Meta Ads <span style="color:var(--primary);">FAQ</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-q-text">Does Lumo manage both Facebook and Instagram ads?</span><div class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 1v10M1 6h10"/></svg></div></div>
+          <div class="faq-a"><p>Yes. We manage campaigns across the full Meta platform including Facebook Feed, Instagram Feed, Stories, Reels, and Messenger placements. We use Advantage+ placements for most campaigns to let Meta's AI optimize delivery across placements, and we manually control placements when the data supports it.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-q-text">How important is creative in Meta Ads?</span><div class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 1v10M1 6h10"/></svg></div></div>
+          <div class="faq-a"><p>Creative is the single largest variable in Meta Ads performance — more than audience targeting or bid strategy. We run structured creative testing frameworks that systematically test hooks, formats, and calls to action to identify winning creative combinations. Every client gets a minimum of 3–5 creative variants per ad set at launch.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-q-text">What is Advantage+ and should I be using it?</span><div class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 1v10M1 6h10"/></svg></div></div>
+          <div class="faq-a"><p>Meta Advantage+ Shopping and Advantage+ Audience campaigns use Meta's AI to automate audience targeting and placement decisions. For most e-commerce clients, Advantage+ Shopping outperforms traditional campaign structures. For lead generation, the results are more mixed. We test both approaches and use data to decide what's right for your account.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-q-text">How does Lumo handle Meta pixel and tracking setup?</span><div class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 1v10M1 6h10"/></svg></div></div>
+          <div class="faq-a"><p>We implement the Meta Conversions API alongside the pixel for server-side event tracking — which is now essential in a world of iOS privacy restrictions and ad blockers. Proper Conversions API setup typically improves reported ROAS by 15–30% by recovering attribution that browser-based tracking misses.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-q-text">What ad spend do you recommend for Meta Ads?</span><div class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 1v10M1 6h10"/></svg></div></div>
+          <div class="faq-a"><p>We recommend a minimum of $3,000/mo in ad spend to give Meta's algorithms enough data to optimize effectively. For Advantage+ Shopping campaigns, $5,000+/mo gives the AI system the volume it needs to exit the learning phase quickly and start optimizing for profit-generating conversions.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-label="Start Meta Ads">
+    <div class="container">
+      <p class="section-eyebrow" style="justify-content:center;">Ready to Scale?</p>
+      <h2>Turn Meta Into a <span style="color:var(--primary);">Revenue Engine</span></h2>
+      <p>Get a free Meta ad account review and a custom creative + campaign strategy for your business.</p>
+      <div class="cta-btns">
+        <a href="/contact.html" class="btn btn-lime">Get Free Account Review <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/pricing.html" class="btn btn-ghost">View Plans</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer aria-label="Site footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/index.html" class="nav-logo">Lumo.</a>
+        <p>AI-powered growth infrastructure for forward-thinking US businesses. Based in Austin, TX.</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/company/lumoagency" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://twitter.com/lumoagency" class="social-link" aria-label="Twitter/X" target="_blank" rel="noopener">X</a>
+          <a href="https://instagram.com/lumoagency" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/seo.html">AI SEO</a></li>
+          <li><a href="/services/geo.html">GEO &amp; AI Overview</a></li>
+          <li><a href="/services/google-ads.html">Google Ads</a></li>
+          <li><a href="/services/meta-ads.html">Meta Ads</a></li>
+          <li><a href="/services/ai-automations.html">AI Automations</a></li>
+          <li><a href="/services/ai-development.html">AI Development</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More Services</h4>
+        <ul>
+          <li><a href="/services/voice-ai.html">Voice AI</a></li>
+          <li><a href="/services/web-design.html">Web Design</a></li>
+          <li><a href="/services/content-marketing.html">Content Marketing</a></li>
+          <li><a href="/services/email-marketing.html">Email Marketing</a></li>
+          <li><a href="/services/ai-outbound.html">AI Outbound</a></li>
+          <li><a href="/services/social-media.html">Social Media</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About Lumo</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/services/saas-products.html">SaaS Products</a></li>
+          <li><a href="/services/ppc.html">PPC Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lumo Agency. All rights reserved. Austin, TX.</p>
+      <div class="footer-badge"><span class="footer-badge-dot"></span>Accepting new clients</div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Scroll to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 14V4M4 9l5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+  const nav = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    document.getElementById('scroll-top').classList.toggle('visible', window.scrollY > 300);
+  });
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    mobileMenu.setAttribute('aria-hidden', !open);
+  });
+  document.getElementById('scroll-top').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const open = item.classList.toggle('open');
+      q.setAttribute('aria-expanded', open);
+    });
+    q.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();q.click();}});
+  });
+</script>
+</body>
+</html>
