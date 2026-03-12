@@ -452,18 +452,37 @@
   scrollTopBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
 
   // Form submission
-  var form=document.getElementById('contact-form-el');
-  var successMsg=document.getElementById('form-success');
-  if(form){
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      // Basic validation
-      var req=form.querySelectorAll('[required]');
-      var valid=true;
-      req.forEach(function(field){
-        if(!field.value.trim()){valid=false;field.style.borderColor='rgba(239,68,68,0.5)';}
-        else{field.style.borderColor='';}
+  var form=
+  document.getElementById('contact-form-el').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var btn = this.querySelector('button[type="submit"]');
+    var orig = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    var data = {};
+    new FormData(this).forEach(function(v, k) { data[k] = v; });
+
+    try {
+      var res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
       });
+      if (res.ok) {
+        this.style.display = 'none';
+        var s = document.getElementById('form-success');
+        if (s) { s.style.display = 'block'; s.classList.add('visible'); }
+        else { this.insertAdjacentHTML('afterend', '<p style="color:#4caf50;font-size:1.1rem;padding:20px 0">Thank you! We will be in touch within 1 business day.</p>'); }
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      btn.textContent = 'Error — try again';
+      btn.disabled = false;
+    }
+  }.bind(document.getElementById('contact-form-el')));
       if(valid){
         form.style.display='none';
         successMsg.style.display='block';
