@@ -80,6 +80,11 @@ Allow: /local/denver/ai-development-company/
 Allow: /local/denver/ai-marketing-agency/
 Allow: /local/denver/custom-ai-development/
 Allow: /local/denver/saas-development-company/
+Allow: /local/detroit/ai-automation-agency/
+Allow: /local/detroit/ai-automation-services/
+Allow: /local/detroit/ai-development-company/
+Allow: /local/detroit/ai-marketing-agency/
+Allow: /local/detroit/custom-ai-development/
 
 # Block unpublished local pages
 Disallow: /local/
