@@ -85,6 +85,11 @@ Allow: /local/detroit/ai-automation-services/
 Allow: /local/detroit/ai-development-company/
 Allow: /local/detroit/ai-marketing-agency/
 Allow: /local/detroit/custom-ai-development/
+Allow: /local/detroit/saas-development-company/
+Allow: /local/fresno/ai-automation-agency/
+Allow: /local/fresno/ai-automation-services/
+Allow: /local/fresno/ai-development-company/
+Allow: /local/fresno/ai-marketing-agency/
 
 # Block unpublished local pages
 Disallow: /local/
