@@ -90,6 +90,11 @@ Allow: /local/fresno/ai-automation-agency/
 Allow: /local/fresno/ai-automation-services/
 Allow: /local/fresno/ai-development-company/
 Allow: /local/fresno/ai-marketing-agency/
+Allow: /local/fresno/custom-ai-development/
+Allow: /local/fresno/saas-development-company/
+Allow: /local/houston/ai-automation-agency/
+Allow: /local/houston/ai-automation-services/
+Allow: /local/houston/ai-development-company/
 
 # Block unpublished local pages
 Disallow: /local/
