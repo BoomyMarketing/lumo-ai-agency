@@ -95,6 +95,11 @@ Allow: /local/fresno/saas-development-company/
 Allow: /local/houston/ai-automation-agency/
 Allow: /local/houston/ai-automation-services/
 Allow: /local/houston/ai-development-company/
+Allow: /local/houston/ai-marketing-agency/
+Allow: /local/houston/custom-ai-development/
+Allow: /local/houston/custom-software-development-company/
+Allow: /local/houston/saas-development-company/
+Allow: /local/indianapolis/ai-automation-agency/
 
 # Block unpublished local pages
 Disallow: /local/
