@@ -100,6 +100,11 @@ Allow: /local/houston/custom-ai-development/
 Allow: /local/houston/custom-software-development-company/
 Allow: /local/houston/saas-development-company/
 Allow: /local/indianapolis/ai-automation-agency/
+Allow: /local/indianapolis/ai-automation-services/
+Allow: /local/indianapolis/ai-development-company/
+Allow: /local/indianapolis/ai-marketing-agency/
+Allow: /local/indianapolis/custom-ai-development/
+Allow: /local/indianapolis/saas-development-company/
 
 # Block unpublished local pages
 Disallow: /local/
