@@ -105,6 +105,11 @@ Allow: /local/indianapolis/ai-development-company/
 Allow: /local/indianapolis/ai-marketing-agency/
 Allow: /local/indianapolis/custom-ai-development/
 Allow: /local/indianapolis/saas-development-company/
+Allow: /local/industry-accountants/ai-automation-agency/
+Allow: /local/industry-accountants/ai-automation-services/
+Allow: /local/industry-accountants/ai-development-company/
+Allow: /local/industry-accountants/ai-marketing-agency/
+Allow: /local/industry-accountants/custom-ai-development/
 
 # Block unpublished local pages
 Disallow: /local/
