@@ -115,6 +115,11 @@ Allow: /local/industry-car-dealerships/ai-automation-agency/
 Allow: /local/industry-car-dealerships/ai-automation-services/
 Allow: /local/industry-car-dealerships/ai-development-company/
 Allow: /local/industry-car-dealerships/ai-marketing-agency/
+Allow: /local/industry-car-dealerships/custom-ai-development/
+Allow: /local/industry-car-dealerships/saas-development-company/
+Allow: /local/industry-construction/ai-automation-agency/
+Allow: /local/industry-construction/ai-automation-services/
+Allow: /local/industry-construction/ai-development-company/
 
 # Block unpublished local pages
 Disallow: /local/
