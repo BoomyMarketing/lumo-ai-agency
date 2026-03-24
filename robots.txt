@@ -130,6 +130,11 @@ Allow: /local/industry-dentists/ai-marketing-agency/
 Allow: /local/industry-dentists/custom-ai-development/
 Allow: /local/industry-dentists/saas-development-company/
 Allow: /local/industry-ecommerce/ai-automation-agency/
+Allow: /local/industry-ecommerce/ai-automation-services/
+Allow: /local/industry-ecommerce/ai-development-company/
+Allow: /local/industry-ecommerce/ai-marketing-agency/
+Allow: /local/industry-ecommerce/custom-ai-development/
+Allow: /local/industry-ecommerce/saas-development-company/
 
 # Block unpublished local pages
 Disallow: /local/
