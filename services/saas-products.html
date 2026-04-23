@@ -71,13 +71,13 @@
     .faq-icon{width:28px;height:28px;border-radius:8px;background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.25s,background 0.25s;} .faq-item.open .faq-icon{transform:rotate(45deg);background:rgba(179,255,0,0.18);}
     .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease;} .faq-a p{font-size:0.9rem;color:var(--muted);line-height:1.75;padding-bottom:20px;} .faq-item.open .faq-a{max-height:400px;}
     .cta-band{background:linear-gradient(135deg,rgba(179,255,0,0.04) 0%,rgba(124,58,237,0.06) 100%);border-top:1px solid rgba(179,255,0,0.08);text-align:center;padding:100px 0;} .cta-band h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;} .cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;} .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-    footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;} .footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;} .footer-brand .nav-logo{margin-bottom:16px;display:block;} .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:24px;}
+    footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding: 64px 0 32px;} .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;} .footer-brand .nav-logo{margin-bottom:16px;display:block;} .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:24px;}
     .social-links{display:flex;gap:10px;} .social-link{width:38px;height:38px;border-radius:10px;background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.25);display:flex;align-items:center;justify-content:center;color:var(--secondary);font-size:0.9rem;transition:background 0.25s,border-color 0.25s,transform 0.25s;}
     .social-link svg { width: 18px; height: 18px; fill: currentColor; } .social-link:hover{background:rgba(124,58,237,0.25);border-color:var(--secondary);transform:translateY(-3px);color:#fff;}
     .footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:20px;} .footer-col ul{display:flex;flex-direction:column;gap:10px;} .footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;} .footer-col a:hover{color:var(--primary);}
     .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;} .footer-bottom p{font-size:0.8rem;color:var(--muted);}
     .footer-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--muted);background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.12);padding:5px 12px;border-radius:50px;} .footer-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--primary);box-shadow:0 0 6px rgba(179,255,0,0.8);animation:blink 2s infinite;}
-    @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}} @media(max-width:900px){.footer-inner{grid-template-columns:1fr 1fr;}} @media(max-width:560px){.footer-inner{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+    @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}} @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}} @media(max-width:560px){.footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
     #scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s;border:none;} #scroll-top.visible{opacity:1;transform:translateY(0);} #scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);transform:translateY(-3px);}
   </style>
 </head>
@@ -111,28 +111,6 @@
     <div class="blob-wrap" aria-hidden="true"><div class="blob blob-lime"></div><div class="blob blob-violet"></div></div>
     <div class="hero-noise" aria-hidden="true"></div>
     <div class="container page-hero-inner">
-      <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="../index.html" class="nav-logo" aria-label="Lumo AI Agency — Home">Lumo<span>.</span></a>
-    <ul class="nav-links" role="menubar">
-      <li role="none"><a href="../services.html" role="menuitem">Services</a></li>
-      <li role="none"><a href="../about.html" role="menuitem">About</a></li>
-      <li role="none"><a href="../pricing.html" role="menuitem">Pricing</a></li>
-      <li role="none"><a href="../contact.html" role="menuitem">Contact</a></li>
-      <li role="none"><a href="../contact.html" class="nav-cta" role="menuitem">Get Started</a></li>
-    </ul>
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
-    <a href="../services.html" role="menuitem">Services</a>
-    <a href="../about.html" role="menuitem">About</a>
-    <a href="../pricing.html" role="menuitem">Pricing</a>
-    <a href="../contact.html" role="menuitem">Contact</a>
-    <a href="../contact.html" role="menuitem">Get Started &rarr;</a>
-  </div>
-</nav>
       <div class="hero-badge">&#128187; B2B SaaS</div>
       <h1>SaaS Products Built to<br/><span class="hl-lime">Scale Revenue</span></h1>
       <p class="lead">From MVP validation to enterprise-grade platform — Lumo designs, engineers, and ships B2B SaaS products with AI-native features, clean architecture, and the growth infrastructure to scale ARR.</p>
