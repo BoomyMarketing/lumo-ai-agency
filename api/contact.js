@@ -1,5 +1,5 @@
 const SITE_LABEL = 'Lumo AI Agency';
-const FROM_EMAIL = 'Lumo AI Agency <onboarding@resend.dev>';
+const FROM_EMAIL = 'Lumo AI Agency <leads@boomymarketing.com>';
 const TO_EMAILS  = ['boomymarketing.com@gmail.com', 'evgeniygalyas@gmail.com'];
 const RESEND_URL = 'https://api.resend.com/emails';
 
