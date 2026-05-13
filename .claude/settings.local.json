@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\Users\\\\Инна\\\\Desktop\\\\projects\\\\lumo-ai-agency\")",
+      "Bash(powershell *)",
+      "Bash(python3 *)",
+      "Bash(python *)",
+      "PowerShell(python --version 2>$null; node --version 2>$null; npx --version 2>$null)",
+      "PowerShell(Start-Process python -ArgumentList \"-m\", \"http.server\", \"3000\", \"--directory\", \"C:\\\\Users\\\\Инна\\\\Desktop\\\\projects\\\\lumo-ai-agency\" -WindowStyle Hidden -PassThru | Select-Object Id)",
+      "Read(//usr/**)",
+      "Read(//usr/local/**)",
+      "Bash(/c/Users/Инна/AppData/Local/Programs/Python/Python313/python *)",
+      "Bash(pip show *)",
+      "Bash(dir C:\\\\Users\\\\Инна\\\\Desktop\\\\projects\\\\lumo-ai-agency\\\\screenshots *)"
+    ]
+  }
+}
