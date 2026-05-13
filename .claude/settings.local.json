@@ -11,7 +11,12 @@
       "Read(//usr/local/**)",
       "Bash(/c/Users/Инна/AppData/Local/Programs/Python/Python313/python *)",
       "Bash(pip show *)",
-      "Bash(dir C:\\\\Users\\\\Инна\\\\Desktop\\\\projects\\\\lumo-ai-agency\\\\screenshots *)"
+      "Bash(dir C:\\\\Users\\\\Инна\\\\Desktop\\\\projects\\\\lumo-ai-agency\\\\screenshots *)",
+      "Bash(git config *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git add *)"
     ]
   }
 }
