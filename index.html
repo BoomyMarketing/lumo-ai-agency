@@ -270,6 +270,35 @@
     @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
 
+    /* ===== PRICING TEASER ===== */
+    .pricing-teaser { background: rgba(179,255,0,0.06); border-top: 1px solid rgba(179,255,0,0.15); border-bottom: 1px solid rgba(179,255,0,0.15); padding: 18px 0; }
+    .pricing-teaser-inner { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .pt-label { font-size: 0.82rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .pt-plans { font-size: 0.95rem; color: var(--fg); }
+    .pt-plans strong { color: var(--primary); }
+    .pt-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.88rem; font-weight: 600; color: var(--primary); text-decoration: none; white-space: nowrap; }
+    .pt-link:hover { text-decoration: underline; }
+
+    /* ===== HOW WE WORK ===== */
+    .how-section { background: var(--bg-dark); }
+    .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; list-style: none; padding: 0; margin: 0; max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .how-step { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-lg); padding: 32px 28px; position: relative; }
+    .how-step::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), transparent); border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+    .how-num { font-size: 0.7rem; font-weight: 900; color: var(--primary); letter-spacing: 0.1em; margin-bottom: 12px; }
+    .how-icon { font-size: 2rem; margin-bottom: 16px; line-height: 1; }
+    .how-step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+    .how-step p { font-size: 0.87rem; color: var(--muted); line-height: 1.75; margin: 0; }
+    @media (max-width: 900px) { .how-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+    @media (max-width: 560px) { .how-grid { grid-template-columns: 1fr; } }
+
+    /* ===== GEO Q&A ===== */
+    .geo-qa-section { background: var(--bg-card); border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .geo-qa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; max-width: 1100px; margin: 0 auto; }
+    .geo-qa-item { padding: 32px; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--radius-lg); }
+    .geo-qa-q { font-size: 1.05rem; font-weight: 700; margin-bottom: 16px; line-height: 1.4; color: var(--fg); }
+    .geo-qa-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.82; margin: 0; }
+    @media (max-width: 900px) { .geo-qa-grid { grid-template-columns: 1fr; gap: 20px; } }
+
     /* ===== WHY LUMO ===== */
     #why { background: var(--bg-dark); }
     .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -302,6 +331,21 @@
     .testi-co { font-size: 0.78rem; color: var(--muted); }
     @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
     @media (max-width: 768px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+    /* ===== FAQ ===== */
+    .faq-section { background: var(--bg-dark); }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--radius); overflow: hidden; transition: border-color 0.25s; }
+    .faq-item[open] { border-color: rgba(179,255,0,0.28); }
+    .faq-item summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 28px; font-size: 1rem; font-weight: 600; cursor: pointer; user-select: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-icon { flex-shrink: 0; width: 22px; height: 22px; background: rgba(179,255,0,0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.25s, background 0.25s; }
+    .faq-icon svg { width: 12px; height: 12px; stroke: var(--primary); transition: transform 0.25s; }
+    .faq-item[open] .faq-icon { background: rgba(179,255,0,0.22); }
+    .faq-item[open] .faq-icon svg { transform: rotate(45deg); }
+    .faq-body { padding: 0 28px 22px; color: var(--muted); line-height: 1.8; font-size: 0.93rem; }
+    .faq-body a { color: var(--primary); text-decoration: none; }
+    .faq-body a:hover { text-decoration: underline; }
 
     /* ===== CTA BAND ===== */
     .cta-band { background: var(--bg-dark); border-top: 1px solid rgba(179,255,0,0.06); text-align: center; position: relative; overflow: hidden; }
@@ -538,6 +582,75 @@
     </div>
   </section>
 
+  <!-- ===== PRICING TEASER ===== -->
+  <div class="pricing-teaser" role="note" aria-label="Pricing overview">
+    <div class="container pricing-teaser-inner">
+      <span class="pt-label">Transparent pricing — no hidden fees</span>
+      <span class="pt-plans">Plans from <strong>$1,200/mo</strong> · Growth from <strong>$3,000/mo</strong> · Scale from <strong>$6,500/mo</strong></span>
+      <a href="/pricing" class="pt-link">See full pricing <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+
+  <!-- ===== HOW WE WORK ===== -->
+  <section class="section-pad how-section" aria-labelledby="how-h2">
+    <div class="container">
+      <p class="section-eyebrow" style="justify-content:center;">Our Process</p>
+      <h2 id="how-h2" style="text-align:center;margin-bottom:52px;">How We <span class="hl-lime">Work</span></h2>
+      <ol class="how-grid" role="list">
+        <li class="how-step">
+          <div class="how-num" aria-hidden="true">01</div>
+          <div class="how-icon" aria-hidden="true">&#128269;</div>
+          <h3>Audit</h3>
+          <p>We analyze your current marketing stack, traffic data, and competitive landscape to find the highest-leverage gaps and opportunities.</p>
+        </li>
+        <li class="how-step">
+          <div class="how-num" aria-hidden="true">02</div>
+          <div class="how-icon" aria-hidden="true">&#127919;</div>
+          <h3>Strategy</h3>
+          <p>Our AI models forecast growth scenarios across channels. You get a custom roadmap with projected ROI before any work begins.</p>
+        </li>
+        <li class="how-step">
+          <div class="how-num" aria-hidden="true">03</div>
+          <div class="how-icon" aria-hidden="true">&#9881;</div>
+          <h3>Build</h3>
+          <p>We execute — campaigns launch, automations deploy, content publishes. AI handles optimization in real time while senior strategists steer direction.</p>
+        </li>
+        <li class="how-step">
+          <div class="how-num" aria-hidden="true">04</div>
+          <div class="how-icon" aria-hidden="true">&#128200;</div>
+          <h3>Scale</h3>
+          <p>Monthly reporting shows exactly what's working. We double down on winners, cut losers fast, and expand to new channels as your growth compounds.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== GEO Q&A ===== -->
+  <section class="section-pad geo-qa-section" aria-labelledby="geo-qa-h2">
+    <div class="container">
+      <p class="section-eyebrow" style="justify-content:center;">AI Marketing Explained</p>
+      <h2 id="geo-qa-h2" style="text-align:center;margin-bottom:56px;">Your Questions, <span class="hl-lime">Answered</span></h2>
+      <div class="geo-qa-grid">
+
+        <article class="geo-qa-item">
+          <h2 class="geo-qa-q">What is an AI Marketing Agency?</h2>
+          <p>An AI marketing agency uses machine learning, large language models, and predictive analytics to plan, execute, and optimize marketing campaigns — replacing manual guesswork with data-driven decisions made in real time. Unlike traditional agencies that rely on historical averages and weekly reporting cycles, an AI-powered agency can reallocate budget mid-campaign, personalize content for individual audience segments, and surface ranking opportunities competitors haven't spotted yet. The result is faster testing, lower cost-per-acquisition, and compounding growth that scales without proportionally scaling headcount.</p>
+        </article>
+
+        <article class="geo-qa-item">
+          <h2 class="geo-qa-q">How Does AI-Powered SEO Differ from Traditional SEO?</h2>
+          <p>Traditional SEO relies on keyword research spreadsheets, manually-built link outreach, and content schedules set months in advance. AI-powered SEO continuously monitors search intent shifts, auto-clusters keywords into semantic topic maps, predicts which pages need freshness updates before rankings drop, and generates optimized content briefs at scale. At Lumo, our AI layer also covers Generative Engine Optimization (GEO) — structuring content so it gets cited by ChatGPT, Perplexity, and Google AI Overviews, a channel that traditional SEO entirely ignores. Clients typically reach page-one rankings 40–60% faster compared to conventional approaches.</p>
+        </article>
+
+        <article class="geo-qa-item">
+          <h2 class="geo-qa-q">What ROI Can I Expect from AI Marketing?</h2>
+          <p>ROI varies by channel and baseline, but our benchmarks across 300+ clients show: SEO clients average 410% organic traffic growth in 12 months; paid media campaigns achieve an 8.7× average ROAS once AI bid optimization is fully trained (usually 30–45 days); email automation sequences generate 3–5× more revenue per subscriber than manual sends. These gains compound — an AI-trained audience model from Q1 makes Q2 campaigns cheaper and more accurate. We provide a custom growth forecast in your free strategy audit so you see projected ROI before signing any contract.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== WHY LUMO ===== -->
   <section class="section-pad" id="why" aria-labelledby="why-h2">
     <div class="container">
@@ -632,6 +745,42 @@
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
+  <section class="section-pad faq-section" aria-labelledby="faq-h2">
+    <div class="container">
+      <p class="section-eyebrow" style="justify-content:center;">Common Questions</p>
+      <h2 id="faq-h2" style="text-align:center;margin-bottom:48px;">Frequently Asked <span class="hl-lime">Questions</span></h2>
+      <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+        <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary><span itemprop="name">What is Lumo AI Agency?</span><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Lumo AI Agency is an AI-powered digital marketing agency headquartered in Austin, TX. We combine proprietary AI tools with senior marketing expertise to deliver SEO, paid media, content, and automation services that outperform traditional agencies. Our clients typically see 3–10× better results because every campaign is backed by machine-learning optimization and real-time data.</p></div>
+        </details>
+
+        <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary><span itemprop="name">What services does Lumo AI Agency offer?</span><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">We offer 105+ AI-enhanced marketing services across nine categories: SEO &amp; GEO, Paid Advertising (Google, Meta, LinkedIn, TikTok, Amazon), Content Marketing, Social Media, Web Design &amp; Development, AI Automation, Email Marketing, CRO, and Local Marketing. Every service is enhanced with AI tools for faster execution and better results. <a href="/services">Browse all services →</a></p></div>
+        </details>
+
+        <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary><span itemprop="name">How much does Lumo AI Agency cost?</span><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Our plans start at $1,200/month for the Starter package (1–2 services, ideal for growing businesses). The Growth plan is $3,000/month for multi-channel campaigns, and the Scale plan is $6,500/month for full-service AI marketing. Custom enterprise packages are available. All plans include a free initial strategy audit. <a href="/pricing">See full pricing →</a></p></div>
+        </details>
+
+        <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary><span itemprop="name">Where is Lumo AI Agency located?</span><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Our headquarters are at 600 Congress Ave, Austin, TX 78701. We work with clients across the United States — fully remote-capable with teams supporting businesses in New York, Los Angeles, Chicago, Houston, and 25+ other US cities. Office hours are Monday–Friday, 9am–6pm CT.</p></div>
+        </details>
+
+        <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <summary><span itemprop="name">What results can I expect from working with Lumo?</span><span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Our clients average 410% organic traffic growth within 12 months and an 8.7× return on ad spend. Most SEO clients see measurable ranking improvements within 60–90 days. Paid media campaigns are typically optimized within the first 30 days. We provide transparent monthly reporting so you always see exactly what's working and where your budget is going.</p></div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CTA BAND ===== -->
   <section class="section-pad cta-band" aria-labelledby="cta-h2">
     <div class="blob-wrap" aria-hidden="true">
@@ -696,27 +845,27 @@
       <div class="footer-col">
         <h4>Industries</h4>
         <ul>
-          <li><a href="industries/seo-for-lawyers/">Law Firms</a></li>
-          <li><a href="industries/seo-for-dentists/">Dentists</a></li>
-          <li><a href="industries/digital-marketing-for-real-estate/">Real Estate</a></li>
-          <li><a href="industries/healthcare-seo/">Healthcare</a></li>
-          <li><a href="industries/ecommerce-marketing/">E-commerce</a></li>
-          <li><a href="industries/saas-marketing/">SaaS &amp; Tech</a></li>
-          <li><a href="industries/home-services-seo/">Home Services</a></li>
-          <li><a href="industries/construction-marketing/">Construction</a></li>
-          <li><a href="industries/fitness-gym-marketing/">Fitness &amp; Gyms</a></li>
-          <li><a href="industries/hospitality-marketing/">Hotels</a></li>
+          <li><a href="/industries/seo-for-lawyers/">Law Firms</a></li>
+          <li><a href="/industries/seo-for-dentists/">Dentists</a></li>
+          <li><a href="/industries/digital-marketing-for-real-estate/">Real Estate</a></li>
+          <li><a href="/industries/healthcare-seo/">Healthcare</a></li>
+          <li><a href="/industries/ecommerce-marketing/">E-commerce</a></li>
+          <li><a href="/industries/saas-marketing/">SaaS &amp; Tech</a></li>
+          <li><a href="/industries/home-services-seo/">Home Services</a></li>
+          <li><a href="/industries/construction-marketing/">Construction</a></li>
+          <li><a href="/industries/fitness-gym-marketing/">Fitness &amp; Gyms</a></li>
+          <li><a href="/industries/hospitality-marketing/">Hotels</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Compare</h4>
         <ul>
-          <li><a href="compare/lumo-vs-webfx/">Lumo vs WebFX</a></li>
-          <li><a href="compare/lumo-vs-thrive-agency/">Lumo vs Thrive</a></li>
-          <li><a href="compare/lumo-vs-np-digital/">Lumo vs NP Digital</a></li>
-          <li><a href="compare/lumo-vs-ignite-digital/">Lumo vs Ignite</a></li>
-          <li><a href="compare/lumo-vs-disruptive-advertising/">Lumo vs Disruptive</a></li>
-          <li><a href="compare/lumo-vs-smartsites/">Lumo vs SmartSites</a></li>
+          <li><a href="/compare/lumo-vs-webfx/">Lumo vs WebFX</a></li>
+          <li><a href="/compare/lumo-vs-thrive-agency/">Lumo vs Thrive</a></li>
+          <li><a href="/compare/lumo-vs-np-digital/">Lumo vs NP Digital</a></li>
+          <li><a href="/compare/lumo-vs-ignite-digital/">Lumo vs Ignite</a></li>
+          <li><a href="/compare/lumo-vs-disruptive-advertising/">Lumo vs Disruptive</a></li>
+          <li><a href="/compare/lumo-vs-smartsites/">Lumo vs SmartSites</a></li>
         </ul>
       </div>
       <div class="footer-col">
