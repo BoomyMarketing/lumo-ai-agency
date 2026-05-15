@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>LinkedIn Ads for B2B: The Complete Pipeline Generation Guide | Lumo AI Agency</title>
+  <meta name="description" content="LinkedIn Ads are expensive per click and powerful per conversion for senior B2B buyers. Complete guide to campaign setup, targeting, formats, offer strategy, and measuring pipeline ROI."/>
+  <link rel="canonical" href="https://lumoaiagency.com/blog/linkedin-ads-guide/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+  <style>
+:root{--bg:#0D0D14;--bg-card:#13131F;--bg-dark:#09090F;--primary:#B3FF00;--primary-dim:rgba(179,255,0,0.08);--secondary:#7C3AED;--accent:#00F5FF;--text:#F0F0FF;--muted:#6B7280;--border:rgba(179,255,0,0.15);--radius-sm:8px;--radius:14px;--radius-lg:20px;--transition:0.25s cubic-bezier(0.4,0,0.2,1);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.15;}a{color:inherit;text-decoration:none;}ul{list-style:none;}button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:700;font-size:0.95rem;letter-spacing:0.02em;transition:var(--transition);white-space:nowrap;}
+.btn-lime{background:var(--primary);color:#0D0D14;}.btn-lime:hover{background:#c8ff26;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,255,0,0.45);}
+.btn-ghost{background:transparent;color:var(--text);border:1.5px solid rgba(240,240,255,0.2);}.btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+#navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s,border-color 0.3s;}
+#navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px;}
+.nav-logo{font-family:'Berkshire Swash',serif;font-size:1.6rem;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);}
+.nav-links a:hover{color:var(--primary);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;padding:8px;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;}
+.mobile-menu{display:none;flex-direction:column;background:rgba(13,13,20,0.98);border-top:1px solid var(--border);padding:8px 24px 16px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--muted);font-size:0.95rem;transition:color var(--transition);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--primary);}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}}
+.page-hero{padding:140px 0 60px;position:relative;overflow:hidden;}
+.blob-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);}
+.blob-lime{width:500px;height:500px;background:radial-gradient(circle,rgba(179,255,0,0.18) 0%,transparent 70%);top:-80px;left:-80px;animation:drift-a 18s ease-in-out infinite;}
+.blob-violet{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%);bottom:0;right:-60px;animation:drift-b 22s ease-in-out infinite;}
+@keyframes drift-a{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(60px,50px) scale(1.08);}}
+@keyframes drift-b{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,-40px) scale(1.06);}}
+.hero-noise{position:absolute;inset:0;background-image:linear-gradient(rgba(179,255,0,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(179,255,0,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+.page-hero-inner{position:relative;z-index:2;}
+.article-breadcrumb{font-size:0.78rem;color:var(--muted);margin-bottom:20px;display:flex;gap:8px;align-items:center;}
+.article-breadcrumb a:hover{color:var(--primary);}
+.article-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;flex-wrap:wrap;}
+.article-cat{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+.cat-cyan{background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);color:var(--accent);}
+.cat-lime{background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.25);color:var(--primary);}
+.article-date,.article-mins{font-size:0.8rem;color:var(--muted);}
+.article-body{max-width:740px;margin:0 auto;padding:60px 24px 100px;}
+.article-body h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;color:var(--text);margin:48px 0 16px;}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--text);margin:28px 0 10px;}
+.article-body p{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.8;margin-bottom:18px;}
+.article-body ul,.article-body ol{padding-left:24px;margin-bottom:18px;display:flex;flex-direction:column;gap:10px;}
+.article-body li{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.7;}
+.article-body strong{color:var(--text);font-weight:700;}
+.callout{background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.2);border-radius:14px;padding:24px 28px;margin:36px 0;}
+.callout p{margin:0 0 12px;color:var(--text);font-weight:600;}
+.callout a{color:var(--primary);font-weight:700;font-size:0.9rem;}
+.faq-section{max-width:740px;margin:0 auto;padding:0 24px 60px;}
+.faq-section h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;margin-bottom:28px;}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.07);padding:20px 0;}
+.faq-q{font-weight:700;font-size:0.95rem;margin-bottom:10px;color:var(--text);}
+.faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;}
+.cta-band{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.06);text-align:center;padding:100px 0;}
+.cta-band h2{font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+.cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+.footer-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:20px;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px;}
+.footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;}
+.footer-col a:hover{color:var(--primary);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:0.8rem;color:var(--muted);}
+.footer-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--muted);background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.12);padding:5px 12px;border-radius:50px;}
+.footer-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--primary);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+#scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s;border:none;}
+#scroll-top.visible{opacity:1;transform:translateY(0);}
+#scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Lumo<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="/contact" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get a Free Audit</a></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/services">Services</a><a href="/about">About</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a><a href="/contact">Get Started &rarr;</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="blob-wrap">
+    <div class="blob blob-lime"></div>
+    <div class="blob blob-violet"></div>
+    <div class="hero-noise"></div>
+  </div>
+  <div class="container page-hero-inner">
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>LinkedIn Ads for B2B: The Complete Pipeline Generation Guide</span>
+    </nav>
+    <div class="article-meta">
+      <span class="article-cat cat-cyan">Paid Advertising</span>
+      <span class="article-date">May 14, 2026</span>
+      <span class="article-mins">10 min read</span>
+    </div>
+    <h1 style="font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4.5vw,3.2rem);max-width:820px;margin-bottom:24px;">LinkedIn Ads for B2B: <span style="color:var(--accent);">The Pipeline Generation Guide</span></h1>
+    <p style="font-size:1.1rem;color:rgba(240,240,255,0.7);max-width:680px;line-height:1.75;">LinkedIn's $15–$80 CPC makes most marketers flinch. Then they see the close rates. When you're reaching CFOs and VPs with a relevant offer, LinkedIn Ads consistently generate the highest-value pipeline of any paid channel — the math just requires patience and the right offer.</p>
+  </div>
+</section>
+
+<article class="article-body">
+
+<h2>Why LinkedIn Despite the High CPC</h2>
+<p>The sticker shock is real. LinkedIn CPCs typically run $15–$80 depending on industry, seniority, and campaign type — compared to $1–$5 on Facebook or $2–$10 on Google Display. But the relevant comparison isn't CPC; it's <strong>cost per qualified pipeline opportunity</strong>.</p>
+<p>A $40 CPC with a 10% landing page conversion rate and a 30% lead-to-opportunity rate produces a $1,333 cost per opportunity. For an enterprise software product with a $60,000 ACV, that's a phenomenal CAC. Compare this to Google Search, where a $5 CPC might yield lower-quality leads that convert to opportunities at 5%, producing a similar or worse cost per opportunity despite the lower CPC headline.</p>
+<p>The reason LinkedIn's conversion quality justifies the cost: <strong>no other platform lets you simultaneously target by job title, company size, seniority, geography, and industry</strong>. On Facebook, you can target "Small Business Owner" — but that bucket includes every one-person Etsy shop alongside $10M revenue companies. On LinkedIn, you can target VP of Finance at companies with 500–5,000 employees in SaaS, who are 5+ years into their careers. That specificity is worth a premium.</p>
+<p>The mental model shift that makes LinkedIn work: stop thinking cost-per-click and start thinking cost-per-ICP (ideal customer profile). If each lead that comes through LinkedIn is 3x more likely to be your ICP than a lead from other channels, a 3x higher CPC is break-even — and LinkedIn frequently delivers that quality differential.</p>
+
+<h2>Campaign Types and When to Use Each</h2>
+<p>LinkedIn Campaign Manager offers several ad formats, each suited to specific funnel stages and objectives:</p>
+<ul>
+  <li><strong>Sponsored Content</strong> — single image, carousel, or video ads in the LinkedIn feed. This is where the majority of LinkedIn budgets should run. Feed ads feel native, accommodate long copy (unlike most platforms), and work across the full funnel from awareness content to gated asset downloads.</li>
+  <li><strong>Message Ads (formerly Sponsored InMail)</strong> — direct messages sent to LinkedIn inboxes. High open rates (30–50%) because they arrive in a dedicated notifications area. Best for high-specificity offers (personalised event invitations, tailored outreach to a precise audience segment). More expensive on a per-send basis but very effective for account-based approaches.</li>
+  <li><strong>Lead Gen Forms</strong> — the most important LinkedIn-specific format for direct response. Opens a LinkedIn-native form (pre-filled with the user's LinkedIn data — name, title, company, email) when a user clicks your CTA. Eliminates the landing page friction step. Converts at 2–3x the rate of website conversion campaigns for most lead gen offers.</li>
+  <li><strong>Document Ads</strong> — allows users to scroll through a multi-page PDF (research report, playbook, framework) in the feed before deciding to download. Excellent for long-form gated content where you want prospects to sample the value before committing their contact information.</li>
+  <li><strong>Conversation Ads</strong> — branching message sequences in LinkedIn inbox with multiple CTA options. Useful for account-based marketing campaigns where you want to offer prospects a personalised path (book a demo vs. read a case study vs. attend a webinar).</li>
+</ul>
+
+<h2>Targeting: LinkedIn's Superpower</h2>
+<p>LinkedIn's targeting is where the platform's B2B value is most concentrated. The nuances matter enormously:</p>
+<ul>
+  <li><strong>Job Title vs Job Function vs Seniority</strong> — Job Title targeting is intuitive but has an Achilles heel: people describe the same role differently ("Head of Growth," "Growth Marketing Manager," "Director of Acquisition"). Use Job Function + Seniority combinations for broader reach that doesn't miss people with non-standard titles. Use Job Title for highly specific roles where title language is standardised (e.g., "Chief Financial Officer").</li>
+  <li><strong>Company Size + Industry</strong> — the backbone of most B2B targeting. Define your ICP's company size range (employees or revenue) and industry, then layer on seniority. This combination tends to give you a large enough audience to run efficiently while being meaningfully targeted.</li>
+  <li><strong>Skills targeting</strong> — underused and often effective. If your ICP has specific technical skills listed on LinkedIn (Salesforce, AWS, Kubernetes), targeting by skill reaches people with proven expertise in your domain, often at lower competition than job title targeting.</li>
+  <li><strong>Company Name targeting (ABM)</strong> — upload a list of target accounts (max 300,000 companies) and serve ads exclusively to employees at those companies. Essential for account-based marketing campaigns. Combine with seniority targeting to reach the decision-makers at your named accounts specifically.</li>
+  <li><strong>Matched Audiences</strong> — retarget your website visitors (requires LinkedIn Insight Tag), upload customer or prospect lists for exclusion or targeting, build lookalike audiences from your converters. First-party data targeting on LinkedIn is consistently your highest-performing audience pool.</li>
+</ul>
+
+<h2>Offer and Creative Strategy for B2B</h2>
+<p>The offer is the make-or-break variable in LinkedIn advertising. The mistake most B2B advertisers make: leading with a demo request to cold audiences who have never heard of your company. The same people who would never cold-call a stranger are willing to ask a stranger to book a 30-minute demo with their sales team.</p>
+<p>The offer hierarchy for cold audiences, from highest to lowest friction:</p>
+<ul>
+  <li><strong>Research reports and original data</strong> — "2026 State of B2B SaaS Spending" — highest download rates because the value is clear and immediate. Gate with Lead Gen Forms.</li>
+  <li><strong>Webinars and virtual events</strong> — lower friction than demos, delivers value, builds relationship. "How [Company Type] Cut CAC by 35% in Q1" is more compelling than a generic webinar.</li>
+  <li><strong>Guides, frameworks, and templates</strong> — practical tools that help your ICP do their job. Credibility-building that positions you as the expert before the sales conversation.</li>
+  <li><strong>Case studies</strong> — work best when highly specific to the prospect's industry and company size. "How a 200-person SaaS company reduced churn by 22%" outperforms generic customer stories.</li>
+  <li><strong>Free audit or assessment</strong> — transitional offer between content and demo. Provides specific value (your expert looks at their setup) without the full sales-meeting commitment. Works well for warm audiences who've already engaged with content.</li>
+  <li><strong>Product demo</strong> — reserve for warm audiences (website visitors, webinar attendees, content downloaders). Asking for a demo from cold audiences wastes your expensive LinkedIn clicks.</li>
+</ul>
+<p>On creative: <strong>professional doesn't mean boring</strong>. LinkedIn's feed has plenty of generic blue-and-white corporate imagery. Bold headlines, contrarian data points ("Most B2B sales teams are measuring the wrong KPIs"), and direct calls-out to specific roles ("If you manage paid media spend over $50k/month…") outperform generic brand imagery. Specificity signals relevance, and relevance drives clicks from the exact people you want.</p>
+
+<h2>Lead Gen Forms vs Website Conversion</h2>
+<p>This is one of the most common and consequential setup decisions in LinkedIn advertising. The data consistently shows:</p>
+<ul>
+  <li><strong>Lead Gen Forms deliver 2–3x more leads at 40–60% lower CPL</strong> because the pre-filled LinkedIn data eliminates the landing page drop-off (typically 70–85% of paid clicks never convert on landing pages).</li>
+  <li><strong>But Lead Gen Form leads are lower quality</strong> on average — the friction reduction means less-engaged prospects also convert, and the automatic data fill means prospects sometimes submit without fully reading the offer details.</li>
+</ul>
+<p>The strategic answer: <strong>use Lead Gen Forms for top-of-funnel content offers</strong> (reports, guides, webinars) where volume matters and your sales team can qualify. <strong>Use website conversion campaigns for demo and consultation requests</strong> where the friction of visiting a landing page filters for higher intent, and the website experience itself builds credibility before the form submission.</p>
+
+<h2>Budget, Bidding, and Scaling</h2>
+<p>LinkedIn requires meaningful budget to gather actionable data. The practical minimums: <strong>$3,000/month</strong> to gather meaningful CPL data within 60–90 days. Below that, you'll have insufficient volume to make statistically sound optimisation decisions.</p>
+<p>Bidding: start with <strong>Manual CPC bidding</strong> at the suggested bid to win competitive auctions and gather click data. Once you have 50+ conversions per campaign, transition to <strong>Automated Bidding with a Max CPA cap</strong>. LinkedIn's automated bidding system has improved substantially and typically reduces CPL by 15–25% over manual once it has sufficient conversion data.</p>
+<p>Scaling on LinkedIn is primarily done through <strong>audience expansion</strong> (lookalike audiences from converters, broader seniority ranges, adjacent job function targeting) and <strong>creative testing at scale</strong> (run 3–5 creative variants per campaign, retire bottom performers after 2 weeks, always have a new creative ready to replace them). Budget increases over 20% in a single change tend to disrupt performance — scale budgets gradually, 15–20% per week when metrics support it.</p>
+
+<div class="callout">
+  <p>Lumo AI Agency builds LinkedIn Ads pipelines for B2B companies targeting enterprise buyers — from audience strategy to offer design to campaign execution.</p>
+  <a href="/services/linkedin-ads">Explore our LinkedIn Ads service &rarr;</a>
+</div>
+
+</article>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  
+    <div class="faq-item">
+      <div class="faq-q">Is LinkedIn Ads worth it for SMBs or only enterprise?</div>
+      <div class="faq-a">LinkedIn is most cost-effective when your deal size justifies the higher CPCs — typically $10,000+ ACV for SaaS or professional services, or high-ticket consulting engagements. For SMBs selling to small business owners with $2,000–$5,000 deal sizes, the CPC-to-LTV math often doesn't work. LinkedIn is best used to reach larger-company decision-makers; if your ICP is a small business owner, Meta or Google may offer better ROI.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How long does it take to see results from LinkedIn Ads?</div>
+      <div class="faq-a">Budget for 60–90 days before drawing strong conclusions. LinkedIn's algorithm needs 2–4 weeks to exit learning mode, and B2B buying cycles mean leads from week 1 may not become opportunities until week 8–12. The mistake is optimising too early: changing targeting or offers after 2 weeks of data produces whiplash rather than improvement. Set a 90-day review cycle for major strategic decisions.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Should I exclude my current customers from LinkedIn targeting?</div>
+      <div class="faq-a">Yes, always exclude current customer company names and email lists from prospecting campaigns. Serving acquisition ads to existing customers wastes budget and can create confusing messaging. Upload your customer domain list as an exclusion audience. Conversely, you can create a separate LinkedIn campaign targeting existing customers with expansion, upsell, or retention messaging — but keep it fully separate from your prospecting campaigns.</div>
+    </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Scale with <span style="color:var(--primary);">LinkedIn Ads?</span></h2>
+    <p>Lumo AI Agency builds data-driven paid advertising campaigns that maximize your ROI. Let's find out what's possible for your business.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="btn btn-lime">Get a Free Audit</a>
+      <a href="/services/linkedin-ads" class="btn btn-ghost">Learn About LinkedIn Ads</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="nav-logo" style="font-family:'Berkshire Swash',serif;font-size:1.5rem;color:var(--primary);margin-bottom:12px;">Lumo<span>.</span></div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;max-width:220px;">Austin's AI-powered marketing agency helping brands grow with paid ads, SEO, and intelligent automation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/seo">SEO</a></li>
+          <li><a href="/services/geo">GEO / AI Search</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/meta-ads">Meta Ads</a></li>
+          <li><a href="/services/ai-automations">AI Automations</a></li>
+          <li><a href="/services">All Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lumo AI Agency. All rights reserved.</p>
+      <div class="footer-badge"><span class="footer-badge-dot"></span>Serving clients across the US</div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Back to top">&#8593;</button>
+
+
+<script>
+(function(){
+  var ham = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  if(ham && menu){
+    ham.addEventListener('click', function(){
+      menu.classList.toggle('open');
+    });
+  }
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 40){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    var st = document.getElementById('scroll-top');
+    if(st){ if(window.scrollY > 400){ st.classList.add('visible'); } else { st.classList.remove('visible'); } }
+  });
+  var st = document.getElementById('scroll-top');
+  if(st){ st.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); }); }
+})();
+</script>
+
+</body>
+</html>

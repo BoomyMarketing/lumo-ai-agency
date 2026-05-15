@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Server-Side Tracking in 2026: Setup Guide for GA4 and Meta | Lumo AI Agency</title>
+  <meta name="description" content="iOS privacy changes and cookie deprecation are cutting 20–40% of your conversion data. Server-side tracking restores signal quality. How to implement GTM server-side, GA4 server events, and Meta Conversions API."/>
+  <link rel="canonical" href="https://lumoaiagency.com/blog/server-side-tracking-guide/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+  <style>
+:root{--bg:#0D0D14;--bg-card:#13131F;--bg-dark:#09090F;--primary:#B3FF00;--primary-dim:rgba(179,255,0,0.08);--secondary:#7C3AED;--accent:#00F5FF;--text:#F0F0FF;--muted:#6B7280;--border:rgba(179,255,0,0.15);--radius-sm:8px;--radius:14px;--radius-lg:20px;--transition:0.25s cubic-bezier(0.4,0,0.2,1);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.15;}a{color:inherit;text-decoration:none;}ul{list-style:none;}button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:700;font-size:0.95rem;letter-spacing:0.02em;transition:var(--transition);white-space:nowrap;}
+.btn-lime{background:var(--primary);color:#0D0D14;}.btn-lime:hover{background:#c8ff26;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,255,0,0.45);}
+.btn-ghost{background:transparent;color:var(--text);border:1.5px solid rgba(240,240,255,0.2);}.btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+#navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s,border-color 0.3s;}
+#navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px;}
+.nav-logo{font-family:'Berkshire Swash',serif;font-size:1.6rem;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);}
+.nav-links a:hover{color:var(--primary);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;padding:8px;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;}
+.mobile-menu{display:none;flex-direction:column;background:rgba(13,13,20,0.98);border-top:1px solid var(--border);padding:8px 24px 16px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--muted);font-size:0.95rem;transition:color var(--transition);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--primary);}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}}
+.page-hero{padding:140px 0 60px;position:relative;overflow:hidden;}
+.blob-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);}
+.blob-lime{width:500px;height:500px;background:radial-gradient(circle,rgba(179,255,0,0.18) 0%,transparent 70%);top:-80px;left:-80px;animation:drift-a 18s ease-in-out infinite;}
+.blob-violet{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%);bottom:0;right:-60px;animation:drift-b 22s ease-in-out infinite;}
+@keyframes drift-a{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(60px,50px) scale(1.08);}}
+@keyframes drift-b{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,-40px) scale(1.06);}}
+.hero-noise{position:absolute;inset:0;background-image:linear-gradient(rgba(179,255,0,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(179,255,0,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+.page-hero-inner{position:relative;z-index:2;}
+.article-breadcrumb{font-size:0.78rem;color:var(--muted);margin-bottom:20px;display:flex;gap:8px;align-items:center;}
+.article-breadcrumb a:hover{color:var(--primary);}
+.article-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;flex-wrap:wrap;}
+.article-cat{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+.cat-cyan{background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);color:var(--accent);}
+.cat-lime{background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.25);color:var(--primary);}
+.article-date,.article-mins{font-size:0.8rem;color:var(--muted);}
+.article-body{max-width:740px;margin:0 auto;padding:60px 24px 100px;}
+.article-body h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;color:var(--text);margin:48px 0 16px;}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--text);margin:28px 0 10px;}
+.article-body p{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.8;margin-bottom:18px;}
+.article-body ul,.article-body ol{padding-left:24px;margin-bottom:18px;display:flex;flex-direction:column;gap:10px;}
+.article-body li{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.7;}
+.article-body strong{color:var(--text);font-weight:700;}
+.callout{background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.2);border-radius:14px;padding:24px 28px;margin:36px 0;}
+.callout p{margin:0 0 12px;color:var(--text);font-weight:600;}
+.callout a{color:var(--primary);font-weight:700;font-size:0.9rem;}
+.faq-section{max-width:740px;margin:0 auto;padding:0 24px 60px;}
+.faq-section h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;margin-bottom:28px;}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.07);padding:20px 0;}
+.faq-q{font-weight:700;font-size:0.95rem;margin-bottom:10px;color:var(--text);}
+.faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;}
+.cta-band{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.06);text-align:center;padding:100px 0;}
+.cta-band h2{font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+.cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+.footer-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:20px;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px;}
+.footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;}
+.footer-col a:hover{color:var(--primary);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:0.8rem;color:var(--muted);}
+.footer-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--muted);background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.12);padding:5px 12px;border-radius:50px;}
+.footer-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--primary);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+#scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s;border:none;}
+#scroll-top.visible{opacity:1;transform:translateY(0);}
+#scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Lumo<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="/contact" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get a Free Audit</a></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/services">Services</a><a href="/about">About</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a><a href="/contact">Get Started &rarr;</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="blob-wrap">
+    <div class="blob blob-lime"></div>
+    <div class="blob blob-violet"></div>
+    <div class="hero-noise"></div>
+  </div>
+  <div class="container page-hero-inner">
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Server-Side Tracking in 2026: Setup Guide for GA4 and Meta</span>
+    </nav>
+    <div class="article-meta">
+      <span class="article-cat cat-cyan">Paid Advertising</span>
+      <span class="article-date">May 14, 2026</span>
+      <span class="article-mins">10 min read</span>
+    </div>
+    <h1 style="font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4.5vw,3.2rem);max-width:820px;margin-bottom:24px;">Server-Side Tracking 2026: <span style="color:var(--accent);">Restore Your Conversion Signal</span></h1>
+    <p style="font-size:1.1rem;color:rgba(240,240,255,0.7);max-width:680px;line-height:1.75;">If you're running Meta Ads without the Conversions API, or Google Ads without server-side conversion events, you're making budget decisions on 60-80% of your data. Studies show server-side tracking recovers 20-40% of conversion events that browser-side tags miss — events that determine how your campaigns are optimised.</p>
+  </div>
+</section>
+
+<article class="article-body">
+
+<h2>Why Browser-Side Tracking Is Failing</h2>
+<p>The tracking infrastructure that most advertising campaigns were built on — browser-based JavaScript tags that fire when a user completes an action — is being systematically dismantled by privacy technology. Understanding the specific mechanisms explains why server-side tracking has become essential rather than optional:</p>
+<ul>
+  <li><strong>Apple's Intelligent Tracking Prevention (ITP)</strong> — Safari (used by approximately 19% of global users but 30%+ in the US on mobile) limits the lifetime of JavaScript-set cookies to 7 days, and first-party cookies set via document.cookie to 7 days as well. This means any user who visits your site and converts more than 7 days later has their original traffic source attribution erased.</li>
+  <li><strong>iOS 14+ App Tracking Transparency</strong> — Apple's ATT framework requires apps (including Facebook's) to explicitly ask users for permission to track their activity across apps and websites. Opt-in rates have settled at 25–35%. This means Meta has lost visibility into post-click conversions for 65–75% of iOS users who use the Facebook app, dramatically degrading campaign optimisation signals for iOS traffic.</li>
+  <li><strong>Ad blockers</strong> — approximately 27% of US internet users run ad blockers in 2026. Many block not just display ads but also analytics and tracking pixels, including Google Tag and Meta Pixel. A user who converts after bypassing your ad blocker won't have that conversion registered by your browser-side tags.</li>
+  <li><strong>Cookie consent tools</strong> — GDPR (EU), CCPA (California), and growing US state privacy legislation requires obtaining consent before setting non-essential tracking cookies. Users who decline consent (typically 15–40% of EU traffic) generate zero browser-side tracking data, even if they later convert.</li>
+</ul>
+<p>The cumulative effect: a typical e-commerce or SaaS website running only browser-side tracking is <strong>missing 20–40% of its actual conversion events</strong>. More critically, the conversions that are missed are systematically biased toward iOS Safari users — which skews performance data and mis-informs bidding algorithms that are optimising on incomplete conversion signals.</p>
+
+<h2>How Server-Side Tracking Works</h2>
+<p>Traditional browser-side tracking: user completes action on your website → JavaScript tag fires in the user's browser → tag sends event data directly to the ad platform (Meta, Google, etc.).</p>
+<p>Server-side tracking breaks this chain at the browser: user completes action on your website → your server captures the event → your server sends the event data to ad platforms via their APIs. The browser is no longer the messenger. The key advantages:</p>
+<ul>
+  <li><strong>Not affected by ITP or Safari cookie limits</strong> — your server's HTTP requests aren't subject to browser cookie restrictions.</li>
+  <li><strong>Not blocked by ad blockers</strong> — ad blockers target browser-side JavaScript; they can't intercept server-to-server API calls.</li>
+  <li><strong>Richer data available</strong> — server-side events can include data that browsers can't access: server-confirmed purchase values, first-party customer IDs, hashed email and phone for identity matching (improving attribution rates).</li>
+  <li><strong>Cookie lifetime control</strong> — set first-party cookies from your server (HTTP-only) to extend the attribution window beyond ITP's 7-day browser limit.</li>
+</ul>
+<p>The most common implementations in 2026: <strong>Google Tag Manager Server-Side Container</strong> (acts as the central hub, routing events to GA4 and Google Ads via server), <strong>Meta Conversions API</strong> (direct server-to-Meta API integration), and <strong>platform-specific SDKs and Measurement Protocols</strong> (GA4 Measurement Protocol, Snap Conversions API, TikTok Events API).</p>
+
+<h2>Setting Up GTM Server-Side Container</h2>
+<p>Google Tag Manager's server-side container acts as a proxy between your website and ad platforms. Your website sends events to the GTM server container, which then forwards them to GA4, Google Ads, Meta, and other platforms — all from your server, not the user's browser.</p>
+<p>Step-by-step setup overview:</p>
+<ul>
+  <li><strong>Create the server container</strong> — in GTM, create a new container with the "Server" type. GTM will provision a server URL (ending in *.gtm-server.appspot.com by default) or let you provide a custom domain.</li>
+  <li><strong>Deploy to Google Cloud</strong> — the recommended hosting is Google Cloud Run (serverless, scales to zero when not in use) or App Engine. Google Cloud provides a managed deployment option directly from GTM. Estimated cost: $30–$80/month for a site with 50,000–200,000 monthly visitors.</li>
+  <li><strong>Configure clients</strong> — add the GA4 Client to your server container (handles incoming data from your GA4 web tag), and the Meta Client (handles forwarding to Meta's CAPI). Each client tells GTM which incoming event format to expect.</li>
+  <li><strong>Update your web container</strong> — modify your existing GA4 Configuration Tag to send events to your server container URL (instead of directly to Google Analytics). This change routes all GA4 events through your server first.</li>
+  <li><strong>Add platform tags in server container</strong> — add a GA4 Server Tag (forwards to Google Analytics), a Google Ads Conversion Tag (fires server-side conversion events), and a Meta Conversions API Tag (forwards to CAPI). Configure each with the appropriate API credentials.</li>
+  <li><strong>Test with Preview mode</strong> — GTM's server-side preview mode shows you each incoming event and which tags fired. Test every conversion event type before publishing.</li>
+</ul>
+
+<h2>Meta Conversions API Implementation</h2>
+<p>The Meta Conversions API (CAPI) is Meta's server-side event ingestion endpoint. It works alongside your Meta Pixel (browser-side) using a <strong>deduplication system</strong> that prevents the same conversion from being counted twice.</p>
+<p>Critical implementation requirements:</p>
+<ul>
+  <li><strong>Get your CAPI access token</strong> — in Meta Events Manager, go to Settings → Conversions API → Generate access token. This token authenticates your server's requests to Meta's API.</li>
+  <li><strong>Event deduplication</strong> — the most important technical requirement. When both browser Pixel and server CAPI fire for the same event, Meta will count it twice unless you implement deduplication. The mechanism: include an <code>event_id</code> parameter that is identical in both the browser Pixel event and the CAPI server event for the same user action. Meta deduplicates events with matching event_id within a 48-hour window.</li>
+  <li><strong>Advanced matching</strong> — the more user data you include with CAPI events, the higher Meta's event match rate (EMQ score). Include hashed versions (SHA-256) of: email address, phone number, first and last name, city, state, zip, and country. A high EMQ score (7+) means Meta can attribute more conversions to the correct ad, improving campaign optimisation.</li>
+  <li><strong>Key events to implement</strong> — at minimum: PageView, ViewContent (product/service page), AddToCart (e-commerce), InitiateCheckout, Purchase (with value and currency), Lead (for lead gen). Each event sent via CAPI should include user data, event_name, event_time, event_id, and action_source ("website").</li>
+</ul>
+<p>Event Match Quality (EMQ) is your north star metric for CAPI health. A score of 6–8 (out of 10) represents strong implementation; below 5 means your matching data is insufficient. Check EMQ in Meta Events Manager weekly until it stabilises above 6.</p>
+
+<h2>GA4 Server-Side Events and Measurement Protocol</h2>
+<p>GA4's Measurement Protocol allows you to send events directly to Google Analytics from your server, bypassing the browser entirely. This is separate from the GTM server-side implementation — both can be used together or independently depending on your technical setup.</p>
+<p>When to use GA4 Measurement Protocol directly (vs GTM server-side): when you need to send events from back-end processes that have no user session context (e.g., delayed conversions, offline events, subscription renewals), or when your technical team prefers direct API integration over GTM's layer of abstraction.</p>
+<p>Required parameters for a GA4 Measurement Protocol request: <strong>client_id</strong> (the GA4 client identifier, which you must store from the browser-side GA4 cookie — typically the _ga cookie value), <strong>events array</strong> (name and parameters of each event), <strong>measurement_id</strong> (your GA4 property's G-XXXXXXXX ID), and <strong>api_secret</strong> (generated in GA4 under Admin → Data Streams → Measurement Protocol API secrets).</p>
+<p>Test server-side GA4 events using the <strong>DebugView in GA4</strong> (Admin → DebugView) by adding <code>debug_mode: 1</code> to your event parameters, or validate using the <strong>Realtime report</strong> for live event verification. Measurement Protocol events without a valid client_id won't appear in user-level reports — storing and passing the client_id correctly is the most common implementation error.</p>
+
+<div class="callout">
+  <p>Lumo AI Agency implements server-side tracking setups — GTM server containers, Meta CAPI, GA4 Measurement Protocol — that restore conversion data completeness and improve campaign performance.</p>
+  <a href="/services/conversion-tracking">Explore our Conversion Tracking service &rarr;</a>
+</div>
+
+</article>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  
+    <div class="faq-item">
+      <div class="faq-q">Do I still need the Meta Pixel if I implement the Conversions API?</div>
+      <div class="faq-a">Yes. The Pixel and CAPI should run simultaneously in a 'redundant' configuration with deduplication. The Pixel captures real-time browser-side events with session context (page URL, referrer, browser data). CAPI captures server-side events that survive iOS and ad blocker restrictions. Together, deduplicated via event_id, they provide the most complete event coverage. Removing the Pixel while running CAPI alone loses browser-context data that improves event quality.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How much does GTM server-side hosting cost?</div>
+      <div class="faq-a">Google Cloud Run pricing for GTM server-side depends on traffic volume. For sites with 20,000–100,000 monthly visitors, expect $30–$60/month. For 100,000–500,000 monthly visitors, $60–$120/month. Google Cloud's free tier covers some usage, and Cloud Run scales to zero (no cost) when there are no requests. This cost is typically recovered many times over by improved campaign performance from better conversion data.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I know if my server-side tracking is working correctly?</div>
+      <div class="faq-a">Three checks: (1) Meta Events Manager — check Event Match Quality score (target 6+) and compare CAPI-received events vs Pixel-received events for the same event types; the ratio should be close to 1:1 after deduplication. (2) GA4 DebugView — verify server-side events appear with correct parameters. (3) Compare total conversion event volume between your browser-only historical baseline and your server-side post-implementation period; you should see a 10–40% increase in captured events.</div>
+    </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Scale with <span style="color:var(--primary);">Conversion Tracking?</span></h2>
+    <p>Lumo AI Agency builds data-driven paid advertising campaigns that maximize your ROI. Let's find out what's possible for your business.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="btn btn-lime">Get a Free Audit</a>
+      <a href="/services/conversion-tracking" class="btn btn-ghost">Learn About Conversion Tracking</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="nav-logo" style="font-family:'Berkshire Swash',serif;font-size:1.5rem;color:var(--primary);margin-bottom:12px;">Lumo<span>.</span></div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;max-width:220px;">Austin's AI-powered marketing agency helping brands grow with paid ads, SEO, and intelligent automation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/seo">SEO</a></li>
+          <li><a href="/services/geo">GEO / AI Search</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/meta-ads">Meta Ads</a></li>
+          <li><a href="/services/ai-automations">AI Automations</a></li>
+          <li><a href="/services">All Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lumo AI Agency. All rights reserved.</p>
+      <div class="footer-badge"><span class="footer-badge-dot"></span>Serving clients across the US</div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Back to top">&#8593;</button>
+
+
+<script>
+(function(){
+  var ham = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  if(ham && menu){
+    ham.addEventListener('click', function(){
+      menu.classList.toggle('open');
+    });
+  }
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 40){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    var st = document.getElementById('scroll-top');
+    if(st){ if(window.scrollY > 400){ st.classList.add('visible'); } else { st.classList.remove('visible'); } }
+  });
+  var st = document.getElementById('scroll-top');
+  if(st){ st.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); }); }
+})();
+</script>
+
+</body>
+</html>

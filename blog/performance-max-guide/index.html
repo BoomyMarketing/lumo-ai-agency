@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Performance Max Campaigns: The Complete Setup and Optimization Guide | Lumo AI Agency</title>
+  <meta name="description" content="Performance Max uses Google's full inventory across Search, Display, YouTube, Shopping, and Maps. A complete guide to campaign structure, asset groups, audience signals, and ROAS optimization."/>
+  <link rel="canonical" href="https://lumoaiagency.com/blog/performance-max-guide/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+  <style>
+:root{--bg:#0D0D14;--bg-card:#13131F;--bg-dark:#09090F;--primary:#B3FF00;--primary-dim:rgba(179,255,0,0.08);--secondary:#7C3AED;--accent:#00F5FF;--text:#F0F0FF;--muted:#6B7280;--border:rgba(179,255,0,0.15);--radius-sm:8px;--radius:14px;--radius-lg:20px;--transition:0.25s cubic-bezier(0.4,0,0.2,1);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.15;}a{color:inherit;text-decoration:none;}ul{list-style:none;}button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:700;font-size:0.95rem;letter-spacing:0.02em;transition:var(--transition);white-space:nowrap;}
+.btn-lime{background:var(--primary);color:#0D0D14;}.btn-lime:hover{background:#c8ff26;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,255,0,0.45);}
+.btn-ghost{background:transparent;color:var(--text);border:1.5px solid rgba(240,240,255,0.2);}.btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+#navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s,border-color 0.3s;}
+#navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px;}
+.nav-logo{font-family:'Berkshire Swash',serif;font-size:1.6rem;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);}
+.nav-links a:hover{color:var(--primary);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;padding:8px;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;}
+.mobile-menu{display:none;flex-direction:column;background:rgba(13,13,20,0.98);border-top:1px solid var(--border);padding:8px 24px 16px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--muted);font-size:0.95rem;transition:color var(--transition);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--primary);}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}}
+.page-hero{padding:140px 0 60px;position:relative;overflow:hidden;}
+.blob-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);}
+.blob-lime{width:500px;height:500px;background:radial-gradient(circle,rgba(179,255,0,0.18) 0%,transparent 70%);top:-80px;left:-80px;animation:drift-a 18s ease-in-out infinite;}
+.blob-violet{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%);bottom:0;right:-60px;animation:drift-b 22s ease-in-out infinite;}
+@keyframes drift-a{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(60px,50px) scale(1.08);}}
+@keyframes drift-b{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,-40px) scale(1.06);}}
+.hero-noise{position:absolute;inset:0;background-image:linear-gradient(rgba(179,255,0,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(179,255,0,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+.page-hero-inner{position:relative;z-index:2;}
+.article-breadcrumb{font-size:0.78rem;color:var(--muted);margin-bottom:20px;display:flex;gap:8px;align-items:center;}
+.article-breadcrumb a:hover{color:var(--primary);}
+.article-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;flex-wrap:wrap;}
+.article-cat{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+.cat-cyan{background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);color:var(--accent);}
+.cat-lime{background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.25);color:var(--primary);}
+.article-date,.article-mins{font-size:0.8rem;color:var(--muted);}
+.article-body{max-width:740px;margin:0 auto;padding:60px 24px 100px;}
+.article-body h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;color:var(--text);margin:48px 0 16px;}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--text);margin:28px 0 10px;}
+.article-body p{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.8;margin-bottom:18px;}
+.article-body ul,.article-body ol{padding-left:24px;margin-bottom:18px;display:flex;flex-direction:column;gap:10px;}
+.article-body li{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.7;}
+.article-body strong{color:var(--text);font-weight:700;}
+.callout{background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.2);border-radius:14px;padding:24px 28px;margin:36px 0;}
+.callout p{margin:0 0 12px;color:var(--text);font-weight:600;}
+.callout a{color:var(--primary);font-weight:700;font-size:0.9rem;}
+.faq-section{max-width:740px;margin:0 auto;padding:0 24px 60px;}
+.faq-section h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;margin-bottom:28px;}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.07);padding:20px 0;}
+.faq-q{font-weight:700;font-size:0.95rem;margin-bottom:10px;color:var(--text);}
+.faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;}
+.cta-band{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.06);text-align:center;padding:100px 0;}
+.cta-band h2{font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+.cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+.footer-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:20px;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px;}
+.footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;}
+.footer-col a:hover{color:var(--primary);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:0.8rem;color:var(--muted);}
+.footer-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--muted);background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.12);padding:5px 12px;border-radius:50px;}
+.footer-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--primary);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+#scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s;border:none;}
+#scroll-top.visible{opacity:1;transform:translateY(0);}
+#scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Lumo<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="/contact" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get a Free Audit</a></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/services">Services</a><a href="/about">About</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a><a href="/contact">Get Started &rarr;</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="blob-wrap">
+    <div class="blob blob-lime"></div>
+    <div class="blob blob-violet"></div>
+    <div class="hero-noise"></div>
+  </div>
+  <div class="container page-hero-inner">
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Performance Max Campaigns: The Complete Setup and Optimization Guide</span>
+    </nav>
+    <div class="article-meta">
+      <span class="article-cat cat-cyan">Paid Advertising</span>
+      <span class="article-date">May 14, 2026</span>
+      <span class="article-mins">10 min read</span>
+    </div>
+    <h1 style="font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4.5vw,3.2rem);max-width:820px;margin-bottom:24px;">Performance Max: <span style="color:var(--accent);">Complete Setup &amp; Optimization Guide</span></h1>
+    <p style="font-size:1.1rem;color:rgba(240,240,255,0.7);max-width:680px;line-height:1.75;">Performance Max is Google's most capable campaign type and its least transparent. When configured correctly — right asset groups, audience signals, and budget controls — it consistently outperforms standalone campaigns. When configured poorly, it spends your budget on irrelevant placements with zero insight.</p>
+  </div>
+</section>
+
+<article class="article-body">
+
+<h2>What Performance Max Actually Is</h2>
+<p>Performance Max (PMax) is Google's AI-driven campaign type that serves ads across every Google-owned channel from a single campaign: <strong>Search, Display, YouTube, Shopping, Discover, Gmail, and Maps</strong>. Instead of managing separate campaigns for each channel, Google's machine learning decides where to serve your ads, which asset combinations to show, and how to bid — all in pursuit of your stated conversion goal.</p>
+<p>The AI works on two axes simultaneously. First, <strong>goal-based bidding</strong>: Google's Smart Bidding predicts the probability that any given impression will result in your target conversion action, then bids accordingly in real time. Second, <strong>asset combination testing</strong>: Google automatically assembles headlines, descriptions, images, videos, and logos into ad creatives and tests which combinations perform best for each placement and audience.</p>
+<p>The trade-off is transparency. Unlike Search campaigns where you see keyword-level performance, PMax gives limited placement-level and asset-level reporting. You're buying into Google's AI system — which in 2026 is genuinely powerful — but you're giving up granular control. Understanding that trade-off is the foundation of a good PMax strategy.</p>
+
+<h2>Campaign Structure: One or Multiple PMax Campaigns?</h2>
+<p>The question of how many PMax campaigns to run is one of the most consequential structural decisions, and the answer depends on your account type:</p>
+<ul>
+  <li><strong>E-commerce:</strong> Create separate PMax campaigns by <strong>product category or margin tier</strong>. A campaign that mixes high-margin accessories with low-margin commodities will have Google optimise toward conversion volume, often favouring the lower-margin items because they convert more frequently. Separate campaigns let you set different ROAS targets aligned with each category's actual margins.</li>
+  <li><strong>Lead generation:</strong> Separate by <strong>service type</strong> if you offer multiple services with different CPL targets or conversion values. A law firm running campaigns for personal injury and estate planning simultaneously in one PMax campaign will confuse the AI's value optimisation.</li>
+  <li><strong>Small budgets (under $3k/month):</strong> One campaign. The AI needs sufficient conversion volume to optimise effectively — splitting a small budget starves both campaigns of the data they need. Target 50+ conversions per campaign per month as a minimum threshold.</li>
+</ul>
+<p>Each campaign has its own budget, which means you can <strong>control spend isolation</strong> between product lines. This is critical for margin management: if your hero products and your low-margin products compete in the same budget pool, the algorithm will spend toward whichever drives easier conversions regardless of profitability.</p>
+
+<h2>Asset Groups: The Most Important Setup Decision</h2>
+<p>Asset groups are PMax's equivalent of ad groups — they contain the creative assets (headlines, descriptions, images, videos, logos) that Google assembles into ads. Think of each asset group as a <strong>creative theme</strong> aligned to a specific product, service, audience, or seasonal message.</p>
+<p>The required assets per asset group: <strong>up to 15 headlines</strong> (at least 3 required), <strong>up to 5 descriptions</strong> (at least 2 required), <strong>up to 20 images</strong> (various aspect ratios), <strong>logos</strong>, and <strong>at least one video</strong> (Google will auto-generate a video if you don't provide one — and auto-generated videos are almost always worse than what you'd create).</p>
+<p>Asset quality score (Excellent/Good/Low) is a signal of how varied and strong your assets are. A "Low" asset strength rating typically means you have too few headlines, they're too similar to each other, or your images are low-resolution. Improving from Low to Excellent has been shown to improve campaign performance by 12–20% in Google's own data — and our client experience corroborates this.</p>
+<p>Structure asset groups around <strong>themes, not channel types</strong>. One asset group for "Running Shoes — Men" with images of men running, headlines about performance and fit, and product-specific descriptions. Another for "Running Shoes — Women" with appropriate creative variations. Don't put all products in one asset group; you'll get generic creative that speaks to no one specifically.</p>
+
+<h2>Audience Signals: Guide the AI Without Limiting It</h2>
+<p>Audience signals are one of the most misunderstood PMax features. They are <strong>hints to the AI about where to start looking</strong>, not hard targeting restrictions. Google will always serve beyond your audience signals if it believes other audiences will convert. This is by design — and often beneficial, as the AI frequently finds converting audiences you wouldn't have thought to target.</p>
+<p>The hierarchy of effective audience signals, strongest to weakest:</p>
+<ul>
+  <li><strong>Customer match lists</strong> — your actual buyer data (email lists, CRM exports) is the highest-quality signal. Upload your existing customer list as the primary audience signal and Google will find similar people.</li>
+  <li><strong>Website visitors</strong> — your existing site visitors, segmented by page type or recency where possible, give the AI a strong behavioural signal.</li>
+  <li><strong>Similar segments</strong> — Google's own similar-to-converters lists are solid secondary signals, particularly for accounts without large customer lists.</li>
+  <li><strong>Interest and in-market segments</strong> — use these as supplementary signals when customer data is limited, but don't over-rely on them; they're less predictive than first-party data.</li>
+</ul>
+<p>One important configuration note: <strong>do not add your customer list as a conversion exclusion</strong> unless you have a specific reason (e.g., you never want to advertise to existing customers). Many advertisers exclude their customer list from targeting, which removes your best lookalike seed from the AI's optimisation signal.</p>
+
+<h2>Bidding Strategy and Budget Controls</h2>
+<p>PMax supports two primary bidding strategies: <strong>Maximize Conversion Value</strong> (with or without a Target ROAS) and <strong>Maximize Conversions</strong> (with or without a Target CPA). For most e-commerce accounts, use Maximize Conversion Value with tROAS. For lead generation, use Maximize Conversions with tCPA.</p>
+<p>The critical mistake with tROAS targets: <strong>setting them too high too early</strong>. If your historical ROAS is 4x and you set a 5x tROAS target from day one, Google will severely restrict delivery looking for those elusive high-value conversions, spending very little while the campaign starves for data. Instead: start at 80–90% of your historical average ROAS, let the campaign run for 4–6 weeks (minimum 50 conversions), then incrementally raise the target by 10–15% each time.</p>
+<p>Budget pacing with PMax can be erratic in the first 2–3 weeks while the AI is in learning mode. Don't panic if daily spend is uneven. The algorithm catches up. However, if spend drops dramatically (below 50% of budget) after week 3 with good asset quality and reasonable tROAS targets, your targets are likely too aggressive.</p>
+
+<h2>Optimization and Reporting</h2>
+<p>PMax's limited reporting is a genuine challenge, but there are actionable levers. The <strong>asset group performance breakdown</strong> (available once you have sufficient conversion volume) shows which creative themes are driving results — use this to iterate, refreshing underperforming asset groups with new creative every 4–6 weeks.</p>
+<p>The <strong>Search terms insight report</strong> (in Insights tab) shows categories of search terms your PMax ads matched, grouped by theme. While not keyword-level, it's essential for identifying wasted spend categories where you should add negative keywords. Note: negative keywords in PMax can only be applied at the campaign level via the Google Ads support team or through campaign settings — they don't work the same way as in Search campaigns.</p>
+<p>Monthly optimization checklist: refresh lowest-performing assets, review search term categories for irrelevant themes, check audience insights for surprising converting segments, review campaign-level ROAS vs target and adjust by 10–15% if consistently above or below, and ensure your conversion actions are correctly weighted.</p>
+
+<div class="callout">
+  <p>Lumo AI Agency configures and manages Performance Max campaigns for e-commerce and lead generation clients — with full asset production and monthly optimization included.</p>
+  <a href="/services/performance-max">See our Performance Max service &rarr;</a>
+</div>
+
+</article>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  
+    <div class="faq-item">
+      <div class="faq-q">Should I run Performance Max alongside my existing Search campaigns?</div>
+      <div class="faq-a">Yes, in most cases. Search campaigns with exact and phrase match keywords will take priority over PMax for queries that match your keywords. Run both: Search for your core high-intent keywords with granular bid control, and PMax to capture additional inventory across all Google channels. Monitor for cannibalization in your Search terms report.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How long does Performance Max take to exit learning mode?</div>
+      <div class="faq-a">PMax typically needs 4–6 weeks to fully exit learning mode and stabilise performance. During this period, avoid making significant changes (budget shifts over 20%, bid strategy changes, major asset additions) as each change resets the learning period. Plan to evaluate performance starting week 5–6, not week 2.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">My Performance Max campaign has a low asset strength rating — does it matter?</div>
+      <div class="faq-a">Yes, it matters meaningfully. Low asset strength usually means too few unique headlines, similar descriptions, or missing video assets. Google's data shows Excellent asset strength campaigns outperform Low by double digits. Add more varied headlines (covering different value propositions), add original video if missing, and ensure you have the full range of image aspect ratios (1:1, 4:5, 16:9, 1.91:1).</div>
+    </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Scale with <span style="color:var(--primary);">Performance Max?</span></h2>
+    <p>Lumo AI Agency builds data-driven paid advertising campaigns that maximize your ROI. Let's find out what's possible for your business.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="btn btn-lime">Get a Free Audit</a>
+      <a href="/services/performance-max" class="btn btn-ghost">Learn About Performance Max</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="nav-logo" style="font-family:'Berkshire Swash',serif;font-size:1.5rem;color:var(--primary);margin-bottom:12px;">Lumo<span>.</span></div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;max-width:220px;">Austin's AI-powered marketing agency helping brands grow with paid ads, SEO, and intelligent automation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/seo">SEO</a></li>
+          <li><a href="/services/geo">GEO / AI Search</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/meta-ads">Meta Ads</a></li>
+          <li><a href="/services/ai-automations">AI Automations</a></li>
+          <li><a href="/services">All Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lumo AI Agency. All rights reserved.</p>
+      <div class="footer-badge"><span class="footer-badge-dot"></span>Serving clients across the US</div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Back to top">&#8593;</button>
+
+
+<script>
+(function(){
+  var ham = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  if(ham && menu){
+    ham.addEventListener('click', function(){
+      menu.classList.toggle('open');
+    });
+  }
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 40){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    var st = document.getElementById('scroll-top');
+    if(st){ if(window.scrollY > 400){ st.classList.add('visible'); } else { st.classList.remove('visible'); } }
+  });
+  var st = document.getElementById('scroll-top');
+  if(st){ st.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); }); }
+})();
+</script>
+
+</body>
+</html>

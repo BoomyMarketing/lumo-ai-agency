@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RevOps aligns sales, marketing, and customer success around a single revenue engine. What it means in practice, why companies with RevOps grow 19% faster, and how to implement it." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Lumo AI Agency" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Revenue Operations (RevOps): What It Is and Why It Drives Faster Growth | Lumo AI Agency" />
+  <meta property="og:description" content="RevOps aligns sales, marketing, and customer success around a single revenue engine. What it means in practice, why companies with RevOps grow 19% faster, and how to implement it." />
+  <meta property="og:url" content="https://lumoaiagency.com/blog/revenue-operations-guide/" />
+  <meta property="og:image" content="https://lumoaiagency.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://lumoaiagency.com/blog/revenue-operations-guide/" />
+  <title>Revenue Operations (RevOps): What It Is and Why It Drives Faster Growth | Lumo AI Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Revenue Operations (RevOps): What It Is and Why It Drives Faster Growth",
+      "description": "RevOps aligns sales, marketing, and customer success around a single revenue engine. What it means in practice, why companies with RevOps grow 19% faster, and how to implement it.",
+      "datePublished": "2026-05-15",
+      "dateModified": "2026-05-15",
+      "author": {"@type": "Organization", "name": "Lumo AI Agency", "url": "https://lumoaiagency.com"},
+      "publisher": {"@type": "Organization", "name": "Lumo AI Agency", "url": "https://lumoaiagency.com"},
+      "url": "https://lumoaiagency.com/blog/revenue-operations-guide/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://lumoaiagency.com/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://lumoaiagency.com/blog/"},
+        {"@type":"ListItem","position":3,"name":"Revenue Operations (RevOps): What It Is and Why It Drives Faster Growth","item":"https://lumoaiagency.com/blog/revenue-operations-guide/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      {"@type":"Question","name":"When should a company hire their first RevOps person?","acceptedAnswer":{"@type":"Answer","text":"The tipping point for most B2B companies is around 10–15 people in sales and marketing combined, or when revenue processes clearly have hand-off friction causing pipeline leakage. Earlier than that, the founder or a senior operator can manage alignment. Later than that, misalignment costs are compounding monthly."}},
+      {"@type":"Question","name":"How is RevOps different from Sales Operations?","acceptedAnswer":{"@type":"Answer","text":"Sales Ops focuses on sales team efficiency — forecasting, territory planning, compensation, and sales tool administration. RevOps extends that scope to include marketing and customer success, with the goal of end-to-end revenue system alignment rather than optimising within a single team's function."}},
+      {"@type":"Question","name":"What CRM is best for a RevOps-first setup?","acceptedAnswer":{"@type":"Answer","text":"HubSpot is the most accessible for SMBs running RevOps — the native integration between CRM, marketing automation, and CS tools reduces the integration complexity that undermines data quality. Salesforce has superior customisation and enterprise capabilities but requires significantly more implementation investment to achieve the same alignment. The best CRM is the one your team will actually adopt and keep clean."}}
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--bg:#0D0D14;--bg-card:#13131F;--bg-dark:#09090F;--primary:#B3FF00;--secondary:#7C3AED;--accent:#00F5FF;--text:#F0F0FF;--muted:#6B7280;--border:rgba(179,255,0,0.15);--radius:14px;--radius-lg:20px;--transition:0.25s cubic-bezier(0.4,0,0.2,1);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+    h1,h2,h3,h4{line-height:1.15;}
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;height:auto;display:block;}
+    button{font-family:inherit;cursor:pointer;border:none;background:none;}
+    ul{list-style:none;}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:700;font-size:0.95rem;letter-spacing:0.02em;transition:var(--transition);white-space:nowrap;}
+    .btn-lime{background:var(--primary);color:#0D0D14;}
+    .btn-lime:hover{background:#c8ff26;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,255,0,0.45);}
+    .btn-ghost{background:transparent;color:var(--text);border:1.5px solid rgba(240,240,255,0.2);}
+    .btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s,border-color 0.3s;}
+    #navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px;}
+    .nav-logo{font-family:'Berkshire Swash',serif;font-size:1.6rem;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
+    .nav-logo span{color:var(--primary);}
+    .nav-links{display:flex;align-items:center;gap:36px;}
+    .nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);letter-spacing:0.02em;}
+    .nav-links a:hover{color:var(--primary);}
+    .nav-cta{display:flex;align-items:center;gap:16px;}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;}
+    .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition);}
+    .mobile-menu{display:none;flex-direction:column;gap:0;background:rgba(13,13,20,0.98);border-top:1px solid var(--border);padding:8px 24px 16px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--muted);font-size:0.95rem;font-weight:500;transition:color var(--transition);}
+    .mobile-menu a:last-child{border-bottom:none;}
+    .mobile-menu a:hover{color:var(--primary);}
+    @media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}}
+    .article-hero{padding:140px 0 60px;position:relative;overflow:hidden;}
+    .blob-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+    .blob{position:absolute;border-radius:50%;filter:blur(80px);}
+    .blob-lime{width:500px;height:500px;background:radial-gradient(circle,rgba(179,255,0,0.18) 0%,transparent 70%);top:-80px;left:-80px;}
+    .blob-violet{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%);bottom:0;right:-60px;}
+    .hero-noise{position:absolute;inset:0;background-image:linear-gradient(rgba(179,255,0,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(179,255,0,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+    .page-hero-inner{position:relative;z-index:2;}
+    .article-breadcrumb{font-size:0.78rem;color:var(--muted);margin-bottom:20px;display:flex;gap:8px;align-items:center;}
+    .article-breadcrumb a{color:var(--muted);}
+    .article-breadcrumb a:hover{color:var(--primary);}
+    .article-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;flex-wrap:wrap;}
+    .article-cat{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+    .cat-lime{background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.25);color:var(--primary);}
+    .cat-violet{background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.3);color:var(--secondary);}
+    .cat-cyan{background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);color:var(--accent);}
+    .article-date,.article-mins{font-size:0.8rem;color:var(--muted);}
+    .article-body{max-width:740px;margin:0 auto;padding:60px 24px 100px;}
+    .article-body h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;color:var(--text);margin:48px 0 16px;}
+    .article-body h3{font-size:1.1rem;font-weight:700;color:var(--text);margin:28px 0 10px;}
+    .article-body p{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.8;margin-bottom:18px;}
+    .article-body ul,.article-body ol{padding-left:24px;margin-bottom:18px;display:flex;flex-direction:column;gap:10px;}
+    .article-body li{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.7;}
+    .article-body strong{color:var(--text);font-weight:700;}
+    .callout{background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.2);border-radius:14px;padding:24px 28px;margin:36px 0;}
+    .callout p{margin:0 0 12px;color:var(--text);}
+    .callout a{display:inline-flex;align-items:center;gap:6px;color:var(--primary);font-weight:700;font-size:0.9rem;}
+    .faq-section{max-width:740px;margin:0 auto;padding:0 24px 60px;}
+    .faq-section h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;margin-bottom:28px;}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.07);padding:20px 0;}
+    .faq-q{font-weight:700;font-size:0.95rem;margin-bottom:10px;color:var(--text);}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;}
+    .cta-band{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.06);text-align:center;padding:100px 0;}
+    .cta-band h2{font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+    .cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+    .footer-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
+    .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-top:12px;}
+    .footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:16px;}
+    .footer-col ul{display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;}
+    .footer-col a:hover{color:var(--primary);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+    .footer-copy{font-size:0.8rem;color:var(--muted);}
+    .footer-bl a{color:var(--primary);font-size:0.8rem;margin-left:16px;}
+    @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+    @media(max-width:560px){.footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+    #scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s,box-shadow 0.3s;border:none;}
+    #scroll-top.visible{opacity:1;transform:translateY(0);}
+    #scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);transform:translateY(-3px);}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Lumo<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/services">Services</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="/contact" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get a Free Audit</a></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/contact">Contact</a>
+    <a href="/contact">Get Started &rarr;</a>
+  </div>
+</nav>
+
+<main>
+  <section class="article-hero">
+    <div class="blob-wrap" aria-hidden="true">
+      <div class="blob blob-lime"></div>
+      <div class="blob blob-violet"></div>
+    </div>
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="container page-hero-inner">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span>&rsaquo;</span>
+        <a href="/blog/">Blog</a> <span>&rsaquo;</span>
+        <span>Strategy</span>
+      </nav>
+      <div class="article-meta">
+        <span class="article-cat cat-lime">Strategy</span>
+        <span class="article-date">May 15, 2026</span>
+        <span class="article-mins">9 min read</span>
+      </div>
+      <h1 style="font-family:'Berkshire Swash',serif;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.1;margin-bottom:24px;">Revenue Operations: <span style="color:var(--primary);">The Growth Engine You're Missing</span></h1>
+      <p style="font-size:1.15rem;color:var(--muted);max-width:680px;line-height:1.75;">Companies with aligned RevOps functions grow revenue 19% faster than those without. The reason isn't mysterious — it's that most businesses run sales, marketing, and customer success as separate silos with misaligned metrics, disconnected systems, and competing priorities.</p>
+    </div>
+  </section>
+
+  <div class="article-body">
+
+    <h2>What RevOps Actually Means</h2>
+    <p>Revenue Operations is the function responsible for aligning sales, marketing, and customer success around shared processes, data, and technology — with the goal of predictable revenue growth. It's not a rebrand of sales operations, and it's not a committee. It's a dedicated function (or set of responsibilities in smaller companies) that sits across the revenue-generating teams rather than within any single one.</p>
+    <p>The core premise of RevOps is that the revenue cycle — from first marketing impression to closed deal to customer expansion — is a single system, not three sequential departments. When marketing, sales, and CS operate with different definitions of success, different data systems, and different incentives, value leaks from every handoff. RevOps closes those leaks.</p>
+    <p>In practice, RevOps owns: the CRM and revenue technology stack, the processes that govern how leads move through the funnel, the data quality and reporting that leadership uses to make decisions, and the alignment of compensation structures to shared revenue outcomes. It's unglamorous, operational work — and it compounds over time into a significant competitive advantage.</p>
+
+    <h2>The Cost of Misalignment</h2>
+    <p>Without RevOps alignment, the symptoms are predictable. Marketing measures MQLs; sales ignores most of them and disputes the quality of the rest. The CRM is partially adopted — sales reps log what they have to, skip what they don't, and the pipeline report is meaningless for forecasting. Customer success doesn't know what was promised in the sales process, leading to onboarding friction and early churn. Renewals are managed reactively rather than systematically.</p>
+    <p>The financial cost is concrete. A Forrester study found that B2B companies lose an average of 10% of revenue annually to misalignment between sales and marketing. Pipeline leakage — qualified leads that fall out of the funnel not because they won't buy but because they weren't followed up correctly — is the most common and least visible source of revenue loss.</p>
+    <p>The forecast problem is particularly expensive. When CRM data quality is poor and pipeline stages don't reflect real buying signals, leadership can't see the business accurately. Bad forecasting leads to bad capacity planning, missed hiring decisions, and reactive budget allocation rather than strategic investment.</p>
+
+    <h2>Core RevOps Pillars: Process, Technology, Data, and People</h2>
+    <p><strong>Process:</strong> The most fundamental RevOps work is defining and governing the revenue process. What is the definition of an MQL? At what point does a lead become a SQL? What are the handoff criteria and SLAs between marketing and sales? What does each pipeline stage actually represent? These definitions need to be agreed upon, documented, enforced in the CRM, and reviewed regularly. Without shared definitions, there are no shared metrics.</p>
+    <p><strong>Technology:</strong> RevOps owns the revenue tech stack — CRM, marketing automation, sales engagement, conversation intelligence, CPQ, and any integration layer connecting them. The goal is a connected system where data flows between tools without manual entry, duplication, or loss. Tech debt in the revenue stack (parallel systems, broken integrations, untrusted data) compounds quickly into operational drag.</p>
+    <p><strong>Data:</strong> The RevOps function is the steward of revenue data quality. Contact data decays at 20–30% annually — phone numbers change, people leave companies, email addresses bounce. Data hygiene is ongoing work, not a one-time cleanup. RevOps also owns the reporting layer — building dashboards that give leadership accurate visibility into pipeline health, conversion rates, and revenue attribution without depending on each team to report in isolation.</p>
+    <p><strong>People:</strong> RevOps doesn't replace sales, marketing, or CS leadership — it enables them. The RevOps team (or person, in smaller companies) acts as an internal consultant and systems builder. Success requires strong cross-functional relationships and the credibility to push back on individual teams when siloed behaviour is damaging shared revenue outcomes.</p>
+
+    <h2>RevOps Implementation Roadmap for SMBs</h2>
+    <p>For businesses under $10M ARR without a dedicated RevOps function, the implementation starts with the fundamentals: clean CRM data, agreed-upon funnel definitions, and a single source of truth for pipeline reporting. This is typically a 60–90 day project that pays immediate dividends in forecast accuracy and cross-team alignment.</p>
+    <p>Phase two is process automation — automating lead routing, handoff notifications, follow-up sequences, and data enrichment so the human teams spend their time on high-value work rather than administrative coordination. Phase three is analytics maturity — building the reporting infrastructure that provides real-time visibility into conversion rates at each funnel stage, cohort analysis of customer acquisition, and predictive pipeline modeling.</p>
+    <p>At the SMB level, RevOps responsibilities often live in one versatile operator — sometimes titled Revenue Operations Manager, sometimes Marketing Ops or Sales Ops with an expanded scope. The function matters more than the title. What matters is that someone owns the system holistically rather than each team owning only their own piece.</p>
+
+    <h2>The Metrics RevOps Teams Own</h2>
+    <p>RevOps teams typically own four categories of metrics: funnel conversion rates (MQL-to-SQL, SQL-to-opportunity, opportunity-to-close), pipeline health (pipeline coverage ratio, average deal size, sales cycle length, win rate by segment), revenue predictability (forecast accuracy, pipeline velocity), and system health (CRM adoption rate, data completeness, lead response time SLA compliance). These metrics cut across teams — which is exactly the point. RevOps exists to hold the system accountable rather than any individual team's self-reported numbers.</p>
+
+
+    <div class="callout">
+      <p>Ready to put these insights into action? Lumo&rsquo;s team builds and manages <strong>Revenue Operations</strong> strategies for growth-stage businesses.</p>
+      <a href="/services/revenue-operations">Explore Revenue Operations &rarr;</a>
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">When should a company hire their first RevOps person?</div>
+        <div class="faq-a">The tipping point for most B2B companies is around 10–15 people in sales and marketing combined, or when revenue processes clearly have hand-off friction causing pipeline leakage. Earlier than that, the founder or a senior operator can manage alignment. Later than that, misalignment costs are compounding monthly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is RevOps different from Sales Operations?</div>
+        <div class="faq-a">Sales Ops focuses on sales team efficiency — forecasting, territory planning, compensation, and sales tool administration. RevOps extends that scope to include marketing and customer success, with the goal of end-to-end revenue system alignment rather than optimising within a single team's function.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What CRM is best for a RevOps-first setup?</div>
+        <div class="faq-a">HubSpot is the most accessible for SMBs running RevOps — the native integration between CRM, marketing automation, and CS tools reduces the integration complexity that undermines data quality. Salesforce has superior customisation and enterprise capabilities but requires significantly more implementation investment to achieve the same alignment. The best CRM is the one your team will actually adopt and keep clean.</div>
+      </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to <span style="color:var(--primary);">Grow Faster?</span></h2>
+      <p>Book a free strategy call and we&rsquo;ll map out exactly which channels will move the needle for your business.</p>
+      <div class="cta-btns">
+        <a href="/contact" class="btn btn-lime">Get Free Proposal &rarr;</a>
+        <a href="/services/revenue-operations" class="btn btn-ghost">Learn About Revenue Operations</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:16px;display:block;">Lumo<span>.</span></a>
+        <p>Austin&rsquo;s AI-powered marketing agency. SEO, paid ads, AI automation &amp; growth strategy built for the future.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/seo">SEO &amp; Content</a></li>
+          <li><a href="/services/geo">GEO &amp; AI Search</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/meta-ads">Meta Ads</a></li>
+          <li><a href="/services/ai-automations">AI Automations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Lumo AI Agency. All rights reserved.</span>
+      <div class="footer-bl">
+        <a href="/privacy-policy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+
+<script>
+(function(){
+  var nb=document.getElementById('navbar');
+  var hb=document.getElementById('hamburger');
+  var mm=document.getElementById('mobile-menu');
+  var open=false;
+  window.addEventListener('scroll',function(){nb.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
+  hb.addEventListener('click',function(){open=!open;mm.classList.toggle('open',open);hb.setAttribute('aria-expanded',String(open));});
+  mm.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){open=false;mm.classList.remove('open');hb.setAttribute('aria-expanded','false');});});
+  var st=document.getElementById('scroll-top');
+  window.addEventListener('scroll',function(){st.classList.toggle('visible',window.scrollY>400);},{passive:true});
+  st.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+
+</body>
+</html>

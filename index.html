@@ -19,7 +19,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
 
   <script type="application/ld+json">
   {
@@ -27,26 +28,44 @@
     "@graph": [
       {
         "@type": "Organization",
+        "@id": "https://lumoaiagency.com/#organization",
         "name": "Lumo AI Agency",
-        "url": "https://lumoaiagency.com",
-        "logo": "https://lumoaiagency.com/logo.png",
+        "url": "https://lumoaiagency.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://lumoaiagency.com/logo.png",
+          "width": 200,
+          "height": 60
+        },
         "description": "Austin's AI-powered marketing agency offering SEO, Google Ads, Meta Ads, AI automations, and web design.",
         "foundingDate": "2023",
         "telephone": "+16473701888",
         "email": "hello@lumoaiagency.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+16473701888",
+          "contactType": "customer service",
+          "areaServed": "US",
+          "availableLanguage": "English"
+        },
         "sameAs": [
-          "https://instagram.com/lumoaiagency",
-          "https://linkedin.com/company/lumoaiagency",
-          "https://twitter.com/lumoaiagency",
-          "https://youtube.com/@lumoaiagency"
+          "https://www.instagram.com/lumoaiagency",
+          "https://www.linkedin.com/company/lumoaiagency",
+          "https://x.com/lumoaiagency",
+          "https://www.youtube.com/@lumoaiagency",
+          "https://www.facebook.com/lumoaiagency",
+          "https://www.tiktok.com/@lumoaiagency"
         ]
       },
       {
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://lumoaiagency.com/#local-business",
         "name": "Lumo AI Agency",
-        "url": "https://lumoaiagency.com",
+        "url": "https://lumoaiagency.com/",
         "telephone": "+16473701888",
         "email": "hello@lumoaiagency.com",
+        "image": "https://lumoaiagency.com/og-image.jpg",
+        "parentOrganization": {"@id": "https://lumoaiagency.com/#organization"},
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "600 Congress Ave",
@@ -57,24 +76,34 @@
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 30.2672,
-          "longitude": -97.7431
+          "latitude": 30.26802,
+          "longitude": -97.74305
         },
         "areaServed": [
-          {"@type": "Country", "name": "United States"}
+          {"@type": "Country", "name": "United States"},
+          {"@type": "City", "name": "Austin"},
+          {"@type": "City", "name": "New York City"},
+          {"@type": "City", "name": "Los Angeles"},
+          {"@type": "City", "name": "Chicago"},
+          {"@type": "City", "name": "Houston"},
+          {"@type": "City", "name": "Dallas"}
         ],
         "priceRange": "$$",
-        "openingHours": "Mo-Fr 09:00-18:00"
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
       },
       {
         "@type": "WebSite",
+        "@id": "https://lumoaiagency.com/#website",
         "name": "Lumo AI Agency",
-        "url": "https://lumoaiagency.com",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://lumoaiagency.com/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "url": "https://lumoaiagency.com/",
+        "publisher": {"@id": "https://lumoaiagency.com/#organization"}
       },
       {
         "@type": "FAQPage",
@@ -312,26 +341,26 @@
 <header>
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Lumo AI Agency — Home">Lumo<span>.</span></a>
+      <a href="/" class="nav-logo" aria-label="Lumo AI Agency — Home">Lumo<span>.</span></a>
       <ul class="nav-links" role="menubar">
-        <li role="none"><a href="services.html" role="menuitem">Services</a></li>
-        <li role="none"><a href="about.html" role="menuitem">About</a></li>
-        <li role="none"><a href="pricing.html" role="menuitem">Pricing</a></li>
-        <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+        <li role="none"><a href="/services" role="menuitem">Services</a></li>
+        <li role="none"><a href="/about" role="menuitem">About</a></li>
+        <li role="none"><a href="/pricing" role="menuitem">Pricing</a></li>
+        <li role="none"><a href="/contact" role="menuitem">Contact</a></li>
       </ul>
       <div class="nav-cta-wrap">
-        <a href="contact.html" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get Started</a>
+        <a href="/contact" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get Started</a>
       </div>
       <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
-      <a href="services.html" role="menuitem">Services</a>
-      <a href="about.html" role="menuitem">About</a>
-      <a href="pricing.html" role="menuitem">Pricing</a>
-      <a href="contact.html" role="menuitem">Contact</a>
-      <a href="contact.html" role="menuitem">Get Started &rarr;</a>
+      <a href="/services" role="menuitem">Services</a>
+      <a href="/about" role="menuitem">About</a>
+      <a href="/pricing" role="menuitem">Pricing</a>
+      <a href="/contact" role="menuitem">Contact</a>
+      <a href="/contact" role="menuitem">Get Started &rarr;</a>
     </div>
   </nav>
 </header>
@@ -356,8 +385,8 @@
           <h1>The AI Agency<br/><span class="hl-lime">Austin Trusts</span></h1>
           <p class="hero-sub">We don't slap "AI" on old playbooks. Lumo builds real AI infrastructure — SEO pipelines, ad optimization agents, and automated growth systems that compound while you sleep.</p>
           <div class="hero-btns">
-            <a href="contact.html" class="btn btn-lime">Get Your Free Proposal <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <a href="services.html" class="btn btn-ghost">Explore Services</a>
+            <a href="/contact" class="btn btn-lime">Get Your Free Proposal <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="/services" class="btn btn-ghost">Explore Services</a>
           </div>
           <div class="hero-trust">
             <div class="trust-avatars" aria-hidden="true">
@@ -440,56 +469,56 @@
           <div class="service-icon" aria-hidden="true">&#128269;</div>
           <h3 class="service-title">SEO &amp; Content</h3>
           <p class="service-desc">AI-generated content briefs, automated internal linking, entity optimization, and programmatic page generation that scales your organic presence exponentially.</p>
-          <a href="services/seo.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/services/seo" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card">
           <div class="service-icon" aria-hidden="true">&#127919;</div>
           <h3 class="service-title">Google Ads</h3>
           <p class="service-desc">Smart bidding strategies powered by custom ML models. AI-written ad copy, automated A/B testing, and real-time budget optimization for maximum ROAS.</p>
-          <a href="services/google-ads.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/services/google-ads" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card">
           <div class="service-icon" aria-hidden="true">&#128241;</div>
           <h3 class="service-title">Meta Ads</h3>
           <p class="service-desc">AI-driven audience segmentation, dynamic creative optimization, and lookalike modeling that continuously improves your Facebook and Instagram ad performance.</p>
-          <a href="services/meta-ads.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/services/meta-ads" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card">
           <div class="service-icon" aria-hidden="true">&#128176;</div>
           <h3 class="service-title">PPC Management</h3>
           <p class="service-desc">Full-funnel pay-per-click management across Google, Bing, and programmatic networks. Data-driven bidding, negative keyword mining, and weekly performance reviews.</p>
-          <a href="services/ppc.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/services/ppc" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card">
           <div class="service-icon" aria-hidden="true">&#128274;</div>
           <h3 class="service-title">Social Media</h3>
           <p class="service-desc">AI-assisted content calendars, trend detection, and engagement analytics. Build an authentic brand presence on LinkedIn, Instagram, X, and TikTok at scale.</p>
-          <a href="services/social-media.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/services/social-media" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card">
           <div class="service-icon" aria-hidden="true">&#128187;</div>
           <h3 class="service-title">Web Design</h3>
           <p class="service-desc">Conversion-optimized websites with Core Web Vitals baked in. Every site is built for speed, accessibility, and measurable business outcomes — not just aesthetics.</p>
-          <a href="services/web-design.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/services/web-design" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card">
           <div class="service-icon" aria-hidden="true">&#129302;</div>
           <h3 class="service-title">AI Development</h3>
           <p class="service-desc">Custom LLM applications, RAG pipelines, AI agents, and intelligent integrations that connect your tools. We build AI products, not just prompt wrappers.</p>
-          <a href="services/ai-development.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/services/ai-development" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="service-card">
           <div class="service-icon" aria-hidden="true">&#9889;</div>
           <h3 class="service-title">AI Automations</h3>
           <p class="service-desc">Outbound sequences, lead enrichment pipelines, reporting dashboards, and CRM workflows — automated end-to-end so your team focuses on closing, not clicking.</p>
-          <a href="services/ai-automations.html" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/services/ai-automations" class="service-link">Learn more <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
       </div>
@@ -511,7 +540,7 @@
             <span class="why-pill">&#128200; ROI-Obsessed</span>
             <span class="why-pill">&#128274; No Lock-In Contracts</span>
           </div>
-          <a href="about.html" class="btn btn-ghost">Meet the Team</a>
+          <a href="/about" class="btn btn-ghost">Meet the Team</a>
         </div>
         <div class="why-cards" role="list">
           <div class="why-card" role="listitem">
@@ -601,8 +630,8 @@
       <h2 id="cta-h2">Ready for <span class="hl-lime">AI-Powered Growth?</span></h2>
       <p>Book a free strategy call. We'll audit your current marketing stack and show you exactly where AI creates leverage in your business — no fluff, no obligation.</p>
       <div class="cta-btns">
-        <a href="contact.html" class="btn btn-lime">Get Your Free Proposal <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="services.html" class="btn btn-ghost">View All Services</a>
+        <a href="/contact" class="btn btn-lime">Get Your Free Proposal <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/services" class="btn btn-ghost">View All Services</a>
       </div>
     </div>
   </section>
@@ -614,7 +643,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html" class="footer-logo" aria-label="Lumo AI Agency home">Lumo<span>.</span></a>
+        <a href="/" class="footer-logo" aria-label="Lumo AI Agency home">Lumo<span>.</span></a>
         <p class="footer-tagline">Austin's AI-powered marketing agency. SEO, paid ads, AI automation &amp; web design built for the future.</p>
         <div class="footer-socials">
           <a href="https://instagram.com/lumoaiagency" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Lumo on Instagram">&#9679;</a>
@@ -625,30 +654,30 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services/seo.html">SEO &amp; Content</a></li>
-          <li><a href="services/google-ads.html">Google Ads</a></li>
-          <li><a href="services/meta-ads.html">Meta Ads</a></li>
-          <li><a href="services/linkedin-ads.html">LinkedIn Ads</a></li>
-          <li><a href="services/tiktok-ads.html">TikTok Ads</a></li>
-          <li><a href="services/youtube-ads.html">YouTube Ads</a></li>
-          <li><a href="services/ecommerce-seo.html">E-commerce SEO</a></li>
-          <li><a href="services/cro.html">CRO</a></li>
-          <li><a href="services/web-design.html">Web Design</a></li>
-          <li><a href="services/ai-development.html">AI Development</a></li>
-          <li><a href="services/ai-automations.html">AI Automations</a></li>
+          <li><a href="/services/seo">SEO &amp; Content</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/meta-ads">Meta Ads</a></li>
+          <li><a href="/services/linkedin-ads">LinkedIn Ads</a></li>
+          <li><a href="/services/tiktok-ads">TikTok Ads</a></li>
+          <li><a href="/services/youtube-ads">YouTube Ads</a></li>
+          <li><a href="/services/ecommerce-seo">E-commerce SEO</a></li>
+          <li><a href="/services/cro">CRO</a></li>
+          <li><a href="/services/web-design">Web Design</a></li>
+          <li><a href="/services/ai-development">AI Development</a></li>
+          <li><a href="/services/ai-automations">AI Automations</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Top Locations</h4>
         <ul>
-          <li><a href="local/austin/seo-agency/index.html">SEO Agency Austin</a></li>
-          <li><a href="local/new-york/seo-agency/index.html">SEO Agency New York</a></li>
-          <li><a href="local/los-angeles/seo-agency/index.html">SEO Agency Los Angeles</a></li>
-          <li><a href="local/austin/google-ads-agency/index.html">Google Ads Austin</a></li>
-          <li><a href="local/austin/ai-automation-agency/index.html">AI Agency Austin</a></li>
-          <li><a href="local/chicago/seo-agency/index.html">SEO Agency Chicago</a></li>
-          <li><a href="local/houston/seo-agency/index.html">SEO Agency Houston</a></li>
-          <li><a href="local/dallas/seo-agency/index.html">SEO Agency Dallas</a></li>
+          <li><a href="/local/austin/seo-agency/">SEO Agency Austin</a></li>
+          <li><a href="/local/new-york/seo-agency/">SEO Agency New York</a></li>
+          <li><a href="/local/los-angeles/seo-agency/">SEO Agency Los Angeles</a></li>
+          <li><a href="/local/austin/google-ads-agency/">Google Ads Austin</a></li>
+          <li><a href="/local/austin/ai-automation-agency/">AI Agency Austin</a></li>
+          <li><a href="/local/chicago/seo-agency/">SEO Agency Chicago</a></li>
+          <li><a href="/local/houston/seo-agency/">SEO Agency Houston</a></li>
+          <li><a href="/local/dallas/seo-agency/">SEO Agency Dallas</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -680,10 +709,10 @@
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/services">All Services</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
         <h4 style="margin-top:24px;">Contact</h4>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px;">
@@ -695,9 +724,9 @@
     <div class="footer-bottom">
       <span class="footer-copy">&copy; 2026 Lumo AI Agency. All rights reserved.</span>
       <div class="footer-bl">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/cookie-policy">Cookie Policy</a>
       </div>
     </div>
   </div>

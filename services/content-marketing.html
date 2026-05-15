@@ -16,7 +16,8 @@
   <title>Content Marketing — AI-Assisted SEO Content | Lumo Agency</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Content Marketing","provider":{"@type":"Organization","name":"Lumo Agency","url":"https://lumoaiagency.com"},"description":"AI-assisted content marketing including SEO blog posts, pillar pages, case studies, and content strategy for US businesses.","areaServed":{"@type":"Country","name":"United States"},"url":"https://lumoaiagency.com/services/content-marketing","offers":{"@type":"Offer","priceCurrency":"USD","price":"1200","priceSpecification":{"@type":"UnitPriceSpecification","priceType":"monthly"}},"dateModified":"2026-05-13"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://lumoaiagency.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://lumoaiagency.com/services"},{"@type":"ListItem","position":3,"name":"Content Marketing","item":"https://lumoaiagency.com/services/content-marketing"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does Lumo use AI in content production?","acceptedAnswer":{"@type":"Answer","text":"We use LLMs for research acceleration, keyword integration mapping, first-draft generation, and optimization suggestions. All content is reviewed, substantially edited, and fact-checked by human SEO writers before publishing. We use AI to go faster — not to replace quality."}},{"@type":"Question","name":"How long does it take for content to rank?","acceptedAnswer":{"@type":"Answer","text":"New content typically begins ranking within 4-8 weeks on lower-competition queries. Competitive head terms can take 3-6 months to reach page 1. We prioritize a mix of quick-win lower-competition terms and strategic longer-term target keywords to show ROI early while building toward bigger rankings."}},{"@type":"Question","name":"Do you write about technical topics?","acceptedAnswer":{"@type":"Answer","text":"Yes. We specialize in technical and B2B content marketing — AI, SaaS, fintech, marketing technology, and other complex verticals. We work with subject matter experts on your team to ensure accuracy on highly technical topics, and our writers have domain expertise across multiple industries."}},{"@type":"Question","name":"What is a content pillar page and do I need one?","acceptedAnswer":{"@type":"Answer","text":"A pillar page is a comprehensive, long-form resource that covers a broad topic (e.g., inchAI Marketinginch) and links to cluster content covering subtopics. This structure signals topical authority to search engines and typically ranks faster for competitive terms. We recommend pillar pages for any topic cluster where you want to build sustained organic authority."}},{"@type":"Question","name":"Can you refresh existing content that has dropped in rankings?","acceptedAnswer":{"@type":"Answer","text":"Yes. Content refreshes are often the highest-ROI activity in a content program. We audit your existing content, identify pages that have lost rankings or traffic, and update them with current information, improved structure, better keyword targeting, and enhanced E-E-A-T signals to recover and improve rankings."}}]}]}
   </script>
@@ -85,24 +86,24 @@
 <header>
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="../index.html" class="nav-logo" aria-label="Lumo AI Agency — Home">Lumo<span>.</span></a>
+    <a href="/" class="nav-logo" aria-label="Lumo AI Agency — Home">Lumo<span>.</span></a>
     <ul class="nav-links" role="menubar">
-      <li role="none"><a href="../services.html" role="menuitem">Services</a></li>
-      <li role="none"><a href="../about.html" role="menuitem">About</a></li>
-      <li role="none"><a href="../pricing.html" role="menuitem">Pricing</a></li>
-      <li role="none"><a href="../contact.html" role="menuitem">Contact</a></li>
+      <li role="none"><a href="/services" role="menuitem">Services</a></li>
+      <li role="none"><a href="/about" role="menuitem">About</a></li>
+      <li role="none"><a href="/pricing" role="menuitem">Pricing</a></li>
+      <li role="none"><a href="/contact" role="menuitem">Contact</a></li>
     </ul>
-    <div class="nav-cta"><a href="../contact.html" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get Started</a></div>
+    <div class="nav-cta"><a href="/contact" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get Started</a></div>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu" role="menu" aria-hidden="true">
-    <a href="../services.html" role="menuitem">Services</a>
-    <a href="../about.html" role="menuitem">About</a>
-    <a href="../pricing.html" role="menuitem">Pricing</a>
-    <a href="../contact.html" role="menuitem">Contact</a>
-    <a href="../contact.html" role="menuitem">Get Started &rarr;</a>
+    <a href="/services" role="menuitem">Services</a>
+    <a href="/about" role="menuitem">About</a>
+    <a href="/pricing" role="menuitem">Pricing</a>
+    <a href="/contact" role="menuitem">Contact</a>
+    <a href="/contact" role="menuitem">Get Started &rarr;</a>
   </div>
 </nav>
 </header>
@@ -116,8 +117,8 @@
       <h1>Content That Ranks,<br/><span class="hl-lime">Converts &amp; Compounds</span></h1>
       <p class="lead">Lumo produces AI-assisted content that search engines and AI systems love to cite. Strategy-first, SEO-engineered, and written by humans using AI tools — not AI slop published at scale.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="/contact.html" class="btn btn-lime">Get Free Content Audit <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="/pricing.html" class="btn btn-ghost">View Pricing</a>
+        <a href="/contact" class="btn btn-lime">Get Free Content Audit <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/pricing" class="btn btn-ghost">View Pricing</a>
       </div>
     </div>
   </section>
@@ -177,8 +178,8 @@
         <div class="price-display">from $1,200<span style="font-size:1.2rem;font-weight:500;color:var(--muted);">/mo</span></div>
         <p>Content marketing is included in all Lumo retainer plans. Starter delivers 4 blog posts/mo; Growth delivers 8 posts plus pillar pages; Scale includes full content infrastructure with digital PR. All pricing in USD.</p>
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
-          <a href="/contact.html" class="btn btn-lime">Get Custom Quote</a>
-          <a href="/pricing.html" class="btn btn-ghost">View All Plans</a>
+          <a href="/contact" class="btn btn-lime">Get Custom Quote</a>
+          <a href="/pricing" class="btn btn-ghost">View All Plans</a>
         </div>
       </div>
     </div>
@@ -206,8 +207,8 @@
       <h2>Build Content That <span style="color:var(--primary);">Compounds Over Time</span></h2>
       <p>Get a free content audit and a custom editorial strategy for your business.</p>
       <div class="cta-btns">
-        <a href="/contact.html" class="btn btn-lime">Get Free Content Audit <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="/pricing.html" class="btn btn-ghost">View Plans</a>
+        <a href="/contact" class="btn btn-lime">Get Free Content Audit <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/pricing" class="btn btn-ghost">View Plans</a>
       </div>
     </div>
   </section>
@@ -216,7 +217,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-logo" aria-label="Lumo AI Agency home">Lumo<span>.</span></a>
+        <a href="/" class="footer-logo" aria-label="Lumo AI Agency home">Lumo<span>.</span></a>
         <p class="footer-tagline">Austin's AI-powered marketing agency. SEO, paid ads, AI automation &amp; web design built for the future.</p>
         <div class="footer-socials">
           <a href="https://instagram.com/lumoaiagency" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Lumo on Instagram">&#9679;</a>
@@ -227,30 +228,30 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="../services/seo.html">SEO &amp; Content</a></li>
-          <li><a href="../services/google-ads.html">Google Ads</a></li>
-          <li><a href="../services/meta-ads.html">Meta Ads</a></li>
-          <li><a href="../services/linkedin-ads.html">LinkedIn Ads</a></li>
-          <li><a href="../services/tiktok-ads.html">TikTok Ads</a></li>
-          <li><a href="../services/youtube-ads.html">YouTube Ads</a></li>
-          <li><a href="../services/ecommerce-seo.html">E-commerce SEO</a></li>
-          <li><a href="../services/cro.html">CRO</a></li>
-          <li><a href="../services/web-design.html">Web Design</a></li>
-          <li><a href="../services/ai-development.html">AI Development</a></li>
-          <li><a href="../services/ai-automations.html">AI Automations</a></li>
+          <li><a href="/services/seo">SEO &amp; Content</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/meta-ads">Meta Ads</a></li>
+          <li><a href="/services/linkedin-ads">LinkedIn Ads</a></li>
+          <li><a href="/services/tiktok-ads">TikTok Ads</a></li>
+          <li><a href="/services/youtube-ads">YouTube Ads</a></li>
+          <li><a href="/services/ecommerce-seo">E-commerce SEO</a></li>
+          <li><a href="/services/cro">CRO</a></li>
+          <li><a href="/services/web-design">Web Design</a></li>
+          <li><a href="/services/ai-development">AI Development</a></li>
+          <li><a href="/services/ai-automations">AI Automations</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Top Locations</h4>
         <ul>
-          <li><a href="../local/austin/seo-agency/index.html">SEO Agency Austin</a></li>
-          <li><a href="../local/new-york/seo-agency/index.html">SEO Agency New York</a></li>
-          <li><a href="../local/los-angeles/seo-agency/index.html">SEO Agency Los Angeles</a></li>
-          <li><a href="../local/austin/google-ads-agency/index.html">Google Ads Austin</a></li>
-          <li><a href="../local/austin/ai-automation-agency/index.html">AI Agency Austin</a></li>
-          <li><a href="../local/chicago/seo-agency/index.html">SEO Agency Chicago</a></li>
-          <li><a href="../local/houston/seo-agency/index.html">SEO Agency Houston</a></li>
-          <li><a href="../local/dallas/seo-agency/index.html">SEO Agency Dallas</a></li>
+          <li><a href="/local/austin/seo-agency/">SEO Agency Austin</a></li>
+          <li><a href="/local/new-york/seo-agency/">SEO Agency New York</a></li>
+          <li><a href="/local/los-angeles/seo-agency/">SEO Agency Los Angeles</a></li>
+          <li><a href="/local/austin/google-ads-agency/">Google Ads Austin</a></li>
+          <li><a href="/local/austin/ai-automation-agency/">AI Agency Austin</a></li>
+          <li><a href="/local/chicago/seo-agency/">SEO Agency Chicago</a></li>
+          <li><a href="/local/houston/seo-agency/">SEO Agency Houston</a></li>
+          <li><a href="/local/dallas/seo-agency/">SEO Agency Dallas</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -282,10 +283,10 @@
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="../about.html">About Us</a></li>
-          <li><a href="../services.html">All Services</a></li>
-          <li><a href="../pricing.html">Pricing</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/services">All Services</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
         <h4 style="margin-top:24px">Contact</h4>
         <div class="footer-contact-item"><span class="fc-text"><a href="tel:+16473701888">(647) 370-1888</a></span></div>
@@ -295,8 +296,8 @@
     <div class="footer-bottom">
       <span class="footer-copy">&copy; 2026 Lumo AI Agency. All rights reserved.</span>
       <div class="footer-bl">
-        <a href="../privacy-policy.html">Privacy Policy</a>
-        <a href="../terms.html">Terms of Service</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
       </div>
     </div>
   </div>
