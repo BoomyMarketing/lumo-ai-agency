@@ -234,6 +234,13 @@
     .chip-violet { background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.25); color: var(--secondary); }
     .chip-cyan { background: rgba(0,245,255,0.06); border: 1px solid rgba(0,245,255,0.18); color: var(--accent); }
     @media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-visual { display: none; } }
+    .hero-mobile-stats { display: none; }
+    @media (max-width: 900px) {
+      .hero-mobile-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; margin-bottom: 8px; }
+      .hms-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; text-align: center; }
+      .hms-num { font-size: 1.6rem; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+      .hms-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+    }
 
     /* ===== STATS BAR ===== */
     .stats-bar { background: var(--bg-dark); border-top: 1px solid rgba(179,255,0,0.06); border-bottom: 1px solid rgba(179,255,0,0.06); padding: 48px 0; }
@@ -397,6 +404,12 @@
               <div class="trust-av ta-5">SB</div>
             </div>
             <p class="trust-text"><strong>300+ US businesses</strong> trust Lumo for AI-powered growth</p>
+          </div>
+          <div class="hero-mobile-stats" aria-label="Key results">
+            <div class="hms-item"><div class="hms-num lime">410%</div><div class="hms-label">Avg Traffic Growth</div></div>
+            <div class="hms-item"><div class="hms-num violet">8.7&times;</div><div class="hms-label">Average ROAS</div></div>
+            <div class="hms-item"><div class="hms-num cyan">300+</div><div class="hms-label">Active Clients</div></div>
+            <div class="hms-item"><div class="hms-num lime2">200+</div><div class="hms-label">AI Automations</div></div>
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
