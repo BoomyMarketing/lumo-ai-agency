@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Lumo — Austin's AI-powered growth agency. Send us a message and get a free strategy call. No real address or phone — contact form only. We respond in 5 minutes." />
+  <meta name="description" content="Contact Lumo — Austin's AI-powered growth agency. Send us a message and get a free strategy call. No real address or phone — contact form only. We respond within 24 hours." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Lumo Agency" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Contact Lumo — Get Your Free AI Growth Proposal" />
-  <meta property="og:description" content="Ready to deploy AI for growth? Fill out the form and our team will respond in 5 minutes with a custom proposal." />
+  <meta property="og:description" content="Ready to deploy AI for growth? Fill out the form and our team will respond within 24 hours with a custom proposal." />
   <meta property="og:url" content="https://lumoaiagency.com/contact" />
   <meta property="og:image" content="https://lumoaiagency.com/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -24,14 +24,15 @@
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact Lumo Agency",
-    "url": "https://lumoaiagency.com/contact.html",
+    "url": "https://lumoaiagency.com/contact",
     "datePublished": "2026-03-08",
+    "dateModified": "2026-05-13",
     "description": "Contact Lumo Agency for a free AI growth strategy proposal.",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lumoaiagency.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://lumoaiagency.com/contact.html"}
+        {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://lumoaiagency.com/contact"}
       ]
     },
     "publisher": {
@@ -66,7 +67,7 @@
     .btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
     #navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s ease,border-color 0.3s ease;}
     #navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px;}
     .nav-logo{font-family:'Berkshire Swash',serif;font-size:1.6rem;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
     .nav-links{display:flex;align-items:center;gap:36px;}
     .nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);letter-spacing:0.02em;}
@@ -94,7 +95,7 @@
     .breadcrumb-sep{color:rgba(179,255,0,0.3);}
     .section-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--primary);margin-bottom:16px;}
     .section-eyebrow::before{content:'';display:block;width:24px;height:2px;background:var(--primary);border-radius:2px;}
-    .page-hero h1{font-family:'Berkshire Swash',serif;font-size:clamp(2rem,6vw,5rem);color:var(--text);line-height:1.08;margin-bottom:24px;}
+    .page-hero h1{font-family:'Berkshire Swash',serif;font-size:clamp(2.8rem,6vw,5rem);color:var(--text);line-height:1.08;margin-bottom:24px;}
     .page-hero h1 .hl-lime{color:var(--primary);text-shadow:0 0 30px rgba(179,255,0,0.45);}
     .page-hero p.lead{font-size:1.15rem;color:var(--muted);max-width:600px;}
 
@@ -137,8 +138,8 @@
     .form-submit{width:100%;justify-content:center;font-size:1rem;padding:16px 24px;margin-top:8px;}
     .form-note{font-size:0.75rem;color:var(--muted);text-align:center;margin-top:12px;}
 
-    footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding: 64px 0 32px;}
-    .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+    .footer-inner{max-width:1180px;margin:0 auto;padding:0 24px;}.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
     .footer-brand .nav-logo{margin-bottom:16px;display:block;}
     .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:24px;}
     .social-links{display:flex;gap:10px;}
@@ -173,8 +174,8 @@
       <li role="none"><a href="about.html" role="menuitem">About</a></li>
       <li role="none"><a href="pricing.html" role="menuitem">Pricing</a></li>
       <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
-      <li role="none"><a href="contact.html" class="nav-cta" role="menuitem">Get Started</a></li>
     </ul>
+    <div class="nav-cta"><a href="contact.html" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get Started</a></div>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
@@ -196,7 +197,7 @@
     <div class="container page-hero-inner">
       <p class="section-eyebrow">Get in Touch</p>
       <h1>Let's Deploy <span class="hl-lime">AI for Your Growth</span></h1>
-      <p class="lead">Fill out the form below and our team will get back to you in 5 minutes with a custom AI growth proposal tailored to your business.</p>
+      <p class="lead">Fill out the form below and our team will get back to you within 24 hours with a custom AI growth proposal tailored to your business.</p>
     </div>
   </section>
 
@@ -251,7 +252,7 @@
             <div class="trust-list">
               <div class="trust-item"><div class="trust-dot td-lime"></div>No spam, ever. One response from a real human.</div>
               <div class="trust-item"><div class="trust-dot td-violet"></div>Free strategy call — zero obligation.</div>
-              <div class="trust-item"><div class="trust-dot td-cyan"></div>150+ clients trust Lumo with their AI growth.</div>
+              <div class="trust-item"><div class="trust-dot td-cyan"></div>300+ clients trust Lumo with their AI growth.</div>
             </div>
           </div>
         </aside>
@@ -334,7 +335,7 @@
               Send My Proposal Request
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
-            <p class="form-note">We respond in 5 minutes. No spam, no cold calls.</p>
+            <p class="form-note">We respond within 24 hours. No spam, no cold calls.</p>
 
           </form>
 
@@ -342,7 +343,7 @@
           <div id="form-success" style="display:none;text-align:center;padding:40px 20px;">
             <div style="font-size:2rem;margin-bottom:16px;">🎉</div>
             <h3 style="color:var(--primary);margin-bottom:12px;">Proposal Request Received!</h3>
-            <p style="color:var(--muted);font-size:0.9rem;">We'll review your submission and reach out in 5 minutes to schedule your free strategy call.</p>
+            <p style="color:var(--muted);font-size:0.9rem;">We'll review your submission and reach out within 24 hours to schedule your free strategy call.</p>
           </div>
         </div>
 
@@ -370,8 +371,11 @@
           <li><a href="services/seo.html">SEO &amp; Content</a></li>
           <li><a href="services/google-ads.html">Google Ads</a></li>
           <li><a href="services/meta-ads.html">Meta Ads</a></li>
-          <li><a href="services/ppc.html">PPC Management</a></li>
-          <li><a href="services/social-media.html">Social Media</a></li>
+          <li><a href="services/linkedin-ads.html">LinkedIn Ads</a></li>
+          <li><a href="services/tiktok-ads.html">TikTok Ads</a></li>
+          <li><a href="services/youtube-ads.html">YouTube Ads</a></li>
+          <li><a href="services/ecommerce-seo.html">E-commerce SEO</a></li>
+          <li><a href="services/cro.html">CRO</a></li>
           <li><a href="services/web-design.html">Web Design</a></li>
           <li><a href="services/ai-development.html">AI Development</a></li>
           <li><a href="services/ai-automations.html">AI Automations</a></li>
@@ -388,6 +392,32 @@
           <li><a href="local/chicago/seo-agency/index.html">SEO Agency Chicago</a></li>
           <li><a href="local/houston/seo-agency/index.html">SEO Agency Houston</a></li>
           <li><a href="local/dallas/seo-agency/index.html">SEO Agency Dallas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="industries/seo-for-lawyers/">Law Firms</a></li>
+          <li><a href="industries/seo-for-dentists/">Dentists</a></li>
+          <li><a href="industries/digital-marketing-for-real-estate/">Real Estate</a></li>
+          <li><a href="industries/healthcare-seo/">Healthcare</a></li>
+          <li><a href="industries/ecommerce-marketing/">E-commerce</a></li>
+          <li><a href="industries/saas-marketing/">SaaS &amp; Tech</a></li>
+          <li><a href="industries/home-services-seo/">Home Services</a></li>
+          <li><a href="industries/construction-marketing/">Construction</a></li>
+          <li><a href="industries/fitness-gym-marketing/">Fitness &amp; Gyms</a></li>
+          <li><a href="industries/hospitality-marketing/">Hotels</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Compare</h4>
+        <ul>
+          <li><a href="compare/lumo-vs-webfx/">Lumo vs WebFX</a></li>
+          <li><a href="compare/lumo-vs-thrive-agency/">Lumo vs Thrive</a></li>
+          <li><a href="compare/lumo-vs-np-digital/">Lumo vs NP Digital</a></li>
+          <li><a href="compare/lumo-vs-ignite-digital/">Lumo vs Ignite</a></li>
+          <li><a href="compare/lumo-vs-disruptive-advertising/">Lumo vs Disruptive</a></li>
+          <li><a href="compare/lumo-vs-smartsites/">Lumo vs SmartSites</a></li>
         </ul>
       </div>
       <div class="footer-col">

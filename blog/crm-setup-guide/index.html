@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A poorly configured CRM creates friction for sales and obscures pipeline visibility. How to set up your CRM correctly from day one — with the right fields, pipeline stages, workflows, and integrations." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Lumo AI Agency" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="CRM Setup Guide: Build a Revenue Engine, Not a Contact List | Lumo AI Agency" />
+  <meta property="og:description" content="A poorly configured CRM creates friction for sales and obscures pipeline visibility. How to set up your CRM correctly from day one — with the right fields, pipeline stages, workflows, and integrations." />
+  <meta property="og:url" content="https://lumoaiagency.com/blog/crm-setup-guide/" />
+  <meta property="og:image" content="https://lumoaiagency.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://lumoaiagency.com/blog/crm-setup-guide/" />
+  <title>CRM Setup Guide: Build a Revenue Engine, Not a Contact List | Lumo AI Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": 'CRM Setup Guide: Build a Revenue Engine, Not a Contact List',
+      "description": 'A poorly configured CRM creates friction for sales and obscures pipeline visibility. How to set up your CRM correctly from day one — with the right fields, pipeline stages, workflows, and integrations.',
+      "datePublished": "2026-05-15",
+      "dateModified": "2026-05-15",
+      "author": {"@type": "Organization", "name": "Lumo AI Agency", "url": "https://lumoaiagency.com"},
+      "publisher": {"@type": "Organization", "name": "Lumo AI Agency", "url": "https://lumoaiagency.com"},
+      "url": "https://lumoaiagency.com/blog/crm-setup-guide/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://lumoaiagency.com/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://lumoaiagency.com/blog/"},
+        {"@type":"ListItem","position":3,"name":'CRM Setup Guide: Build a Revenue Engine, Not a Contact List',"item":"https://lumoaiagency.com/blog/crm-setup-guide/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      {"@type":"Question","name":'HubSpot vs Salesforce: which CRM should I start with?',"acceptedAnswer":{"@type":"Answer","text":"HubSpot is significantly easier to implement and maintain for teams under 50 people, and its native marketing-to-CRM integration is unmatched for companies running HubSpot Marketing Hub. Salesforce offers superior customisation, reporting depth, and enterprise integration capabilities, but requires dedicated CRM admin resources to maintain effectively. Start with HubSpot and migrate to Salesforce when you outgrow it — most businesses don't outgrow HubSpot until well past $20M ARR."}},
+      {"@type":"Question","name":'How long does a proper CRM implementation take?',"acceptedAnswer":{"@type":"Answer","text":'A foundational CRM setup — pipeline configuration, required fields, basic automations, and team training — takes 4–6 weeks for most SMBs. Advanced configuration including lead scoring, marketing integration, and custom reporting takes an additional 4–8 weeks. Building adoption (actually getting reps to log consistently) takes 3–6 months of management reinforcement after the technical setup is complete.'}},
+      {"@type":"Question","name":"What's the best way to get sales reps to actually use the CRM?","acceptedAnswer":{"@type":"Answer","text":"Three things work: make the CRM the single source of truth for forecasting (so managers only discuss pipeline from CRM data, incentivising reps to keep it current); reduce the friction of logging (mobile app for on-the-go entry, email/calendar integration that auto-logs activity); and show reps what's in it for them — better pipeline visibility, automated reminders, and access to customer history that helps them sell. Top-down enforcement without demonstrated value produces compliance without adoption."}}
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--bg:#0D0D14;--bg-card:#13131F;--bg-dark:#09090F;--primary:#B3FF00;--secondary:#7C3AED;--accent:#00F5FF;--text:#F0F0FF;--muted:#6B7280;--border:rgba(179,255,0,0.15);--radius:14px;--radius-lg:20px;--transition:0.25s cubic-bezier(0.4,0,0.2,1);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+    h1,h2,h3,h4{line-height:1.15;}
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;height:auto;display:block;}
+    button{font-family:inherit;cursor:pointer;border:none;background:none;}
+    ul{list-style:none;}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:700;font-size:0.95rem;letter-spacing:0.02em;transition:var(--transition);white-space:nowrap;}
+    .btn-lime{background:var(--primary);color:#0D0D14;}
+    .btn-lime:hover{background:#c8ff26;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,255,0,0.45);}
+    .btn-ghost{background:transparent;color:var(--text);border:1.5px solid rgba(240,240,255,0.2);}
+    .btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s,border-color 0.3s;}
+    #navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px;}
+    .nav-logo{font-family:'Berkshire Swash',serif;font-size:1.6rem;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
+    .nav-logo span{color:var(--primary);}
+    .nav-links{display:flex;align-items:center;gap:36px;}
+    .nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);letter-spacing:0.02em;}
+    .nav-links a:hover{color:var(--primary);}
+    .nav-cta{display:flex;align-items:center;gap:16px;}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;}
+    .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition);}
+    .mobile-menu{display:none;flex-direction:column;gap:0;background:rgba(13,13,20,0.98);border-top:1px solid var(--border);padding:8px 24px 16px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--muted);font-size:0.95rem;font-weight:500;transition:color var(--transition);}
+    .mobile-menu a:last-child{border-bottom:none;}
+    .mobile-menu a:hover{color:var(--primary);}
+    @media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}}
+    .article-hero{padding:140px 0 60px;position:relative;overflow:hidden;}
+    .blob-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+    .blob{position:absolute;border-radius:50%;filter:blur(80px);}
+    .blob-lime{width:500px;height:500px;background:radial-gradient(circle,rgba(179,255,0,0.18) 0%,transparent 70%);top:-80px;left:-80px;}
+    .blob-violet{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%);bottom:0;right:-60px;}
+    .hero-noise{position:absolute;inset:0;background-image:linear-gradient(rgba(179,255,0,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(179,255,0,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+    .page-hero-inner{position:relative;z-index:2;}
+    .article-breadcrumb{font-size:0.78rem;color:var(--muted);margin-bottom:20px;display:flex;gap:8px;align-items:center;}
+    .article-breadcrumb a{color:var(--muted);}
+    .article-breadcrumb a:hover{color:var(--primary);}
+    .article-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;flex-wrap:wrap;}
+    .article-cat{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+    .cat-lime{background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.25);color:var(--primary);}
+    .cat-violet{background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.3);color:var(--secondary);}
+    .cat-cyan{background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);color:var(--accent);}
+    .article-date,.article-mins{font-size:0.8rem;color:var(--muted);}
+    .article-body{max-width:740px;margin:0 auto;padding:60px 24px 100px;}
+    .article-body h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;color:var(--text);margin:48px 0 16px;}
+    .article-body h3{font-size:1.1rem;font-weight:700;color:var(--text);margin:28px 0 10px;}
+    .article-body p{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.8;margin-bottom:18px;}
+    .article-body ul,.article-body ol{padding-left:24px;margin-bottom:18px;display:flex;flex-direction:column;gap:10px;}
+    .article-body li{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.7;}
+    .article-body strong{color:var(--text);font-weight:700;}
+    .callout{background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.2);border-radius:14px;padding:24px 28px;margin:36px 0;}
+    .callout p{margin:0 0 12px;color:var(--text);}
+    .callout a{display:inline-flex;align-items:center;gap:6px;color:var(--primary);font-weight:700;font-size:0.9rem;}
+    .faq-section{max-width:740px;margin:0 auto;padding:0 24px 60px;}
+    .faq-section h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;margin-bottom:28px;}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.07);padding:20px 0;}
+    .faq-q{font-weight:700;font-size:0.95rem;margin-bottom:10px;color:var(--text);}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;}
+    .cta-band{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.06);text-align:center;padding:100px 0;}
+    .cta-band h2{font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+    .cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+    .footer-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
+    .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-top:12px;}
+    .footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:16px;}
+    .footer-col ul{display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;}
+    .footer-col a:hover{color:var(--primary);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+    .footer-copy{font-size:0.8rem;color:var(--muted);}
+    .footer-bl a{color:var(--primary);font-size:0.8rem;margin-left:16px;}
+    @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+    @media(max-width:560px){.footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+    #scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s,box-shadow 0.3s;border:none;}
+    #scroll-top.visible{opacity:1;transform:translateY(0);}
+    #scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);transform:translateY(-3px);}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Lumo<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="/contact.html" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get a Free Audit</a></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/services.html">Services</a>
+    <a href="/about.html">About</a>
+    <a href="/pricing.html">Pricing</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/contact.html">Get Started &rarr;</a>
+  </div>
+</nav>
+
+<main>
+  <section class="article-hero">
+    <div class="blob-wrap" aria-hidden="true">
+      <div class="blob blob-lime"></div>
+      <div class="blob blob-violet"></div>
+    </div>
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="container page-hero-inner">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span>&rsaquo;</span>
+        <a href="/blog/">Blog</a> <span>&rsaquo;</span>
+        <span>Strategy</span>
+      </nav>
+      <div class="article-meta">
+        <span class="article-cat cat-lime">Strategy</span>
+        <span class="article-date">May 15, 2026</span>
+        <span class="article-mins">10 min read</span>
+      </div>
+      <h1 style="font-family:'Berkshire Swash',serif;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.1;margin-bottom:24px;">CRM Setup Guide: <span style="color:var(--primary);">Build a Revenue Engine</span></h1>
+      <p style="font-size:1.15rem;color:var(--muted);max-width:680px;line-height:1.75;">A CRM that's adopted by the sales team and configured to reflect your actual sales process is a competitive advantage. Most CRMs are neither — they're glorified spreadsheets that sales reps avoid updating and managers can't trust for forecasting.</p>
+    </div>
+  </section>
+
+  <div class="article-body">
+
+    <h2>The Most Common CRM Setup Mistakes</h2>
+    <p>The most common CRM failure is over-configuration before adoption. Teams spend weeks building custom fields, complex automations, and elaborate reporting before a single deal has been logged — then wonder why reps don't use it. A CRM that requires 20 fields to create a deal will not be used consistently. One that requires 5 will be.</p>
+    <p>The second common mistake is configuring the CRM to reflect an ideal sales process rather than the actual one. Pipeline stages that don't match how deals actually progress create reps who either log deals incorrectly to make their numbers look better or don't log them at all. The CRM should reflect reality first, then be improved toward the ideal as behaviour changes.</p>
+    <p>The third mistake is treating the CRM implementation as an IT project rather than a sales leadership project. CRM adoption is a behaviour change. It requires buy-in from the people who will use it daily, clear explanation of what's in it for them (better forecasting, clearer next steps, automated admin), and consistent enforcement from management. Technology doesn't drive adoption — leadership does.</p>
+
+    <h2>Defining Pipeline Stages</h2>
+    <p>Pipeline stages should represent real buyer actions or signals, not internal sales activities. "Proposal sent" is a sales action, not a buyer stage — a better stage is "Proposal reviewed with prospect" because it requires confirmation of buyer engagement. "Demo scheduled" is a calendar action; "Technical evaluation" represents where the buyer actually is.</p>
+    <p>For most B2B businesses, 5–7 pipeline stages is the right number. Fewer than 5 and you lose granularity needed for accurate forecasting. More than 8 and reps struggle to correctly categorise deals, leading to inconsistent data. A standard structure: Lead → Qualified (ICP criteria met) → Discovery Complete → Proposal Out → Decision Pending → Closed Won/Lost. Adjust the labels to reflect your specific sales motion.</p>
+    <p>Each stage needs an entry criteria (what must be true to move a deal here) and an exit criteria (what action moves it forward). Without criteria, stage movement becomes subjective and your pipeline report becomes meaningless. Document criteria in the CRM as deal stage descriptions that reps can reference while logging activity.</p>
+
+    <h2>Required Fields vs. Optional — The Minimalism Principle</h2>
+    <p>Every required field in your CRM is a tax on adoption. Required fields that reps can't answer at the time of deal creation get filled with dummy data ("unknown," "TBD," or a placeholder date), which is worse than having no requirement because it pollutes your reporting with unreliable data.</p>
+    <p>The minimalist principle: make required only what's truly necessary to route, qualify, and report on deals. Typically this is: company name, contact name and email, deal source (how they came in), deal stage, and expected close date. Everything else — deal value, ICP classification, product fit score, budget confirmed — should be required at the point in the funnel where reps realistically have that information, not on deal creation.</p>
+    <p>Progressive field completion — requiring additional fields as deals advance to later stages — is a better pattern than front-loading requirements. Stage advancement triggers a prompt to complete the fields relevant to that stage, which is both more practical and more likely to produce accurate data.</p>
+
+    <h2>Workflow Automation Inside Your CRM</h2>
+    <p>The highest-value automations for a sales CRM are those that eliminate administrative work reps would otherwise do manually and that enforce process consistency without adding friction. Priority automations: auto-assign new leads to the correct rep based on territory, company size, or product interest; trigger a follow-up task when a deal has been in a stage for more than X days without activity; send an internal notification to the manager when a high-value deal advances to proposal stage; automatically log email and calendar activity from integrated inboxes.</p>
+    <p>Automations that add friction rather than reduce it are common mistakes. An automation that sends a personalised email on the rep's behalf without explicit opt-in, or that creates tasks the rep has to dismiss to continue working, increases CRM avoidance rather than adoption. Automations should save time, not create new administrative obligations.</p>
+    <p>Build automations incrementally. Start with the two or three highest-impact automation workflows, let the team adapt to them, then add more. A CRM with 50 automations that no one understands is as dysfunctional as one with none.</p>
+
+    <h2>CRM-to-Marketing Integration: Lead Scoring, Attribution, and Nurture Triggers</h2>
+    <p>The integration between your CRM and marketing automation platform is where revenue operations creates its most significant value. A bidirectional integration enables: contact activity in the CRM (deal stage changes, call notes, close dates) to update marketing segments in real time; marketing engagement data (email opens, content downloads, page visits) to flow into the CRM and update lead scores; and CRM outcomes (closed-won deals) to flow back into marketing platforms for attribution reporting and lookalike audience building.</p>
+    <p>Lead scoring — assigning point values to contact attributes and behaviours that correlate with purchase readiness — works best when it's calibrated to actual conversion data. Start by analysing your last 50–100 closed-won customers and identifying what marketing actions and firmographic characteristics they had in common. Build lead score rules based on those patterns, implement them, and refine quarterly as you accumulate more conversion data.</p>
+    <p>Nurture triggers are automations that enrol contacts in marketing sequences based on CRM events. A deal marked "Closed Lost — revisit in 90 days" should automatically add the contact to a re-engagement sequence. A contact whose deal stage goes backward should trigger a check-in from marketing. A newly qualified lead who hasn't responded to sales in 5 days should enter a sales-assist nurture sequence. These triggers require a clean, trusted integration — which is why CRM data quality is the prerequisite for effective marketing automation.</p>
+
+
+    <div class="callout">
+      <p>Ready to put these insights into action? Lumo&rsquo;s team builds and manages <strong>CRM Setup</strong> strategies for growth-stage businesses.</p>
+      <a href="/services/crm-setup.html">Explore CRM Setup &rarr;</a>
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">HubSpot vs Salesforce: which CRM should I start with?</div>
+        <div class="faq-a">HubSpot is significantly easier to implement and maintain for teams under 50 people, and its native marketing-to-CRM integration is unmatched for companies running HubSpot Marketing Hub. Salesforce offers superior customisation, reporting depth, and enterprise integration capabilities, but requires dedicated CRM admin resources to maintain effectively. Start with HubSpot and migrate to Salesforce when you outgrow it — most businesses don't outgrow HubSpot until well past $20M ARR.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does a proper CRM implementation take?</div>
+        <div class="faq-a">A foundational CRM setup — pipeline configuration, required fields, basic automations, and team training — takes 4–6 weeks for most SMBs. Advanced configuration including lead scoring, marketing integration, and custom reporting takes an additional 4–8 weeks. Building adoption (actually getting reps to log consistently) takes 3–6 months of management reinforcement after the technical setup is complete.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the best way to get sales reps to actually use the CRM?</div>
+        <div class="faq-a">Three things work: make the CRM the single source of truth for forecasting (so managers only discuss pipeline from CRM data, incentivising reps to keep it current); reduce the friction of logging (mobile app for on-the-go entry, email/calendar integration that auto-logs activity); and show reps what's in it for them — better pipeline visibility, automated reminders, and access to customer history that helps them sell. Top-down enforcement without demonstrated value produces compliance without adoption.</div>
+      </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to <span style="color:var(--primary);">Grow Faster?</span></h2>
+      <p>Book a free strategy call and we&rsquo;ll map out exactly which channels will move the needle for your business.</p>
+      <div class="cta-btns">
+        <a href="/contact.html" class="btn btn-lime">Get Free Proposal &rarr;</a>
+        <a href="/services/crm-setup.html" class="btn btn-ghost">Learn About CRM Setup</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:16px;display:block;">Lumo<span>.</span></a>
+        <p>Austin&rsquo;s AI-powered marketing agency. SEO, paid ads, AI automation &amp; growth strategy built for the future.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/seo.html">SEO &amp; Content</a></li>
+          <li><a href="/services/geo.html">GEO &amp; AI Search</a></li>
+          <li><a href="/services/google-ads.html">Google Ads</a></li>
+          <li><a href="/services/meta-ads.html">Meta Ads</a></li>
+          <li><a href="/services/ai-automations.html">AI Automations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Lumo AI Agency. All rights reserved.</span>
+      <div class="footer-bl">
+        <a href="/privacy-policy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+
+<script>
+(function(){
+  var nb=document.getElementById('navbar');
+  var hb=document.getElementById('hamburger');
+  var mm=document.getElementById('mobile-menu');
+  var open=false;
+  window.addEventListener('scroll',function(){nb.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
+  hb.addEventListener('click',function(){open=!open;mm.classList.toggle('open',open);hb.setAttribute('aria-expanded',String(open));});
+  mm.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){open=false;mm.classList.remove('open');hb.setAttribute('aria-expanded','false');});});
+  var st=document.getElementById('scroll-top');
+  window.addEventListener('scroll',function(){st.classList.toggle('visible',window.scrollY>400);},{passive:true});
+  st.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+
+</body>
+</html>

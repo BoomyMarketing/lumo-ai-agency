@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Retargeting Strategy: How to Re-Engage the 97% Who Don't Convert | Lumo AI Agency</title>
+  <meta name="description" content="97% of visitors leave without converting. A multi-platform retargeting strategy brings them back — here's how to structure audiences, choose platforms, create effective sequences, and avoid ad fatigue."/>
+  <link rel="canonical" href="https://lumoaiagency.com/blog/retargeting-strategy/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+:root{--bg:#0D0D14;--bg-card:#13131F;--bg-dark:#09090F;--primary:#B3FF00;--primary-dim:rgba(179,255,0,0.08);--secondary:#7C3AED;--accent:#00F5FF;--text:#F0F0FF;--muted:#6B7280;--border:rgba(179,255,0,0.15);--radius-sm:8px;--radius:14px;--radius-lg:20px;--transition:0.25s cubic-bezier(0.4,0,0.2,1);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.15;}a{color:inherit;text-decoration:none;}ul{list-style:none;}button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:700;font-size:0.95rem;letter-spacing:0.02em;transition:var(--transition);white-space:nowrap;}
+.btn-lime{background:var(--primary);color:#0D0D14;}.btn-lime:hover{background:#c8ff26;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,255,0,0.45);}
+.btn-ghost{background:transparent;color:var(--text);border:1.5px solid rgba(240,240,255,0.2);}.btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+#navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s,border-color 0.3s;}
+#navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px;}
+.nav-logo{font-family:'Berkshire Swash',serif;font-size:1.6rem;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);}
+.nav-links a:hover{color:var(--primary);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;padding:8px;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;}
+.mobile-menu{display:none;flex-direction:column;background:rgba(13,13,20,0.98);border-top:1px solid var(--border);padding:8px 24px 16px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--muted);font-size:0.95rem;transition:color var(--transition);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--primary);}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}}
+.page-hero{padding:140px 0 60px;position:relative;overflow:hidden;}
+.blob-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);}
+.blob-lime{width:500px;height:500px;background:radial-gradient(circle,rgba(179,255,0,0.18) 0%,transparent 70%);top:-80px;left:-80px;animation:drift-a 18s ease-in-out infinite;}
+.blob-violet{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%);bottom:0;right:-60px;animation:drift-b 22s ease-in-out infinite;}
+@keyframes drift-a{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(60px,50px) scale(1.08);}}
+@keyframes drift-b{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,-40px) scale(1.06);}}
+.hero-noise{position:absolute;inset:0;background-image:linear-gradient(rgba(179,255,0,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(179,255,0,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+.page-hero-inner{position:relative;z-index:2;}
+.article-breadcrumb{font-size:0.78rem;color:var(--muted);margin-bottom:20px;display:flex;gap:8px;align-items:center;}
+.article-breadcrumb a:hover{color:var(--primary);}
+.article-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;flex-wrap:wrap;}
+.article-cat{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+.cat-cyan{background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);color:var(--accent);}
+.cat-lime{background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.25);color:var(--primary);}
+.article-date,.article-mins{font-size:0.8rem;color:var(--muted);}
+.article-body{max-width:740px;margin:0 auto;padding:60px 24px 100px;}
+.article-body h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;color:var(--text);margin:48px 0 16px;}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--text);margin:28px 0 10px;}
+.article-body p{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.8;margin-bottom:18px;}
+.article-body ul,.article-body ol{padding-left:24px;margin-bottom:18px;display:flex;flex-direction:column;gap:10px;}
+.article-body li{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.7;}
+.article-body strong{color:var(--text);font-weight:700;}
+.callout{background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.2);border-radius:14px;padding:24px 28px;margin:36px 0;}
+.callout p{margin:0 0 12px;color:var(--text);font-weight:600;}
+.callout a{color:var(--primary);font-weight:700;font-size:0.9rem;}
+.faq-section{max-width:740px;margin:0 auto;padding:0 24px 60px;}
+.faq-section h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;margin-bottom:28px;}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.07);padding:20px 0;}
+.faq-q{font-weight:700;font-size:0.95rem;margin-bottom:10px;color:var(--text);}
+.faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;}
+.cta-band{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.06);text-align:center;padding:100px 0;}
+.cta-band h2{font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+.cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+.footer-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:20px;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px;}
+.footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;}
+.footer-col a:hover{color:var(--primary);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:0.8rem;color:var(--muted);}
+.footer-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--muted);background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.12);padding:5px 12px;border-radius:50px;}
+.footer-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--primary);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+#scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s;border:none;}
+#scroll-top.visible{opacity:1;transform:translateY(0);}
+#scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Lumo<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="/contact.html" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get a Free Audit</a></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/services.html">Services</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/contact.html">Contact</a><a href="/contact.html">Get Started &rarr;</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="blob-wrap">
+    <div class="blob blob-lime"></div>
+    <div class="blob blob-violet"></div>
+    <div class="hero-noise"></div>
+  </div>
+  <div class="container page-hero-inner">
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>Retargeting Strategy: How to Re-Engage the 97% Who Don't Convert</span>
+    </nav>
+    <div class="article-meta">
+      <span class="article-cat cat-cyan">Paid Advertising</span>
+      <span class="article-date">May 14, 2026</span>
+      <span class="article-mins">9 min read</span>
+    </div>
+    <h1 style="font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4.5vw,3.2rem);max-width:820px;margin-bottom:24px;">Retargeting Strategy: <span style="color:var(--accent);">Re-Engage the 97% Who Don't Convert</span></h1>
+    <p style="font-size:1.1rem;color:rgba(240,240,255,0.7);max-width:680px;line-height:1.75;">The average website conversion rate is 2–3%. That means 97% of people who found your site, considered your offer, and left are now addressable through retargeting — and they convert at 10x the rate of cold audiences. The question isn't whether to retarget, it's how to structure it.</p>
+  </div>
+</section>
+
+<article class="article-body">
+
+<h2>How Retargeting Works</h2>
+<p>Retargeting works by placing a small piece of code (a pixel or tag) on your website that fires when a user visits. This tag drops a cookie in the user's browser and records the visit in the ad platform's database. When that user later browses other websites, watches YouTube, scrolls Instagram, or searches Google, the ad platform recognises them and serves your ad.</p>
+<p>Each major platform has its own tracking mechanism: <strong>Meta Pixel</strong> (plus Conversions API for server-side), <strong>Google Tag</strong> (for Google Ads remarketing lists), <strong>LinkedIn Insight Tag</strong> (for LinkedIn website retargeting), and <strong>TikTok Pixel</strong>. Install all that are relevant to your advertising platforms as early as possible — audience pools build over time, and you can't retroactively add people who visited before the pixel was installed.</p>
+<p>Privacy changes have meaningfully reduced retargeting effectiveness over the past few years. <strong>Apple's ITP</strong> limits cookie lifetime to 7 days on Safari (limiting the window for retargeting). <strong>iOS 14+ App Tracking Transparency</strong> requires user opt-in for tracking on iOS apps, reducing Meta's and other platforms' ability to track actions across apps and websites. <strong>Cookie consent tools</strong> (required under GDPR and increasingly under US state privacy laws) reduce the percentage of visitors who are tracked when they decline consent.</p>
+<p>The practical impact: your retargeting audience pools are typically <strong>60–70% of what they would have been in 2020</strong>. First-party data (email lists, CRM data) has become far more valuable as a retargeting seed because it isn't affected by browser privacy changes — it works through customer list uploads and hashed email matching.</p>
+
+<h2>Segmenting Your Retargeting Audiences by Intent</h2>
+<p>Not all website visitors are equal. The most important structural decision in retargeting is <strong>segmenting your audience pools by behavioural intent signals</strong>, then serving different ads and offers to each segment. Running one giant "all visitors" retargeting campaign is leaving most of the value on the table.</p>
+<ul>
+  <li><strong>All visitors (last 30 days)</strong> — broadest pool, lowest average intent. Best for brand recall ads: lighter creative, social proof content, educational value. CPMs are typically low here. Don't oversell; most of this audience is still in early consideration.</li>
+  <li><strong>Specific page visitors</strong> — people who visited a specific service page, product category, or pricing page. Significantly higher intent than general visitors. Serve ads referencing the specific thing they looked at. A visitor to your "Enterprise SEO" page should see ads about enterprise SEO, not your generic homepage messaging.</li>
+  <li><strong>Video viewers (50%+ completion)</strong> — people who've demonstrated engagement with your content. Warmer than page visitors who bounced after 10 seconds. Serve more consideration-stage content: testimonials, detailed comparisons, specific case studies.</li>
+  <li><strong>Email subscribers and CRM contacts</strong> — highest-quality first-party data audience. Upload customer and prospect lists and match via hashed email. These people are already in your funnel; serve them content that accelerates the purchase decision rather than re-introducing your brand.</li>
+  <li><strong>Cart abandoners and form starters</strong> — the highest-intent non-converters. Someone who put items in a cart or started filling out a contact form and then left is very close to conversion. Serve urgency-creating ads: reminder of what they left, limited-time offer, social proof that removes final objections.</li>
+</ul>
+
+<h2>Platform Strategy</h2>
+<p>Retargeting across multiple platforms simultaneously can feel like comprehensive coverage, but with limited budgets it fragments your audience pools too thinly to gather optimisation data. <strong>Prioritise platforms by where your customer actually spends time</strong>:</p>
+<ul>
+  <li><strong>Meta (Facebook and Instagram)</strong> — the largest reach for retargeting of any single platform. Dynamic Product Ads (DPA) automatically serve the exact product a visitor viewed, making them essential for e-commerce retargeting with catalogs. Meta's retargeting is best for B2C, e-commerce, and consumer services. Strong for cart abandoner recovery campaigns.</li>
+  <li><strong>Google Display Network</strong> — CPMs are generally lower than Meta, and Display reaches users across millions of websites and apps (including YouTube). Less precise targeting but excellent for brand recall at scale. Particularly effective for B2B companies where buyers do research across many industry websites.</li>
+  <li><strong>LinkedIn</strong> — for B2B companies, LinkedIn retargeting of pricing page and case study visitors is extremely high-value. Reaching a VP who visited your enterprise software pricing page with a case study from their industry converts at exceptional rates. CPMs are high, so reserve for your highest-intent B2B audience segments.</li>
+  <li><strong>Programmatic retargeting</strong> — via DSPs (demand-side platforms) gives access to a wider inventory pool at potentially lower CPMs for large audience pools. Best suited for brands with 50,000+ monthly visitors where audience pool size supports programmatic buying.</li>
+</ul>
+
+<h2>Creative and Offer Strategy Per Segment</h2>
+<p>The creative and offer you show each retargeting segment should match where they are in the decision process. Using the same ad for a cart abandoner and a one-time homepage visitor is a strategic error:</p>
+<ul>
+  <li><strong>Cold visitors (homepage, blog, early-stage content)</strong> — focus on building trust, not closing. Customer reviews, media logos ("As seen in"), statistics about results, educational content. The goal is to move them to the next consideration stage, not to generate an immediate conversion.</li>
+  <li><strong>Product or service page visitors</strong> — serve creative that references what they looked at specifically. If Meta DPA is an option (e-commerce with catalog), let the algorithm serve the exact product. Otherwise, create audience-specific ads: "Still thinking about [service]? Here's what clients say."</li>
+  <li><strong>Pricing page visitors</strong> — this audience has done enough research to look at pricing. They need final objection removal: strong testimonials, a specific ROI claim, a risk-reversal offer (free trial, money-back guarantee, free audit). Urgency messaging can work here if genuine (seasonal offer, limited spots).</li>
+  <li><strong>Cart abandoners / form starters</strong> — direct, specific, action-oriented. "You left something behind." Show the exact product. Offer a small incentive if margin allows (free shipping, 10% off). Create urgency with stock messaging or a time-limited offer. This is the segment where every dollar of retargeting spend has the highest return.</li>
+</ul>
+
+<h2>Frequency Caps and Avoiding Ad Fatigue</h2>
+<p>Retargeting's biggest failure mode is oversaturation — showing the same ads to the same small audience so frequently that they start generating negative sentiment rather than conversions. The symptoms are unmistakable: <strong>CPM increases</strong> (the platform charges more as your audience fatigues), <strong>CTR drops</strong> (people are tuning out your ads), and in worst cases, <strong>negative comments on your ads</strong> ("I'm seeing this everywhere, please stop.").</p>
+<p>Recommended frequency caps by platform: <strong>Meta: 2–3 impressions per person per week</strong> for warm audiences; <strong>LinkedIn: 1–2 impressions per week</strong> for your typically small B2B retargeting pools; <strong>Google Display: 5–7 impressions per week</strong> due to lower CPMs and the expectation of more passive browsing exposure.</p>
+<p>Creative refresh cadence is the most important lever for fighting fatigue: <strong>plan for new creative every 3–4 weeks</strong> for your most active retargeting audiences. This doesn't necessarily mean new concepts — different angles on the same offer (different testimonial, different visual, different headline) are sufficient to reset fatigue. Track your ad frequency metrics weekly, and flag any audience segment averaging above 3 impressions per week on Meta as a priority for immediate creative refresh or audience refresh.</p>
+<p>Finally, always maintain <strong>conversion exclusion lists</strong>: exclude anyone who has converted in the past 30 days from your standard retargeting campaigns. Showing acquisition ads to recent buyers is wasteful and creates a negative brand experience. Converted buyers can be moved to separate post-purchase campaigns with upsell, referral, or loyalty messaging.</p>
+
+<div class="callout">
+  <p>Lumo AI Agency builds structured retargeting systems across Meta, Google, and LinkedIn — with audience segmentation, creative frameworks, and frequency management built in from day one.</p>
+  <a href="/services/retargeting.html">Explore our Retargeting service &rarr;</a>
+</div>
+
+</article>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  
+    <div class="faq-item">
+      <div class="faq-q">How large does my retargeting audience need to be before it's worth running?</div>
+      <div class="faq-a">Meta requires a minimum of 1,000 people in a custom audience to serve ads. Practically, you need 5,000+ monthly website visitors to build meaningful segmented retargeting pools. For smaller sites, email list uploads (customer match) can supplement thin pixel audiences. LinkedIn retargeting is viable with 300+ matched members, but 1,000+ is where performance becomes stable.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Does retargeting still work after iOS 14 and cookie changes?</div>
+      <div class="faq-a">Yes, but audience pools are 30–40% smaller than pre-2021 baselines for browser-based tracking. The solution is first-party data: email list uploads and CRM matching are not affected by iOS privacy changes or cookie deprecation. Invest in growing your email list (and using it as a retargeting seed) and implement server-side tracking (Conversions API, GTM server-side) to recover conversion signal quality.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What's the right retargeting window — 7 days, 30 days, or 180 days?</div>
+      <div class="faq-a">Use tiered windows based on your sales cycle length. For impulse e-commerce (under $100): 7–14 day windows with urgency creative. For considered purchases ($100–$1,000): 30–60 day windows. For B2B with long sales cycles: 90–180 day windows with educational content sequences. The longer the window, the less warm the audience — adjust creative and offer intensity accordingly.</div>
+    </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Scale with <span style="color:var(--primary);">Retargeting?</span></h2>
+    <p>Lumo AI Agency builds data-driven paid advertising campaigns that maximize your ROI. Let's find out what's possible for your business.</p>
+    <div class="cta-btns">
+      <a href="/contact.html" class="btn btn-lime">Get a Free Audit</a>
+      <a href="/services/retargeting.html" class="btn btn-ghost">Learn About Retargeting</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="nav-logo" style="font-family:'Berkshire Swash',serif;font-size:1.5rem;color:var(--primary);margin-bottom:12px;">Lumo<span>.</span></div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;max-width:220px;">Austin's AI-powered marketing agency helping brands grow with paid ads, SEO, and intelligent automation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/seo.html">SEO</a></li>
+          <li><a href="/services/geo.html">GEO / AI Search</a></li>
+          <li><a href="/services/google-ads.html">Google Ads</a></li>
+          <li><a href="/services/meta-ads.html">Meta Ads</a></li>
+          <li><a href="/services/ai-automations.html">AI Automations</a></li>
+          <li><a href="/services.html">All Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lumo AI Agency. All rights reserved.</p>
+      <div class="footer-badge"><span class="footer-badge-dot"></span>Serving clients across the US</div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Back to top">&#8593;</button>
+
+
+<script>
+(function(){
+  var ham = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  if(ham && menu){
+    ham.addEventListener('click', function(){
+      menu.classList.toggle('open');
+    });
+  }
+  var nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 40){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    var st = document.getElementById('scroll-top');
+    if(st){ if(window.scrollY > 400){ st.classList.add('visible'); } else { st.classList.remove('visible'); } }
+  });
+  var st = document.getElementById('scroll-top');
+  if(st){ st.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); }); }
+})();
+</script>
+
+</body>
+</html>

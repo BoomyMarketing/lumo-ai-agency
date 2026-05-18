@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ten practical AI-powered marketing automations — eliminate manual work, scale pipeline, and cut costs without adding headcount. Built with n8n, Make, Zapier, and custom Python integrations." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Lumo AI Agency" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="10 AI Marketing Automations Every Business Should Build in 2026 | Lumo AI Agency" />
+  <meta property="og:description" content="Ten practical AI-powered marketing automations — eliminate manual work, scale pipeline, and cut costs without adding headcount. Built with n8n, Make, Zapier, and custom Python integrations." />
+  <meta property="og:url" content="https://lumoaiagency.com/blog/ai-marketing-automations/" />
+  <meta property="og:image" content="https://lumoaiagency.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://lumoaiagency.com/blog/ai-marketing-automations/" />
+  <title>10 AI Marketing Automations Every Business Should Build in 2026 | Lumo AI Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": '10 AI Marketing Automations Every Business Should Build in 2026',
+      "description": 'Ten practical AI-powered marketing automations — eliminate manual work, scale pipeline, and cut costs without adding headcount. Built with n8n, Make, Zapier, and custom Python integrations.',
+      "datePublished": "2026-05-15",
+      "dateModified": "2026-05-15",
+      "author": {"@type": "Organization", "name": "Lumo AI Agency", "url": "https://lumoaiagency.com"},
+      "publisher": {"@type": "Organization", "name": "Lumo AI Agency", "url": "https://lumoaiagency.com"},
+      "url": "https://lumoaiagency.com/blog/ai-marketing-automations/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://lumoaiagency.com/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://lumoaiagency.com/blog/"},
+        {"@type":"ListItem","position":3,"name":'10 AI Marketing Automations Every Business Should Build in 2026',"item":"https://lumoaiagency.com/blog/ai-marketing-automations/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+      {"@type":"Question","name":'Do I need a developer to implement these automations?',"acceptedAnswer":{"@type":"Answer","text":"For most of the automations on this list, no. Tools like Make, Zapier, and n8n (with its visual interface) handle the majority of use cases without writing code. You'll want developer support for custom AI integrations, complex data transformations, or building proprietary scoring models — but the entry-level versions of most automations are accessible to non-technical marketers."}},
+      {"@type":"Question","name":"What's the typical ROI on marketing automation?","acceptedAnswer":{"@type":"Answer","text":'ROI varies by automation and business model, but time savings are the most consistent return. Most teams recapture 5–15 hours per week once a full automation stack is running. Lead enrichment and scoring typically improve sales conversion rates by 15–25% by ensuring reps prioritise the right leads. Review automation routinely 3–5x review volume, which has measurable impact on local SEO and conversion rates.'}},
+      {"@type":"Question","name":'How do I prevent automations from sending incorrect or embarrassing content?',"acceptedAnswer":{"@type":"Answer","text":'Human review checkpoints are essential, especially for AI-generated content. Build your automations so that AI-drafted content — emails, social posts, reports — lands in a review queue before sending, at least initially. As you build confidence in output quality for specific use cases, you can remove the review step for low-stakes outputs (like internal Slack summaries) while maintaining it for customer-facing content.'}}
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root{--bg:#0D0D14;--bg-card:#13131F;--bg-dark:#09090F;--primary:#B3FF00;--secondary:#7C3AED;--accent:#00F5FF;--text:#F0F0FF;--muted:#6B7280;--border:rgba(179,255,0,0.15);--radius:14px;--radius-lg:20px;--transition:0.25s cubic-bezier(0.4,0,0.2,1);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+    h1,h2,h3,h4{line-height:1.15;}
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;height:auto;display:block;}
+    button{font-family:inherit;cursor:pointer;border:none;background:none;}
+    ul{list-style:none;}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:700;font-size:0.95rem;letter-spacing:0.02em;transition:var(--transition);white-space:nowrap;}
+    .btn-lime{background:var(--primary);color:#0D0D14;}
+    .btn-lime:hover{background:#c8ff26;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,255,0,0.45);}
+    .btn-ghost{background:transparent;color:var(--text);border:1.5px solid rgba(240,240,255,0.2);}
+    .btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+    #navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s,border-color 0.3s;}
+    #navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px;}
+    .nav-logo{font-family:'Berkshire Swash',serif;font-size:1.6rem;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
+    .nav-logo span{color:var(--primary);}
+    .nav-links{display:flex;align-items:center;gap:36px;}
+    .nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);letter-spacing:0.02em;}
+    .nav-links a:hover{color:var(--primary);}
+    .nav-cta{display:flex;align-items:center;gap:16px;}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;}
+    .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition);}
+    .mobile-menu{display:none;flex-direction:column;gap:0;background:rgba(13,13,20,0.98);border-top:1px solid var(--border);padding:8px 24px 16px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--muted);font-size:0.95rem;font-weight:500;transition:color var(--transition);}
+    .mobile-menu a:last-child{border-bottom:none;}
+    .mobile-menu a:hover{color:var(--primary);}
+    @media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}}
+    .page-hero{padding:140px 0 60px;position:relative;overflow:hidden;}
+    .blob-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+    .blob{position:absolute;border-radius:50%;filter:blur(80px);}
+    .blob-lime{width:500px;height:500px;background:radial-gradient(circle,rgba(179,255,0,0.18) 0%,transparent 70%);top:-80px;left:-80px;animation:drift-a 18s ease-in-out infinite alternate;}
+    .blob-violet{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%);bottom:0;right:-60px;animation:drift-b 22s ease-in-out infinite alternate;}
+    @keyframes drift-a{0%{transform:translate(0,0) scale(1);}100%{transform:translate(40px,30px) scale(1.08);}}
+    @keyframes drift-b{0%{transform:translate(0,0) scale(1);}100%{transform:translate(-30px,-20px) scale(1.06);}}
+    .hero-noise{position:absolute;inset:0;background-image:linear-gradient(rgba(179,255,0,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(179,255,0,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+    .page-hero-inner{position:relative;z-index:2;}
+    .section-eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);margin-bottom:14px;}
+    .article-breadcrumb{font-size:0.78rem;color:var(--muted);margin-bottom:20px;display:flex;gap:8px;align-items:center;}
+    .article-breadcrumb a{color:var(--muted);}
+    .article-breadcrumb a:hover{color:var(--primary);}
+    .article-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;flex-wrap:wrap;}
+    .article-cat{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+    .cat-lime{background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.25);color:var(--primary);}
+    .cat-violet{background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.3);color:var(--secondary);}
+    .cat-cyan{background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);color:var(--accent);}
+    .article-date,.article-mins{font-size:0.8rem;color:var(--muted);}
+    .article-body{max-width:740px;margin:0 auto;padding:60px 24px 100px;}
+    .article-body h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;color:var(--text);margin:48px 0 16px;}
+    .article-body h3{font-size:1.1rem;font-weight:700;color:var(--text);margin:28px 0 10px;}
+    .article-body p{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.8;margin-bottom:18px;}
+    .article-body ul,.article-body ol{padding-left:24px;margin-bottom:18px;display:flex;flex-direction:column;gap:10px;}
+    .article-body li{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.7;}
+    .article-body strong{color:var(--text);font-weight:700;}
+    .callout{background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.2);border-radius:14px;padding:24px 28px;margin:36px 0;}
+    .callout p{margin:0 0 12px;color:var(--text);}
+    .callout a{display:inline-flex;align-items:center;gap:6px;color:var(--primary);font-weight:700;font-size:0.9rem;}
+    .callout a:hover{text-decoration:underline;}
+    .faq-section{max-width:740px;margin:0 auto;padding:0 24px 60px;}
+    .faq-section h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;margin-bottom:28px;}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.07);padding:20px 0;}
+    .faq-q{font-weight:700;font-size:0.95rem;margin-bottom:10px;color:var(--text);}
+    .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;}
+    .cta-band{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.06);text-align:center;padding:100px 0;}
+    .cta-band h2{font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+    .cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+    footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+    .footer-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
+    .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-top:12px;}
+    .footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:16px;}
+    .footer-col ul{display:flex;flex-direction:column;gap:10px;}
+    .footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;}
+    .footer-col a:hover{color:var(--primary);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+    .footer-copy{font-size:0.8rem;color:var(--muted);}
+    .footer-bl a{color:var(--primary);font-size:0.8rem;margin-left:16px;}
+    @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+    @media(max-width:560px){.footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+    #scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s,box-shadow 0.3s;border:none;}
+    #scroll-top.visible{opacity:1;transform:translateY(0);}
+    #scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);transform:translateY(-3px);}
+    @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.4;}}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Lumo<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="/contact.html" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get a Free Audit</a></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/services.html">Services</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/contact.html">Contact</a><a href="/contact.html">Get Started &rarr;</a>
+  </div>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="blob-wrap" aria-hidden="true">
+      <div class="blob blob-lime"></div>
+      <div class="blob blob-violet"></div>
+    </div>
+    <div class="hero-noise" aria-hidden="true"></div>
+    <div class="container page-hero-inner">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> <span>&rsaquo;</span>
+        <a href="/blog/">Blog</a> <span>&rsaquo;</span>
+        <span>AI & GEO</span>
+      </nav>
+      <div class="article-meta">
+        <span class="article-cat cat-lime">AI & GEO</span>
+        <span class="article-date">May 15, 2026</span>
+        <span class="article-mins">11 min read</span>
+      </div>
+      <h1 style="font-family:'Berkshire Swash',serif;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.1;margin-bottom:24px;">10 AI Marketing Automations <span style="color:var(--primary);">Every Business Should Build</span></h1>
+      <p style="font-size:1.15rem;color:var(--muted);max-width:680px;line-height:1.75;">The average marketing team loses 40% of its time to tasks that AI can automate. Here are ten proven automations that eliminate manual overhead and compound your team's output.</p>
+    </div>
+  </section>
+
+  <div class="article-body">
+
+    <p>The average marketing team spends 40% of its time on tasks that could be automated: data entry, report pulling, lead routing, content reformatting, meeting follow-ups. AI marketing automation doesn't replace strategy or creativity — it eliminates the repetitive overhead that prevents your team from doing the work that actually moves revenue. Here are ten automations that deliver measurable ROI for most businesses in 2026.</p>
+
+    <h2>The 10 Automations</h2>
+    <ol style="list-style:decimal;padding-left:24px;display:flex;flex-direction:column;gap:20px;">
+      <li><strong>Lead Enrichment on Form Submission.</strong> When a prospect fills out a contact form, an automation immediately pulls their LinkedIn profile, company size, tech stack, funding status, and industry from data APIs (Clearbit, Apollo, Hunter). By the time your sales rep opens the CRM record, the lead is already enriched with context — no manual research required. This alone can save 15–20 minutes per lead and dramatically improve first-call quality.</li>
+      <li><strong>AI-Powered Lead Scoring.</strong> Not all inbound leads deserve equal attention. An AI scoring automation evaluates each new lead against your ideal customer profile in real time — factoring in company size, industry, behaviour on your site, email engagement, and intent signals — and assigns a score that determines routing priority. High-fit leads go to senior reps immediately; low-fit leads enter a nurture sequence. Response times to hot leads drop from hours to minutes.</li>
+      <li><strong>Automated Competitor Monitoring.</strong> Set up a daily pipeline that tracks competitor ad spend (via SpyFu/SimilarWeb APIs), SERP rankings for target keywords, pricing page changes, and new content publication. Every morning, a digest lands in your Slack channel summarising what changed. No one has to manually check competitor sites — your team sees actionable intelligence without the busywork.</li>
+      <li><strong>Content Repurposing Pipeline.</strong> Every long-form blog post you publish gets automatically transformed: an AI rewrites it as three LinkedIn posts, a Twitter/X thread, a five-email nurture sequence, and a short-form video script. The output lands in a review folder for a human editor to polish and approve. One piece of content becomes seven, at a fraction of the time and cost of manual repurposing.</li>
+      <li><strong>Review Request Automation.</strong> Triggered by purchase completion, project delivery, or service milestones, this automation sends a personalised review request at the exact moment a customer's satisfaction is highest. It sequences across email and SMS, handles non-responders with a single follow-up, and routes negative feedback to customer success before it becomes a public review. Brands using this consistently see Google review counts increase 3–5x within 90 days.</li>
+      <li><strong>AI Meeting Notes to CRM.</strong> After every sales or customer call, an AI transcription tool (Fireflies, Otter, Grain) generates a structured summary, extracts action items, identifies objections raised, and updates the relevant CRM record automatically. Follow-up emails are drafted and queued for human approval. Reps spend zero time on post-call admin — that time goes back into selling.</li>
+      <li><strong>Dynamic Email Personalisation.</strong> Mass email is dead; personalised sequences at scale are very much alive. An AI automation reads each recipient's CRM data — their industry, role, company size, previous interactions, and stated pain points — and writes a personalised opening paragraph for every email before sending. The personalisation is subtle but effective: open rates typically improve 20–35% compared to generic broadcasts.</li>
+      <li><strong>Ad Creative Testing Pipeline.</strong> Feed your brand guidelines and campaign brief to an AI that generates 15–20 ad copy and headline variants. The automation launches all variants simultaneously in a low-budget test phase, monitors performance daily, automatically pauses underperforming variants at statistically significant thresholds, and scales budget to winners. Creative testing that used to take a media buyer two weeks now runs continuously in the background.</li>
+      <li><strong>Churn Risk Detection.</strong> This automation monitors customer health signals — login frequency, feature usage, support ticket volume, NPS scores, contract renewal dates — and computes a churn risk score for every account weekly. Accounts crossing a risk threshold automatically trigger an intervention: a customer success outreach task, a personalised check-in email, or a discount offer depending on the risk level. Catching churn early is dramatically cheaper than winning customers back.</li>
+      <li><strong>Reporting Aggregation.</strong> Instead of a team member spending four hours every Monday pulling data from Google Ads, Meta Ads, GA4, HubSpot, and your e-commerce platform, an automation does it overnight. By 8 AM, an executive dashboard is updated and a plain-language summary — written by AI from the data — lands in the relevant Slack channels. Everyone starts the week with current numbers and no one wasted time building the report.</li>
+    </ol>
+
+    <h2>How to Prioritise Which Automations to Build First</h2>
+    <p>Not all automations deliver equal value, and building all ten at once is a recipe for none of them working well. Use a simple impact vs. complexity matrix to sequence your roadmap. Plot each automation on two axes: estimated time saved per week (or revenue impact) on the vertical axis, and implementation complexity on the horizontal axis. The automations in the top-left quadrant — high impact, low complexity — are your first sprint.</p>
+    <p>For most businesses, lead enrichment, meeting notes to CRM, and review request automation fall into this quadrant. They're technically straightforward (most require just a Zapier or Make workflow connecting two or three tools), and they produce visible, measurable results within weeks. More complex automations — churn risk detection, dynamic email personalisation at scale — belong in a later sprint once your team has confidence in the infrastructure and processes to monitor them.</p>
+
+    <h2>The Technology Stack Behind AI Marketing Automation</h2>
+    <p><strong>n8n</strong> is the open-source workflow automation platform we recommend for teams that want full control and data privacy. It runs self-hosted, connects to hundreds of services via native integrations, and handles complex, branching workflows that tools like Zapier can't support. <strong>Make</strong> (formerly Integromat) is the best no-code option for teams without developer resources — its visual workflow builder is intuitive and powerful for most marketing automation use cases. <strong>Zapier</strong> remains the simplest entry point, ideal for straightforward trigger-action workflows between popular tools.</p>
+    <p>For more sophisticated AI integrations — custom scoring models, content generation at scale, or anything requiring fine-tuned outputs — <strong>Python scripts</strong> connected to the <strong>OpenAI API</strong> or <strong>Anthropic API</strong> provide the flexibility that no-code tools can't match. The best automation stacks in 2026 combine these layers: no-code tools for speed, custom code for complexity, and a central data layer (usually a CRM or data warehouse) that connects everything.</p>
+
+    <div class="callout">
+      <p>Lumo's AI automation service designs, builds, and maintains marketing automation stacks tailored to your business — so you get the benefits without the integration headaches.</p>
+      <a href="/services/ai-automations.html">Explore our AI Automations service &rarr;</a>
+    </div>
+
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">Do I need a developer to implement these automations?</div>
+        <div class="faq-a">For most of the automations on this list, no. Tools like Make, Zapier, and n8n (with its visual interface) handle the majority of use cases without writing code. You'll want developer support for custom AI integrations, complex data transformations, or building proprietary scoring models — but the entry-level versions of most automations are accessible to non-technical marketers.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the typical ROI on marketing automation?</div>
+        <div class="faq-a">ROI varies by automation and business model, but time savings are the most consistent return. Most teams recapture 5–15 hours per week once a full automation stack is running. Lead enrichment and scoring typically improve sales conversion rates by 15–25% by ensuring reps prioritise the right leads. Review automation routinely 3–5x review volume, which has measurable impact on local SEO and conversion rates.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I prevent automations from sending incorrect or embarrassing content?</div>
+        <div class="faq-a">Human review checkpoints are essential, especially for AI-generated content. Build your automations so that AI-drafted content — emails, social posts, reports — lands in a review queue before sending, at least initially. As you build confidence in output quality for specific use cases, you can remove the review step for low-stakes outputs (like internal Slack summaries) while maintaining it for customer-facing content.</div>
+      </div>
+  </div>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>Let&rsquo;s build a strategy that puts your brand ahead of the competition.</p>
+      <div class="cta-btns">
+        <a href="/contact.html" class="btn btn-lime">Get Free Proposal</a>
+        <a href="/services/ai-automations.html" class="btn btn-ghost">Learn About AI Automations</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:16px;display:block;">Lumo<span>.</span></a>
+        <p>Austin&rsquo;s AI-powered marketing agency. SEO, paid ads, AI automation &amp; growth strategy built for the future.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/seo.html">SEO &amp; Content</a></li>
+          <li><a href="/services/geo.html">GEO &amp; AI Search</a></li>
+          <li><a href="/services/google-ads.html">Google Ads</a></li>
+          <li><a href="/services/meta-ads.html">Meta Ads</a></li>
+          <li><a href="/services/ai-automations.html">AI Automations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+          <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Lumo AI Agency. All rights reserved.</span>
+      <div class="footer-bl">
+        <a href="/privacy-policy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Back to top">&#8593;</button>
+
+<script>
+(function(){
+  var nb=document.getElementById('navbar');
+  var hb=document.getElementById('hamburger');
+  var mm=document.getElementById('mobile-menu');
+  var open=false;
+  window.addEventListener('scroll',function(){nb.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
+  hb.addEventListener('click',function(){open=!open;mm.classList.toggle('open',open);hb.setAttribute('aria-expanded',String(open));});
+  mm.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){open=false;mm.classList.remove('open');hb.setAttribute('aria-expanded','false');});});
+  var st=document.getElementById('scroll-top');
+  window.addEventListener('scroll',function(){st.classList.toggle('visible',window.scrollY>400);},{passive:true});
+  st.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Core Web Vitals 2026: LCP, CLS & INP Explained | Lumo AI Agency</title>
+  <meta name="description" content="What Largest Contentful Paint, Cumulative Layout Shift, and Interaction to Next Paint mean — how Google measures them, what scores you need to rank, and the fastest ways to improve each metric.">
+  <meta property="og:title" content="Core Web Vitals 2026: LCP, CLS & INP Explained">
+  <meta property="og:description" content="What Largest Contentful Paint, Cumulative Layout Shift, and Interaction to Next Paint mean — how Google measures them, what scores you need to rank, and the fastest ways to improve each metric.">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://lumoaiagency.com/blog/core-web-vitals-guide/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root{--bg:#0D0D14;--bg-card:#13131F;--bg-dark:#09090F;--primary:#B3FF00;--primary-dim:rgba(179,255,0,0.08);--secondary:#7C3AED;--accent:#00F5FF;--text:#F0F0FF;--muted:#6B7280;--border:rgba(179,255,0,0.15);--radius-sm:8px;--radius:14px;--radius-lg:20px;--transition:0.25s cubic-bezier(0.4,0,0.2,1);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
+h1,h2,h3,h4{line-height:1.15;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:700;font-size:0.95rem;letter-spacing:0.02em;transition:var(--transition);white-space:nowrap;}
+.btn-lime{background:var(--primary);color:#0D0D14;}.btn-lime:hover{background:#c8ff26;transform:translateY(-2px);box-shadow:0 8px 30px rgba(179,255,0,0.45);}
+.btn-ghost{background:transparent;color:var(--text);border:1.5px solid rgba(240,240,255,0.2);}.btn-ghost:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+#navbar{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(13,13,20,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(179,255,0,0.06);transition:background 0.3s,border-color 0.3s;}
+#navbar.scrolled{background:rgba(13,13,20,0.97);border-bottom-color:rgba(179,255,0,0.12);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1180px;margin:0 auto;padding:0 24px;}
+.nav-logo{font-family:'Berkshire Swash',serif;font-size:1.6rem;color:var(--primary);letter-spacing:-0.01em;text-shadow:0 0 20px rgba(179,255,0,0.4);}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{font-size:0.88rem;font-weight:500;color:var(--muted);transition:color var(--transition);}
+.nav-links a:hover{color:var(--primary);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;padding:8px;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;}
+.mobile-menu{display:none;flex-direction:column;background:rgba(13,13,20,0.98);border-top:1px solid var(--border);padding:8px 24px 16px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--muted);font-size:0.95rem;transition:color var(--transition);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--primary);}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}}
+.page-hero{padding:140px 0 60px;position:relative;overflow:hidden;}
+.blob-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);}
+.blob-lime{width:500px;height:500px;background:radial-gradient(circle,rgba(179,255,0,0.18) 0%,transparent 70%);top:-80px;left:-80px;animation:drift-a 18s ease-in-out infinite;}
+.blob-violet{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.15) 0%,transparent 70%);bottom:0;right:-60px;animation:drift-b 22s ease-in-out infinite;}
+@keyframes drift-a{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(60px,50px) scale(1.08);}}
+@keyframes drift-b{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-50px,-40px) scale(1.06);}}
+.hero-noise{position:absolute;inset:0;background-image:linear-gradient(rgba(179,255,0,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(179,255,0,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+.page-hero-inner{position:relative;z-index:2;}
+.section-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--primary);margin-bottom:16px;}
+.section-eyebrow::before{content:'';display:block;width:24px;height:2px;background:var(--primary);border-radius:2px;}
+.article-breadcrumb{font-size:0.78rem;color:var(--muted);margin-bottom:20px;display:flex;gap:8px;align-items:center;}
+.article-breadcrumb a:hover{color:var(--primary);}
+.article-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;flex-wrap:wrap;}
+.article-cat{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+.cat-lime{background:rgba(179,255,0,0.08);border:1px solid rgba(179,255,0,0.25);color:var(--primary);}
+.cat-violet{background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.3);color:var(--secondary);}
+.article-date,.article-mins{font-size:0.8rem;color:var(--muted);}
+.article-body{max-width:740px;margin:0 auto;padding:60px 24px 100px;}
+.article-body h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;color:var(--text);margin:48px 0 16px;}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--text);margin:28px 0 10px;}
+.article-body p{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.8;margin-bottom:18px;}
+.article-body ul,.article-body ol{padding-left:24px;margin-bottom:18px;display:flex;flex-direction:column;gap:10px;}
+.article-body li{font-size:1rem;color:rgba(240,240,255,0.8);line-height:1.7;}
+.article-body strong{color:var(--text);font-weight:700;}
+.callout{background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.2);border-radius:14px;padding:24px 28px;margin:36px 0;}
+.callout p{margin:0 0 12px;color:var(--text);font-weight:600;}
+.callout a{color:var(--primary);font-weight:700;font-size:0.9rem;}
+.faq-section{max-width:740px;margin:0 auto;padding:0 24px 60px;}
+.faq-section h2{font-family:'Berkshire Swash',serif;font-size:1.7rem;margin-bottom:28px;}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.07);padding:20px 0;}
+.faq-q{font-weight:700;font-size:0.95rem;margin-bottom:10px;color:var(--text);}
+.faq-a{font-size:0.9rem;color:var(--muted);line-height:1.7;}
+.cta-band{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.06);text-align:center;padding:100px 0;}
+.cta-band h2{font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:20px;}
+.cta-band p{color:var(--muted);font-size:1rem;max-width:500px;margin:0 auto 36px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+footer{background:var(--bg-dark);border-top:1px solid rgba(179,255,0,0.08);padding:60px 0 30px;}
+.footer-inner{max-width:1180px;margin:0 auto;padding:0 24px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:20px;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px;}
+.footer-col a{font-size:0.85rem;color:var(--muted);transition:color 0.22s;}
+.footer-col a:hover{color:var(--primary);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:0.8rem;color:var(--muted);}
+.footer-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--muted);background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.12);padding:5px 12px;border-radius:50px;}
+.footer-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--primary);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
+#scroll-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:12px;background:var(--primary);color:#0D0D14;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:800;opacity:0;transform:translateY(10px);transition:opacity 0.3s,transform 0.3s;border:none;}
+#scroll-top.visible{opacity:1;transform:translateY(0);}
+#scroll-top:hover{box-shadow:0 0 20px rgba(179,255,0,0.5);}
+</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Core Web Vitals 2026: LCP, CLS & INP Explained",
+    "description": "What Largest Contentful Paint, Cumulative Layout Shift, and Interaction to Next Paint mean — how Google measures them, what scores you need to rank, and the fastest ways to improve each metric.",
+    "author": {"@type": "Organization", "name": "Lumo AI Agency"},
+    "publisher": {"@type": "Organization", "name": "Lumo AI Agency", "url": "https://lumoaiagency.com"},
+    "datePublished": "2026-05-15",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://lumoaiagency.com/blog/core-web-vitals-guide/"}
+  }
+  </script>
+</head>
+<body>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Lumo<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/pricing.html">Pricing</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="/contact.html" class="btn btn-lime" style="padding:10px 22px;font-size:0.85rem;">Get a Free Audit</a></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/services.html">Services</a><a href="/about.html">About</a><a href="/pricing.html">Pricing</a><a href="/contact.html">Contact</a><a href="/contact.html">Get Started →</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="blob-wrap">
+    <div class="blob blob-lime"></div>
+    <div class="blob blob-violet"></div>
+  </div>
+  <div class="hero-noise"></div>
+  <div class="container page-hero-inner">
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/blog/">Blog</a> <span>/</span> <span>Core Web Vitals 2026: LCP, CLS & INP Explained</span>
+    </nav>
+    <div class="article-meta">
+      <span class="article-cat cat-violet">SEO</span>
+      <span class="article-date">May 15, 2026</span>
+      <span class="article-mins">10 min read</span>
+    </div>
+    <h1 style="font-family:'Berkshire Swash',serif;font-size:clamp(2rem,4.5vw,3.2rem);max-width:820px;margin-bottom:24px;">Core Web Vitals 2026: <span style="color:var(--secondary);">LCP, CLS &amp; INP Explained</span></h1>
+    <p style="font-size:1.1rem;color:rgba(240,240,255,0.75);max-width:680px;line-height:1.75;">Google's Core Web Vitals are real-world performance metrics that measure user experience — not synthetic lab scores. Poor CWV scores cost rankings. Here's what each metric measures, what scores you need, and the specific fixes that move them.</p>
+  </div>
+</section>
+
+<article class="article-body">
+
+  <h2>Largest Contentful Paint (LCP): Load Performance</h2>
+  <p>Largest Contentful Paint measures the time from when the user navigates to a page until the largest content element visible in the initial viewport finishes rendering. This is typically a hero image, a large block of text, or a video poster image. LCP is the Core Web Vital most directly correlated with perceived page speed — it's what users feel when they assess whether a page is "fast" or "slow."</p>
+  <p><strong>Thresholds:</strong> Good LCP is under 2.5 seconds. Needs Improvement is 2.5–4 seconds. Poor LCP is above 4 seconds. Google's ranking signal triggers when 75% or more of page visits (based on real Chrome field data) fall in the "Good" threshold.</p>
+  <p>The most common causes of poor LCP are:</p>
+  <ul>
+    <li><strong>Slow server response time (TTFB):</strong> Everything that happens after the browser sends an HTTP request to your server — including database queries, CMS processing, and server-side rendering — delays LCP. If your TTFB exceeds 600ms, focus here first. Solutions include server-side caching, database query optimisation, CDN implementation, and in some cases moving to a faster hosting infrastructure.</li>
+    <li><strong>Render-blocking resources:</strong> JavaScript and CSS loaded in the document head that haven't been marked as deferred or async will prevent the browser from rendering any content until they've been downloaded, parsed, and executed. Audit render-blocking resources in PageSpeed Insights and defer everything non-critical.</li>
+    <li><strong>Unoptimised hero images:</strong> If your LCP element is a hero image (the most common case), optimise it aggressively: compress it, serve it in WebP or AVIF format, and critically, <strong>preload it</strong> using <code>&lt;link rel="preload" as="image"&gt;</code>. The preload hint tells the browser to fetch the LCP image immediately rather than waiting to discover it in the HTML parsing phase.</li>
+    <li><strong>No CDN:</strong> A Content Delivery Network caches your static assets (images, CSS, JS) at edge locations geographically close to your users. This dramatically reduces latency for users far from your origin server. For any site with a geographically distributed audience, a CDN is not optional — it's table stakes for good LCP.</li>
+  </ul>
+
+  <h2>Cumulative Layout Shift (CLS): Visual Stability</h2>
+  <p>Cumulative Layout Shift measures the visual stability of a page — specifically, how much visible content unexpectedly shifts during the page loading process. CLS is measured as a score (not a time), calculated from the impact fraction (how much of the viewport was affected by a shift) multiplied by the distance fraction (how far shifted elements moved). CLS is the Core Web Vital most directly tied to user frustration — few experiences are more aggravating than trying to click a button that moves as you reach for it.</p>
+  <p><strong>Thresholds:</strong> Good CLS is below 0.1. Needs Improvement is 0.1–0.25. Poor CLS is above 0.25.</p>
+  <p>Common causes and their fixes:</p>
+  <ul>
+    <li><strong>Images without explicit width and height attributes:</strong> When a browser downloads an image, it needs to know how much space to reserve for it. Without explicit dimensions in the HTML, the browser renders the surrounding content first, then causes a layout shift when the image loads and pushes everything down. The fix is simple: always include <code>width</code> and <code>height</code> attributes on every <code>&lt;img&gt;</code> tag — even if you override them with CSS. This preserves the aspect ratio and allows the browser to reserve space before the image loads.</li>
+    <li><strong>Dynamically injected content:</strong> Content inserted above existing content (banner ads, cookie notices, notification bars, personalised content) that pushes down page elements causes CLS. Reserve space for dynamic content using CSS (e.g., min-height on ad containers), and load it from below or as an overlay rather than in the document flow.</li>
+    <li><strong>Web fonts causing FOIT or FOUT:</strong> Flash of Invisible Text (FOIT) and Flash of Unstyled Text (FOUT) occur when web fonts load asynchronously, causing text to briefly appear in a fallback font before switching to the intended font. The text reflow causes CLS. Fix with <code>font-display: optional</code> (never swaps — best for CLS) or <code>font-display: swap</code> with a carefully matched fallback font to minimise the reflow distance.</li>
+    <li><strong>Ads without reserved space:</strong> Display ads are one of the most common CLS culprits, particularly on publisher sites. Always specify minimum dimensions for ad slots in CSS so that if an ad doesn't fill the full slot height, the page doesn't shift when the ad loads.</li>
+  </ul>
+
+  <h2>Interaction to Next Paint (INP): Responsiveness</h2>
+  <p>Interaction to Next Paint replaced First Input Delay (FID) as a Core Web Vital in March 2024. FID only measured the delay before a browser began processing the first user interaction — it didn't measure how long that processing actually took. INP measures the full responsiveness of a page throughout its entire lifetime, capturing the worst-case interaction latency from all interactions a user makes during their visit.</p>
+  <p><strong>What INP measures:</strong> When a user interacts with a page (clicks a button, taps a menu, types in an input), the browser needs to process event handlers and repaint the screen. INP measures the time from the start of the interaction to when the next frame is presented — the moment the user sees a response to their action. High INP makes pages feel sluggish and unresponsive.</p>
+  <p><strong>Thresholds:</strong> Good INP is under 200 milliseconds. Needs Improvement is 200–500ms. Poor INP is above 500ms.</p>
+  <p>INP problems are almost always caused by JavaScript issues:</p>
+  <ul>
+    <li><strong>Long tasks on the main thread:</strong> JavaScript that runs for more than 50ms without yielding to the browser is considered a "long task" and will block user interactions. The browser's main thread handles both JavaScript execution and rendering — when JavaScript is running, the browser can't process user interactions. Identify long tasks using Chrome DevTools' Performance panel and break them up using techniques like <code>scheduler.yield()</code>, <code>setTimeout()</code> chunking, or <code>requestIdleCallback()</code>.</li>
+    <li><strong>Heavy event handlers:</strong> Click handlers and input handlers that do expensive work synchronously — fetching data, sorting arrays, rendering large DOM updates — block the main thread. Move expensive work to web workers, defer non-critical processing with <code>setTimeout</code>, or use virtual DOM techniques to minimise render cycles.</li>
+    <li><strong>Third-party scripts:</strong> Analytics tags, chatbots, ad scripts, and A/B testing tools can all add significant main thread load. Audit third-party script impact using the "Block third-party cookies" network throttling option in Chrome DevTools and load non-critical third-party scripts with <code>defer</code> or <code>async</code> attributes, or load them only after the page is interactive.</li>
+    <li><strong>Large DOM size:</strong> Pages with very large DOMs (tens of thousands of nodes) take longer to process layout and paint changes triggered by interactions. Use virtualization techniques for long lists and paginate content where possible.</li>
+  </ul>
+
+  <h2>How to Measure Core Web Vitals</h2>
+  <p>The most important distinction in CWV measurement is <strong>field data vs lab data</strong>. Lab data is collected by automated tools in a controlled environment (synthetic testing). Field data is collected from real Chrome users visiting your site (real user measurement, or RUM). Google's ranking signal uses field data — specifically from the Chrome User Experience Report (CrUX) — not lab data.</p>
+  <ul>
+    <li><strong>PageSpeed Insights:</strong> The most accessible tool for checking both field data (from CrUX) and lab data (from Lighthouse). The field data section at the top of the report shows your actual Core Web Vitals as Google measures them. The lab data (Lighthouse audit) provides diagnostic information about what's causing problems. Always prioritise the field data for ranking decisions.</li>
+    <li><strong>Google Search Console — Core Web Vitals report:</strong> Shows your CWV status across all pages on your site, grouped into Good, Needs Improvement, and Poor. This is the best tool for identifying which pages have the largest-scale CWV problems. Issues listed here are what Google is actually seeing.</li>
+    <li><strong>Chrome DevTools — Performance panel:</strong> The most detailed diagnostic tool available. The Performance panel shows a full waterfall of everything happening during page load, including LCP timing, layout shifts annotated on the timeline, long tasks highlighted in red, and INP events. Use this for root-cause analysis once you've identified which pages have issues.</li>
+    <li><strong>Real User Monitoring (RUM):</strong> For production-level CWV monitoring, implement the <code>web-vitals</code> JavaScript library on your site to collect CWV metrics from real users in real time. Send these metrics to your analytics platform or a dedicated RUM tool to monitor CWV trends over time and detect regressions immediately after deployments.</li>
+  </ul>
+
+  <h2>Prioritising Your CWV Fixes</h2>
+  <p>If your site has CWV problems across multiple metrics and multiple pages, knowing where to start is critical. Random fixes waste engineering time and delay results. Here's how to prioritise:</p>
+  <p><strong>Start with field data, not lab data.</strong> Your Google Search Console CWV report shows which pages have confirmed field data issues. These are the pages where improvements will actually impact Google's ranking signal. Lab data issues on pages that pass in field data are lower priority.</p>
+  <p><strong>Prioritise by traffic volume.</strong> CWV improvements on your highest-traffic pages deliver the largest ranking and user experience impact per engineering hour spent. Fixing a CWV issue on a page with 10,000 monthly visits is worth more than fixing the same issue on a page with 100 monthly visits.</p>
+  <p><strong>Fix LCP first.</strong> Among the three CWV metrics, LCP has the most direct correlation with perceived page speed and the clearest ranking impact. It's also typically the most actionable — LCP improvements often come from optimising a single image or reducing server response time, which are well-understood engineering problems.</p>
+  <p><strong>Then CLS.</strong> CLS improvements are often quick wins: adding image dimensions and reserving ad slot space are simple code changes that can dramatically improve CLS. The user experience impact is immediate and measurable.</p>
+  <p><strong>INP last — it's often the hardest.</strong> INP problems require profiling JavaScript execution, identifying long tasks, and restructuring code to yield to the browser more frequently. This work is more complex than LCP and CLS fixes and typically requires developer time rather than just configuration changes. Start with identifying your worst INP offenders in Chrome DevTools and work through them systematically.</p>
+  <p><strong>Test after every change.</strong> CWV improvements interact — optimising images for LCP can inadvertently improve CLS if the image previously caused layout shifts. Use PageSpeed Insights to measure the impact of each change before moving to the next. This prevents regression and helps you isolate which changes are actually moving the needle.</p>
+
+  <div class="callout">
+    <p>Need expert help implementing these strategies for your site?</p>
+    <a href="/services/website-speed-optimization.html">Learn about our Speed Optimization service &rarr;</a>
+  </div>
+</article>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-q">Do Core Web Vitals affect rankings for all websites?</div>
+    <div class="faq-a">Yes, Core Web Vitals are applied as a ranking signal for all websites. However, the magnitude of the effect varies. Google has stated that content relevance and quality are stronger signals than CWV — a highly relevant page with mediocre CWV scores can still outrank a less relevant page with perfect scores. CWV becomes a tiebreaker when two pages are similarly relevant. That said, for highly competitive queries where multiple pages have strong content, CWV can be the deciding factor.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Why does my PageSpeed Insights lab score differ from my field data?</div>
+    <div class="faq-a">Lab data (Lighthouse) tests your page in a controlled, throttled environment — simulating a mid-range Android device on a slow 4G connection. Field data (CrUX) reflects actual user devices and connection speeds, which vary widely. A page might have a poor lab LCP because it's simulated on a slow connection, but good field LCP because most of your real users have fast connections and modern devices. Always treat field data as the authoritative source for ranking decisions.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How quickly will CWV improvements impact my rankings?</div>
+    <div class="faq-a">Google updates its CWV data using a rolling 28-day window of Chrome field data. This means improvements won't be reflected in Google's ranking signal immediately — you typically need to see improved CWV metrics in field data for at least 2–4 weeks before the ranking impact materialises. Monitor your CWV field data trend in Search Console and PageSpeed Insights weekly after implementing fixes.</div>
+  </div>
+
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to Improve Your Rankings?</h2>
+    <p>Get a free audit from Lumo AI Agency and find out exactly what's holding your site back.</p>
+    <div class="cta-btns">
+      <a href="/contact.html" class="btn btn-lime">Get a Free Audit</a>
+      <a href="/services/website-speed-optimization.html" class="btn btn-ghost">Learn About Speed Optimization</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col">
+        <a href="/" class="nav-logo" style="font-family:'Berkshire Swash',serif;font-size:1.5rem;color:var(--primary);margin-bottom:14px;display:inline-block;">Lumo<span>.</span></a>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin-top:12px;">AI-powered marketing for ambitious brands. Smarter strategy. Faster growth.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/seo.html">SEO</a></li>
+          <li><a href="/services/geo.html">GEO / AI Search</a></li>
+          <li><a href="/services/google-ads.html">Google Ads</a></li>
+          <li><a href="/services/meta-ads.html">Meta Ads</a></li>
+          <li><a href="/services/ai-automations.html">AI Automations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lumo AI Agency. All rights reserved.</p>
+      <div class="footer-badge"><span class="footer-badge-dot"></span>Austin, TX — Serving US Businesses</div>
+    </div>
+  </div>
+</footer>
+<button id="scroll-top" aria-label="Back to top">&#8593;</button>
+<script>
+const nav=document.getElementById('navbar');
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobile-menu');
+const scrollTopBtn=document.getElementById('scroll-top');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40);scrollTopBtn.classList.toggle('visible',window.scrollY>400);});
+hamburger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');hamburger.setAttribute('aria-expanded',open);});
+scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
