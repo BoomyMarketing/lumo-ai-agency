@@ -1,0 +1,16 @@
+name: IndexNow Sitemap Ping
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap to IndexNow (Bing)
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" \
+            "https://api.indexnow.org/indexnow?url=https://lumoaiagency.com/sitemap.xml&key=55e58827a124439a8ac1804f0d494b25&keyLocation=https://lumoaiagency.com/55e58827a124439a8ac1804f0d494b25.txt"
+          echo " — Bing IndexNow pinged"
