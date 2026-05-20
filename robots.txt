@@ -415,6 +415,9 @@ Allow: /local/seattle/saas-development-company
 Allow: /local/seattle/seo-agency
 Allow: /local/seattle/social-media-agency
 Allow: /local/seattle/tiktok-ads-agency
+Allow: /local/seattle/voice-ai-agency
+Allow: /local/seattle/web-design-company
+Allow: /local/seattle/youtube-ads-agency
 
 # Block unpublished local pages
 Disallow: /local/
