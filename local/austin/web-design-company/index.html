@@ -555,7 +555,7 @@
         <div class="cta-eyebrow">&#x1F4C5; Free Consultation</div>
         <h2 id="cta-h2"><span class="hl-lime">Ready to Grow Your Austin Business?</span></h2>
         <p>Get a free strategy consultation. No commitment, no pressure — just actionable insights.</p>
-        <form id="bookingForm" style="background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.15);border-radius:16px;padding:32px;text-align:left;max-width:580px;margin:0 auto 32px;">
+        <form action="/api/contact" method="POST" id="bookingForm" style="background:rgba(179,255,0,0.05);border:1px solid rgba(179,255,0,0.15);border-radius:16px;padding:32px;text-align:left;max-width:580px;margin:0 auto 32px;">
           <input type="hidden" name="service" value="Web Design Company">
           <input type="hidden" name="city" value="Austin">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
@@ -718,10 +718,7 @@
         var success = document.getElementById('formSuccess');
         btn.disabled = true;
         btn.textContent = 'Sending…';
-        fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: new FormData(bookingForm)
-        }).then(function(r) { return r.json(); }).then(function(d) {
+        fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify((function () { var __d = {}; new FormData(bookingForm).forEach(function (v, k) { __d[k] = v; }); __d.source = location.pathname; return __d; })()) }).then(function(r) { return r.json(); }).then(function(d) {
           if (d.success) {
             success.style.display = 'block';
             bookingForm.reset();
@@ -739,5 +736,6 @@
   }());
   </script>
 
+<!-- booking-form-v2 -->
 </body>
 </html>

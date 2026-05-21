@@ -1,0 +1,31 @@
+{
+  "site": {
+    "name": "Lumo AI Agency",
+    "domain": "lumoaiagency.com",
+    "language": "en-US"
+  },
+  "contact": {
+    "email": "hello@lumoaiagency.com",
+    "phone": ""
+  },
+  "brand": {
+    "primary_color": "#B3FF00",
+    "secondary_color": "#0D0D14"
+  },
+  "business": {
+    "niche": "auto",
+    "schema_type": "MarketingAgency",
+    "is_local": true,
+    "founded_year": 2023,
+    "target_city": "Austin",
+    "target_state": "TX",
+    "target_country": "US"
+  },
+  "autodetect_niche": true,
+  "thresholds": {
+    "word_count": [800, 2500],
+    "faq_count": 5,
+    "h2_count": [3, 12],
+    "image_count": [2, 15]
+  }
+}
