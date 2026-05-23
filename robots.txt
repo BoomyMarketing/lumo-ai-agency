@@ -236,6 +236,16 @@ Allow: /local/denver/tiktok-ads-agency
 Allow: /local/denver/voice-ai-agency
 Allow: /local/denver/web-design-company
 Allow: /local/denver/youtube-ads-agency
+Allow: /local/detroit/ai-automation-agency
+Allow: /local/detroit/ai-automation-services
+Allow: /local/detroit/ai-development-company
+Allow: /local/detroit/ai-marketing-agency
+Allow: /local/detroit/custom-ai-development
+Allow: /local/detroit/saas-development-company
+Allow: /local/fresno/ai-automation-agency
+Allow: /local/fresno/ai-automation-services
+Allow: /local/fresno/ai-development-company
+Allow: /local/fresno/ai-marketing-agency
 Allow: /local/houston/ai-automation-agency
 Allow: /local/houston/ai-automation-services
 Allow: /local/houston/ai-development-company
