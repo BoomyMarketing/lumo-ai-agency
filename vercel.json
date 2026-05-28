@@ -5,11 +5,2165 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/local/albuquerque/ai-automation-agency",
+      "destination": "/ai-automation-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/ai-automation-services",
+      "destination": "/ai-automation-services/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/ai-development-company",
+      "destination": "/ai-development-company/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/content-marketing-agency",
+      "destination": "/content-marketing-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/cro-agency",
+      "destination": "/cro-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/custom-ai-development",
+      "destination": "/custom-ai-development/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/google-ads-agency",
+      "destination": "/google-ads-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/saas-development-company",
+      "destination": "/saas-development-company/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/seo-agency",
+      "destination": "/seo-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/social-media-agency",
+      "destination": "/social-media-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/voice-ai-agency",
+      "destination": "/voice-ai-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/web-design-company",
+      "destination": "/web-design-company/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/albuquerque/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/ai-automation-agency",
+      "destination": "/ai-automation-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/ai-automation-services",
+      "destination": "/ai-automation-services/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/ai-development-company",
+      "destination": "/ai-development-company/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/content-marketing-agency",
+      "destination": "/content-marketing-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/cro-agency",
+      "destination": "/cro-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/custom-ai-development",
+      "destination": "/custom-ai-development/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/google-ads-agency",
+      "destination": "/google-ads-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/saas-development-company",
+      "destination": "/saas-development-company/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/seo-agency",
+      "destination": "/seo-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/social-media-agency",
+      "destination": "/social-media-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/voice-ai-agency",
+      "destination": "/voice-ai-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/web-design-company",
+      "destination": "/web-design-company/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/arlington/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/arlington",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/ai-automation-agency",
+      "destination": "/ai-automation-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/ai-automation-services",
+      "destination": "/ai-automation-services/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/ai-development-company",
+      "destination": "/ai-development-company/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/content-marketing-agency",
+      "destination": "/content-marketing-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/cro-agency",
+      "destination": "/cro-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/custom-ai-development",
+      "destination": "/custom-ai-development/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/google-ads-agency",
+      "destination": "/google-ads-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/saas-development-company",
+      "destination": "/saas-development-company/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/seo-agency",
+      "destination": "/seo-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/social-media-agency",
+      "destination": "/social-media-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/voice-ai-agency",
+      "destination": "/voice-ai-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/web-design-company",
+      "destination": "/web-design-company/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/atlanta/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/ai-automation-agency",
+      "destination": "/ai-automation-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/ai-automation-services",
+      "destination": "/ai-automation-services/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/ai-development-company",
+      "destination": "/ai-development-company/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/content-marketing-agency",
+      "destination": "/content-marketing-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/cro-agency",
+      "destination": "/cro-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/custom-ai-development",
+      "destination": "/custom-ai-development/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/google-ads-agency",
+      "destination": "/google-ads-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/saas-development-company",
+      "destination": "/saas-development-company/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/seo-agency",
+      "destination": "/seo-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/social-media-agency",
+      "destination": "/social-media-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/voice-ai-agency",
+      "destination": "/voice-ai-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/web-design-company",
+      "destination": "/web-design-company/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/austin/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/austin",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/ai-automation-agency",
+      "destination": "/ai-automation-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/ai-automation-services",
+      "destination": "/ai-automation-services/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/ai-development-company",
+      "destination": "/ai-development-company/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/content-marketing-agency",
+      "destination": "/content-marketing-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/cro-agency",
+      "destination": "/cro-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/custom-ai-development",
+      "destination": "/custom-ai-development/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/google-ads-agency",
+      "destination": "/google-ads-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/saas-development-company",
+      "destination": "/saas-development-company/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/seo-agency",
+      "destination": "/seo-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/social-media-agency",
+      "destination": "/social-media-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/voice-ai-agency",
+      "destination": "/voice-ai-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/web-design-company",
+      "destination": "/web-design-company/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/bakersfield/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/bakersfield",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/ai-automation-agency",
+      "destination": "/ai-automation-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/ai-automation-services",
+      "destination": "/ai-automation-services/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/ai-development-company",
+      "destination": "/ai-development-company/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/content-marketing-agency",
+      "destination": "/content-marketing-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/cro-agency",
+      "destination": "/cro-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/custom-ai-development",
+      "destination": "/custom-ai-development/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/google-ads-agency",
+      "destination": "/google-ads-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/saas-development-company",
+      "destination": "/saas-development-company/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/seo-agency",
+      "destination": "/seo-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/social-media-agency",
+      "destination": "/social-media-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/voice-ai-agency",
+      "destination": "/voice-ai-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/web-design-company",
+      "destination": "/web-design-company/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/boston/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/boston",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/ai-automation-agency",
+      "destination": "/ai-automation-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/ai-automation-services",
+      "destination": "/ai-automation-services/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/ai-development-company",
+      "destination": "/ai-development-company/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/content-marketing-agency",
+      "destination": "/content-marketing-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/cro-agency",
+      "destination": "/cro-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/custom-ai-development",
+      "destination": "/custom-ai-development/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/google-ads-agency",
+      "destination": "/google-ads-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/saas-development-company",
+      "destination": "/saas-development-company/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/seo-agency",
+      "destination": "/seo-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/social-media-agency",
+      "destination": "/social-media-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/voice-ai-agency",
+      "destination": "/voice-ai-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/web-design-company",
+      "destination": "/web-design-company/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/charlotte/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/ai-automation-agency",
+      "destination": "/ai-automation-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/ai-automation-services",
+      "destination": "/ai-automation-services/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/ai-development-company",
+      "destination": "/ai-development-company/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/content-marketing-agency",
+      "destination": "/content-marketing-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/cro-agency",
+      "destination": "/cro-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/custom-ai-development",
+      "destination": "/custom-ai-development/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/custom-software-development-company",
+      "destination": "/custom-software-development-company/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/google-ads-agency",
+      "destination": "/google-ads-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/saas-development-company",
+      "destination": "/saas-development-company/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/seo-agency",
+      "destination": "/seo-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/social-media-agency",
+      "destination": "/social-media-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/voice-ai-agency",
+      "destination": "/voice-ai-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/web-design-company",
+      "destination": "/web-design-company/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/chicago/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/chicago",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/ai-automation-agency",
+      "destination": "/ai-automation-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/ai-automation-services",
+      "destination": "/ai-automation-services/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/ai-development-company",
+      "destination": "/ai-development-company/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/content-marketing-agency",
+      "destination": "/content-marketing-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/cro-agency",
+      "destination": "/cro-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/custom-ai-development",
+      "destination": "/custom-ai-development/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/google-ads-agency",
+      "destination": "/google-ads-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/saas-development-company",
+      "destination": "/saas-development-company/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/seo-agency",
+      "destination": "/seo-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/social-media-agency",
+      "destination": "/social-media-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/voice-ai-agency",
+      "destination": "/voice-ai-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/web-design-company",
+      "destination": "/web-design-company/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cincinnati/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/cincinnati",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/ai-automation-agency",
+      "destination": "/ai-automation-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/ai-automation-services",
+      "destination": "/ai-automation-services/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/ai-development-company",
+      "destination": "/ai-development-company/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/content-marketing-agency",
+      "destination": "/content-marketing-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/cro-agency",
+      "destination": "/cro-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/custom-ai-development",
+      "destination": "/custom-ai-development/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/google-ads-agency",
+      "destination": "/google-ads-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/saas-development-company",
+      "destination": "/saas-development-company/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/seo-agency",
+      "destination": "/seo-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/social-media-agency",
+      "destination": "/social-media-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/voice-ai-agency",
+      "destination": "/voice-ai-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/web-design-company",
+      "destination": "/web-design-company/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/cleveland/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/cleveland",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/ai-automation-agency",
+      "destination": "/ai-automation-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/ai-automation-services",
+      "destination": "/ai-automation-services/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/ai-development-company",
+      "destination": "/ai-development-company/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/content-marketing-agency",
+      "destination": "/content-marketing-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/cro-agency",
+      "destination": "/cro-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/custom-ai-development",
+      "destination": "/custom-ai-development/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/google-ads-agency",
+      "destination": "/google-ads-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/saas-development-company",
+      "destination": "/saas-development-company/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/seo-agency",
+      "destination": "/seo-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/social-media-agency",
+      "destination": "/social-media-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/voice-ai-agency",
+      "destination": "/voice-ai-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/web-design-company",
+      "destination": "/web-design-company/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/columbus/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/columbus",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/ai-automation-agency",
+      "destination": "/ai-automation-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/ai-automation-services",
+      "destination": "/ai-automation-services/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/ai-development-company",
+      "destination": "/ai-development-company/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/content-marketing-agency",
+      "destination": "/content-marketing-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/cro-agency",
+      "destination": "/cro-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/custom-ai-development",
+      "destination": "/custom-ai-development/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/custom-software-development-company",
+      "destination": "/custom-software-development-company/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/google-ads-agency",
+      "destination": "/google-ads-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/saas-development-company",
+      "destination": "/saas-development-company/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/seo-agency",
+      "destination": "/seo-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/social-media-agency",
+      "destination": "/social-media-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/voice-ai-agency",
+      "destination": "/voice-ai-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/web-design-company",
+      "destination": "/web-design-company/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/dallas/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/dallas",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/ai-automation-agency",
+      "destination": "/ai-automation-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/ai-automation-services",
+      "destination": "/ai-automation-services/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/ai-development-company",
+      "destination": "/ai-development-company/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/content-marketing-agency",
+      "destination": "/content-marketing-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/cro-agency",
+      "destination": "/cro-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/custom-ai-development",
+      "destination": "/custom-ai-development/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/google-ads-agency",
+      "destination": "/google-ads-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/saas-development-company",
+      "destination": "/saas-development-company/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/seo-agency",
+      "destination": "/seo-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/social-media-agency",
+      "destination": "/social-media-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/voice-ai-agency",
+      "destination": "/voice-ai-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/web-design-company",
+      "destination": "/web-design-company/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/denver/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/denver",
+      "permanent": true
+    },
+    {
+      "source": "/local/detroit/ai-automation-agency",
+      "destination": "/ai-automation-agency/detroit",
+      "permanent": true
+    },
+    {
+      "source": "/local/detroit/ai-automation-services",
+      "destination": "/ai-automation-services/detroit",
+      "permanent": true
+    },
+    {
+      "source": "/local/detroit/ai-development-company",
+      "destination": "/ai-development-company/detroit",
+      "permanent": true
+    },
+    {
+      "source": "/local/detroit/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/detroit",
+      "permanent": true
+    },
+    {
+      "source": "/local/detroit/custom-ai-development",
+      "destination": "/custom-ai-development/detroit",
+      "permanent": true
+    },
+    {
+      "source": "/local/detroit/saas-development-company",
+      "destination": "/saas-development-company/detroit",
+      "permanent": true
+    },
+    {
+      "source": "/local/fresno/ai-automation-agency",
+      "destination": "/ai-automation-agency/fresno",
+      "permanent": true
+    },
+    {
+      "source": "/local/fresno/ai-automation-services",
+      "destination": "/ai-automation-services/fresno",
+      "permanent": true
+    },
+    {
+      "source": "/local/fresno/ai-development-company",
+      "destination": "/ai-development-company/fresno",
+      "permanent": true
+    },
+    {
+      "source": "/local/fresno/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/fresno",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/ai-automation-agency",
+      "destination": "/ai-automation-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/ai-automation-services",
+      "destination": "/ai-automation-services/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/ai-development-company",
+      "destination": "/ai-development-company/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/content-marketing-agency",
+      "destination": "/content-marketing-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/cro-agency",
+      "destination": "/cro-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/custom-ai-development",
+      "destination": "/custom-ai-development/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/custom-software-development-company",
+      "destination": "/custom-software-development-company/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/google-ads-agency",
+      "destination": "/google-ads-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/saas-development-company",
+      "destination": "/saas-development-company/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/seo-agency",
+      "destination": "/seo-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/social-media-agency",
+      "destination": "/social-media-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/voice-ai-agency",
+      "destination": "/voice-ai-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/web-design-company",
+      "destination": "/web-design-company/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/houston/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/houston",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/ai-automation-agency",
+      "destination": "/ai-automation-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/ai-automation-services",
+      "destination": "/ai-automation-services/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/ai-development-company",
+      "destination": "/ai-development-company/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/content-marketing-agency",
+      "destination": "/content-marketing-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/cro-agency",
+      "destination": "/cro-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/custom-ai-development",
+      "destination": "/custom-ai-development/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/google-ads-agency",
+      "destination": "/google-ads-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/saas-development-company",
+      "destination": "/saas-development-company/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/seo-agency",
+      "destination": "/seo-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/social-media-agency",
+      "destination": "/social-media-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/voice-ai-agency",
+      "destination": "/voice-ai-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/web-design-company",
+      "destination": "/web-design-company/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/los-angeles/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/los-angeles",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/ai-automation-agency",
+      "destination": "/ai-automation-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/ai-automation-services",
+      "destination": "/ai-automation-services/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/ai-development-company",
+      "destination": "/ai-development-company/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/content-marketing-agency",
+      "destination": "/content-marketing-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/cro-agency",
+      "destination": "/cro-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/custom-ai-development",
+      "destination": "/custom-ai-development/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/google-ads-agency",
+      "destination": "/google-ads-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/saas-development-company",
+      "destination": "/saas-development-company/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/seo-agency",
+      "destination": "/seo-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/social-media-agency",
+      "destination": "/social-media-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/voice-ai-agency",
+      "destination": "/voice-ai-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/web-design-company",
+      "destination": "/web-design-company/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/miami/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/miami",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/ai-automation-agency",
+      "destination": "/ai-automation-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/ai-automation-services",
+      "destination": "/ai-automation-services/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/ai-development-company",
+      "destination": "/ai-development-company/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/content-marketing-agency",
+      "destination": "/content-marketing-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/cro-agency",
+      "destination": "/cro-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/custom-ai-development",
+      "destination": "/custom-ai-development/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/google-ads-agency",
+      "destination": "/google-ads-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/saas-development-company",
+      "destination": "/saas-development-company/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/seo-agency",
+      "destination": "/seo-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/social-media-agency",
+      "destination": "/social-media-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/voice-ai-agency",
+      "destination": "/voice-ai-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/web-design-company",
+      "destination": "/web-design-company/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/nashville/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/ai-automation-agency",
+      "destination": "/ai-automation-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/ai-automation-services",
+      "destination": "/ai-automation-services/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/ai-development-company",
+      "destination": "/ai-development-company/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/content-marketing-agency",
+      "destination": "/content-marketing-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/cro-agency",
+      "destination": "/cro-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/custom-ai-development",
+      "destination": "/custom-ai-development/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/custom-software-development-company",
+      "destination": "/custom-software-development-company/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/google-ads-agency",
+      "destination": "/google-ads-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/saas-development-company",
+      "destination": "/saas-development-company/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/seo-agency",
+      "destination": "/seo-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/social-media-agency",
+      "destination": "/social-media-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/voice-ai-agency",
+      "destination": "/voice-ai-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/web-design-company",
+      "destination": "/web-design-company/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/new-york/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/ai-automation-agency",
+      "destination": "/ai-automation-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/ai-automation-services",
+      "destination": "/ai-automation-services/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/ai-development-company",
+      "destination": "/ai-development-company/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/content-marketing-agency",
+      "destination": "/content-marketing-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/cro-agency",
+      "destination": "/cro-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/custom-ai-development",
+      "destination": "/custom-ai-development/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/google-ads-agency",
+      "destination": "/google-ads-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/saas-development-company",
+      "destination": "/saas-development-company/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/seo-agency",
+      "destination": "/seo-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/social-media-agency",
+      "destination": "/social-media-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/voice-ai-agency",
+      "destination": "/voice-ai-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/web-design-company",
+      "destination": "/web-design-company/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/phoenix/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/phoenix",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/ai-automation-agency",
+      "destination": "/ai-automation-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/ai-automation-services",
+      "destination": "/ai-automation-services/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/ai-development-company",
+      "destination": "/ai-development-company/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/content-marketing-agency",
+      "destination": "/content-marketing-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/cro-agency",
+      "destination": "/cro-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/custom-ai-development",
+      "destination": "/custom-ai-development/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/google-ads-agency",
+      "destination": "/google-ads-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/saas-development-company",
+      "destination": "/saas-development-company/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/seo-agency",
+      "destination": "/seo-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/social-media-agency",
+      "destination": "/social-media-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/voice-ai-agency",
+      "destination": "/voice-ai-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/web-design-company",
+      "destination": "/web-design-company/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/portland/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/portland",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/ai-automation-agency",
+      "destination": "/ai-automation-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/ai-automation-services",
+      "destination": "/ai-automation-services/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/ai-development-company",
+      "destination": "/ai-development-company/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/content-marketing-agency",
+      "destination": "/content-marketing-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/cro-agency",
+      "destination": "/cro-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/custom-ai-development",
+      "destination": "/custom-ai-development/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/google-ads-agency",
+      "destination": "/google-ads-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/saas-development-company",
+      "destination": "/saas-development-company/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/seo-agency",
+      "destination": "/seo-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/social-media-agency",
+      "destination": "/social-media-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/voice-ai-agency",
+      "destination": "/voice-ai-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/web-design-company",
+      "destination": "/web-design-company/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-diego/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/san-diego",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/ai-automation-agency",
+      "destination": "/ai-automation-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/ai-automation-services",
+      "destination": "/ai-automation-services/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/ai-development-company",
+      "destination": "/ai-development-company/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/content-marketing-agency",
+      "destination": "/content-marketing-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/cro-agency",
+      "destination": "/cro-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/custom-ai-development",
+      "destination": "/custom-ai-development/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/google-ads-agency",
+      "destination": "/google-ads-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/saas-development-company",
+      "destination": "/saas-development-company/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/seo-agency",
+      "destination": "/seo-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/social-media-agency",
+      "destination": "/social-media-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/voice-ai-agency",
+      "destination": "/voice-ai-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/web-design-company",
+      "destination": "/web-design-company/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/san-francisco/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/san-francisco",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/ai-automation-agency",
+      "destination": "/ai-automation-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/ai-automation-services",
+      "destination": "/ai-automation-services/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/ai-development-company",
+      "destination": "/ai-development-company/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/ai-marketing-agency",
+      "destination": "/ai-marketing-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/content-marketing-agency",
+      "destination": "/content-marketing-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/cro-agency",
+      "destination": "/cro-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/custom-ai-development",
+      "destination": "/custom-ai-development/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/ecommerce-seo-agency",
+      "destination": "/ecommerce-seo-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/geo-optimization-agency",
+      "destination": "/geo-optimization-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/google-ads-agency",
+      "destination": "/google-ads-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/linkedin-ads-agency",
+      "destination": "/linkedin-ads-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/saas-development-company",
+      "destination": "/saas-development-company/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/seo-agency",
+      "destination": "/seo-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/social-media-agency",
+      "destination": "/social-media-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/tiktok-ads-agency",
+      "destination": "/tiktok-ads-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/voice-ai-agency",
+      "destination": "/voice-ai-agency/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/web-design-company",
+      "destination": "/web-design-company/seattle",
+      "permanent": true
+    },
+    {
+      "source": "/local/seattle/youtube-ads-agency",
+      "destination": "/youtube-ads-agency/seattle",
+      "permanent": true
     }
   ]
 }
