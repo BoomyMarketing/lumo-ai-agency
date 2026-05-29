@@ -1,697 +1,663 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Lumo — Design System</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
-<style>
-  :root {
-    /* Brand */
-    --primary: #B3FF00;
-    --primary-dark: #c8ff26;
-    --primary-glow: rgba(179,255,0,0.4);
-    --secondary: #7C3AED;
-    --accent: #00F5FF;
-    /* Backgrounds */
-    --bg: #0D0D14;
-    --bg-surface: #13131F;
-    --bg-soft: #09090F;
-    --dark: #13131F;
-    --hero-bg: linear-gradient(160deg, #09090F 0%, #13131F 60%, #0D0D14 100%);
-    /* Text */
-    --text-heading: #F0F0FF;
-    --text: rgba(240,240,255,0.85);
-    --text-muted: #6B7280;
-    --text-on-primary: #0D0D14;
-    --logo-color: #B3FF00;
-    /* Borders */
-    --border-color: rgba(179,255,0,0.15);
-    /* Gradients */
-    --gradient-primary: var(--primary);
-    /* Shape */
-    --radius: 14px;
-    --radius-sm: 8px;
-    --radius-lg: 20px;
-    --radius-btn: 50px;
-    /* Shadows */
-    --shadow: 0 4px 24px rgba(0,0,0,0.6);
-    --shadow-lg: 0 0 40px rgba(179,255,0,0.2);
-    --shadow-primary: 0 8px 30px rgba(179,255,0,0.45);
-    /* Motion */
-    --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
-    /* Fonts */
-    --font-heading: 'Berkshire Swash', serif;
-    --font-body: 'Inter', sans-serif;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-
-  /* ── LAYOUT ── */
-  .ds-header {
-    background: var(--hero-bg);
-    border-bottom: 1px solid var(--border-color);
-    padding: 60px 40px 48px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .ds-header::before {
-    content: '';
-    position: absolute;
-    top: -60px; left: 50%; transform: translateX(-50%);
-    width: 500px; height: 300px;
-    background: radial-gradient(ellipse at center, rgba(179,255,0,0.12) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .ds-logo {
-    font-family: var(--font-heading);
-    font-size: 56px;
-    font-weight: 800;
-    color: var(--primary);
-    letter-spacing: -2px;
-    position: relative;
-    z-index: 1;
-  }
-  .ds-tagline { font-size: 15px; color: var(--text-muted); margin-top: 10px; position: relative; z-index: 1; font-family: var(--font-body); letter-spacing: 0.02em; }
-  .ds-meta { margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
-  .ds-meta-pill {
-    background: rgba(179,255,0,0.08);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-btn);
-    padding: 5px 14px;
-    font-size: 12px;
-    color: var(--text-muted);
-    font-family: monospace;
-  }
-
-  .ds-nav {
-    background: var(--bg-soft);
-    border-bottom: 1px solid var(--border-color);
-    padding: 0 40px;
-    display: flex;
-    gap: 0;
-    overflow-x: auto;
-  }
-  .ds-nav a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-    font-family: var(--font-heading);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    padding: 14px 16px;
-    border-bottom: 2px solid transparent;
-    white-space: nowrap;
-    transition: var(--transition);
-  }
-  .ds-nav a:hover { color: var(--primary); border-bottom-color: var(--primary); }
-
-  .ds-main { max-width: 1100px; margin: 0 auto; padding: 48px 40px 80px; }
-
-  .ds-section { margin-bottom: 72px; }
-  .ds-section-title {
-    font-family: var(--font-heading);
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--text-heading);
-    margin-bottom: 8px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border-color);
-  }
-  .ds-section-desc { color: var(--text-muted); font-size: 13px; margin-bottom: 28px; font-family: monospace; }
-
-  /* ── COLORS ── */
-  .color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
-  .color-swatch {
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    background: var(--bg-surface);
-  }
-  .color-block { height: 110px; width: 100%; }
-  .color-info { padding: 10px 12px; }
-  .color-name { font-size: 11px; font-weight: 600; color: var(--text-heading); font-family: monospace; }
-  .color-hex { font-size: 11px; color: var(--text-muted); font-family: monospace; margin-top: 2px; }
-
-  /* ── TYPOGRAPHY ── */
-  .type-samples { display: flex; flex-direction: column; gap: 16px; }
-  .type-row {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    padding: 24px;
-    display: grid;
-    grid-template-columns: 130px 1fr;
-    gap: 16px;
-    align-items: center;
-  }
-  .type-label { font-size: 10px; font-weight: 600; color: var(--text-muted); font-family: monospace; text-transform: uppercase; letter-spacing: 0.08em; }
-  .t-h1 { font-family: var(--font-heading); font-size: 52px; font-weight: 800; color: var(--text-heading); line-height: 1.1; letter-spacing: -2px; }
-  .t-h2 { font-family: var(--font-heading); font-size: 38px; font-weight: 700; color: var(--text-heading); line-height: 1.1; letter-spacing: -1px; }
-  .t-h3 { font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: var(--text-heading); line-height: 1.2; }
-  .t-h4 { font-family: var(--font-heading); font-size: 20px; font-weight: 600; color: var(--text-heading); }
-  .t-body { font-size: 16px; color: var(--text); }
-  .t-small { font-size: 13px; color: var(--text-muted); }
-  .t-mono { font-family: monospace; font-size: 13px; color: var(--primary); }
-  .t-accent { font-family: var(--font-body); font-size: 16px; color: var(--accent); font-weight: 500; }
-
-  /* ── BUTTONS ── */
-  .btn-grid { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 13px 28px;
-    border-radius: var(--radius-btn);
-    font-family: var(--font-heading);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    cursor: pointer;
-    border: none;
-    transition: var(--transition);
-    text-decoration: none;
-  }
-  .btn-primary {
-    background: var(--primary);
-    color: var(--text-on-primary);
-    box-shadow: var(--shadow-primary);
-  }
-  .btn-primary:hover { background: var(--primary-dark); box-shadow: 0 12px 40px rgba(179,255,0,0.6); transform: translateY(-1px); }
-  .btn-ghost {
-    background: transparent;
-    color: var(--primary);
-    border: 1.5px solid rgba(179,255,0,0.4);
-  }
-  .btn-ghost:hover { border-color: var(--primary); background: rgba(179,255,0,0.08); }
-  .btn-accent {
-    background: transparent;
-    color: var(--accent);
-    border: 1.5px solid rgba(0,245,255,0.4);
-  }
-  .btn-accent:hover { border-color: var(--accent); background: rgba(0,245,255,0.08); }
-  .btn-secondary {
-    background: var(--secondary);
-    color: #fff;
-  }
-  .btn-sm { padding: 9px 18px; font-size: 12px; }
-  .btn-label { font-size: 11px; color: var(--text-muted); font-family: monospace; white-space: nowrap; margin-top: 6px; text-align: center; }
-  .btn-item { display: flex; flex-direction: column; align-items: center; }
-
-  /* ── CARDS ── */
-  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-  .card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-  }
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--primary);
-    opacity: 0;
-    transition: var(--transition);
-  }
-  .card:hover { box-shadow: var(--shadow-lg); border-color: rgba(179,255,0,0.3); }
-  .card:hover::before { opacity: 1; }
-  .card-icon {
-    width: 48px; height: 48px;
-    background: rgba(179,255,0,0.12);
-    border: 1px solid rgba(179,255,0,0.25);
-    border-radius: var(--radius);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px; margin-bottom: 16px;
-    color: var(--primary);
-    font-family: monospace; font-weight: 700; font-size: 14px;
-  }
-  .card-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--text-heading); margin-bottom: 10px; }
-  .card-text { font-size: 14px; color: var(--text); line-height: 1.6; }
-  .card-pricing { text-align: center; }
-  .card-pricing .price { font-family: var(--font-heading); font-size: 38px; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
-  .card-pricing .price-label { font-size: 12px; color: var(--text-muted); font-family: monospace; }
-  .card-pricing ul { list-style: none; margin: 16px 0; text-align: left; }
-  .card-pricing ul li { padding: 7px 0; font-size: 13px; color: var(--text); border-bottom: 1px solid var(--border-color); }
-  .card-pricing ul li::before { content: '→ '; color: var(--primary); font-weight: 700; }
-  .card-aside { background: rgba(179,255,0,0.04); border: 1px solid rgba(179,255,0,0.2); }
-  .aside-heading { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--primary); font-weight: 700; font-family: monospace; margin-bottom: 12px; }
-
-  /* ── COMPONENTS ── */
-  .comp-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start; margin-bottom: 28px; }
-
-  .badge {
-    display: inline-flex; align-items: center; gap: 5px;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 11px; font-weight: 700;
-    font-family: monospace;
-    text-transform: uppercase; letter-spacing: 0.06em;
-  }
-  .badge-primary { background: rgba(179,255,0,0.15); color: var(--primary); border: 1px solid rgba(179,255,0,0.25); }
-  .badge-accent { background: rgba(0,245,255,0.12); color: var(--accent); border: 1px solid rgba(0,245,255,0.25); }
-  .badge-secondary { background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.25); }
-  .badge-muted { background: rgba(107,114,128,0.15); color: var(--text-muted); border: 1px solid rgba(107,114,128,0.25); }
-
-  .faq-item {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    margin-bottom: 8px;
-  }
-  .faq-q {
-    padding: 16px 20px;
-    font-weight: 600;
-    font-family: var(--font-heading);
-    color: var(--text-heading);
-    display: flex; justify-content: space-between; align-items: center;
-    cursor: pointer;
-    font-size: 15px;
-  }
-  .faq-q::after { content: '+'; color: var(--primary); font-size: 18px; font-weight: 300; font-family: monospace; }
-  .faq-a { padding: 0 20px 16px; font-size: 14px; color: var(--text); line-height: 1.6; }
-
-  .nearby-pills { display: flex; gap: 8px; flex-wrap: wrap; }
-  .pill {
-    background: rgba(179,255,0,0.06);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 6px 12px;
-    font-size: 12px;
-    color: var(--text-muted);
-    text-decoration: none;
-    font-family: monospace;
-    transition: var(--transition);
-  }
-  .pill:hover { border-color: var(--primary); color: var(--primary); background: rgba(179,255,0,0.1); }
-
-  .breadcrumb { display: flex; gap: 6px; align-items: center; font-size: 12px; color: var(--text-muted); font-family: monospace; }
-  .breadcrumb a { color: var(--primary); text-decoration: none; }
-  .breadcrumb span { color: var(--text-muted); }
-
-  .stats-bar {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    padding: 24px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    text-align: center;
-  }
-  .stat-val { font-family: var(--font-heading); font-size: 30px; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
-  .stat-lbl { font-size: 12px; color: var(--text-muted); margin-top: 2px; font-family: monospace; }
-
-  /* ── GRADIENTS & SHADOWS ── */
-  .grad-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
-  .grad-block {
-    border-radius: var(--radius);
-    height: 100px;
-    display: flex; align-items: flex-end;
-    padding: 12px;
-    font-size: 11px; font-weight: 700;
-    font-family: monospace;
-    position: relative;
-    overflow: hidden;
-  }
-  .shadow-demo {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    padding: 24px;
-    font-size: 12px;
-    color: var(--text-muted);
-    text-align: center;
-    font-family: monospace;
-  }
-
-  /* ── TOKENS TABLE ── */
-  .tokens-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    font-family: monospace;
-  }
-  .tokens-table th {
-    background: var(--bg-soft);
-    color: var(--text-muted);
-    text-align: left;
-    padding: 10px 14px;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-bottom: 1px solid var(--border-color);
-  }
-  .tokens-table td {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border-color);
-    color: var(--text);
-    vertical-align: middle;
-  }
-  .tokens-table tr:hover td { background: rgba(179,255,0,0.03); }
-  .token-name { color: var(--primary); }
-  .token-dot { width: 20px; height: 20px; border-radius: 4px; display: inline-block; vertical-align: middle; border: 1px solid rgba(255,255,255,0.1); }
-  .token-section-row td { background: var(--bg-soft); color: var(--text-muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; padding: 6px 14px; }
-
-  /* ── FOOTER ── */
-  .ds-footer {
-    background: var(--bg-soft);
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-    padding: 24px;
-    font-size: 12px;
-    color: var(--text-muted);
-    font-family: monospace;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumo AI Agency — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* Design-system page chrome */
+    .ds-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(9,9,15,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(179,255,0,0.12);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .ds-nav-brand { font-family:'Berkshire Swash',serif; color:#B3FF00; font-size:1.2rem; margin-right:16px; }
+    .ds-nav a { font-size:0.8rem; color:#6B7280; font-weight:500; letter-spacing:0.04em; transition:color 0.2s; }
+    .ds-nav a:hover { color:#B3FF00; }
+    .ds-version { margin-left:auto; font-size:0.72rem; background:rgba(179,255,0,0.08); border:1px solid rgba(179,255,0,0.18); color:#B3FF00; padding:4px 10px; border-radius:50px; font-weight:600; }
+    .ds-section { padding:72px 0 40px; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .ds-section:last-child { border-bottom:none; }
+    .ds-heading { font-family:'Berkshire Swash',serif; font-size:1.8rem; color:#F0F0FF; margin-bottom:8px; }
+    .ds-sub { font-size:0.85rem; color:#6B7280; margin-bottom:40px; }
+    .ds-rule { display:block; width:40px; height:3px; background:#B3FF00; border-radius:2px; margin-bottom:16px; }
+    .ds-grid { display:grid; gap:16px; }
+    .ds-grid-2 { grid-template-columns:repeat(2,1fr); }
+    .ds-grid-3 { grid-template-columns:repeat(3,1fr); }
+    .ds-grid-4 { grid-template-columns:repeat(4,1fr); }
+    .ds-swatch { border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.06); }
+    .ds-swatch-color { height:80px; }
+    .ds-swatch-label { padding:10px 14px; background:#13131F; }
+    .ds-swatch-name { font-size:0.82rem; font-weight:600; color:#F0F0FF; }
+    .ds-swatch-val { font-size:0.72rem; color:#6B7280; font-family:monospace; }
+    .ds-token-table { width:100%; border-collapse:collapse; font-size:0.85rem; }
+    .ds-token-table th { text-align:left; padding:10px 16px; background:#09090F; color:#6B7280; font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; border-bottom:1px solid rgba(255,255,255,0.06); }
+    .ds-token-table td { padding:10px 16px; border-bottom:1px solid rgba(255,255,255,0.04); color:#E0E0F0; vertical-align:middle; }
+    .ds-token-table td:first-child { font-family:monospace; font-size:0.8rem; color:#B3FF00; }
+    .ds-token-table td:last-child { color:#6B7280; font-size:0.82rem; }
+    .ds-preview { background:#13131F; border:1px solid rgba(255,255,255,0.06); border-radius:14px; padding:32px; margin-bottom:16px; }
+    .ds-code { font-family:monospace; font-size:0.78rem; color:#6B7280; background:#09090F; border:1px solid rgba(255,255,255,0.06); border-radius:8px; padding:12px 16px; margin-top:8px; }
+    .ds-type-row { display:flex; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid rgba(255,255,255,0.04); }
+    .ds-type-meta { width:160px; flex-shrink:0; font-size:0.75rem; color:#6B7280; font-family:monospace; }
+    .ds-btn-row { display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+    @media (max-width:768px) { .ds-grid-2,.ds-grid-3,.ds-grid-4 { grid-template-columns:1fr 1fr; } }
+    @media (max-width:480px) { .ds-grid-2,.ds-grid-3,.ds-grid-4 { grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="ds-header">
-  <div class="ds-logo">LUMO</div>
-  <p class="ds-tagline">AI-Powered Growth for Forward-Thinking Businesses</p>
-  <div class="ds-meta">
-    <span class="ds-meta-pill">lumoaiagency.com</span>
-    <span class="ds-meta-pill">Austin, TX</span>
-    <span class="ds-meta-pill">Berkshire Swash + Inter</span>
-    <span class="ds-meta-pill">dark-mode native</span>
-    <span class="ds-meta-pill">Design System v1.0</span>
-  </div>
-</header>
-
-<!-- NAV -->
 <nav class="ds-nav">
-  <a href="#colors">Colors</a>
+  <span class="ds-nav-brand">Lumo.</span>
+  <a href="#tokens">Tokens</a>
   <a href="#typography">Typography</a>
   <a href="#buttons">Buttons</a>
   <a href="#cards">Cards</a>
-  <a href="#components">Components</a>
-  <a href="#gradients">Gradients & Shadows</a>
-  <a href="#tokens">Design Tokens</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#faq">FAQ</a>
+  <a href="#new-components">New Components</a>
+  <a href="#utilities">Utilities</a>
+  <span class="ds-version">v1.0 · 2026-05-29</span>
 </nav>
 
-<main class="ds-main">
+<div class="container">
 
-  <!-- COLORS -->
-  <section class="ds-section" id="colors">
-    <h2 class="ds-section-title">Color Palette</h2>
-    <p class="ds-section-desc">// All brand colors and CSS custom property names</p>
-    <div class="color-grid">
-      <div class="color-swatch">
-        <div class="color-block" style="background:#B3FF00;"></div>
-        <div class="color-info"><div class="color-name">--primary</div><div class="color-hex">#B3FF00</div></div>
+  <!-- HEADER -->
+  <div style="padding:64px 0 0;">
+    <span class="section-eyebrow">Design System</span>
+    <h1 class="section-title">Lumo AI Agency</h1>
+    <p class="section-sub">Dark-mode design system. Lime <code style="color:#B3FF00;">#B3FF00</code> primary · <code style="color:#7C3AED;">#7C3AED</code> violet · <code style="color:#00F5FF;">#00F5FF</code> cyan. All colours via CSS custom properties in /assets/css/main.css.</p>
+  </div>
+
+
+  <!-- ═══════ TOKENS ═══════ -->
+  <section class="ds-section" id="tokens">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Design Tokens</h2>
+    <p class="ds-sub">All visual decisions as CSS custom properties in :root. Never hardcode hex — always var(--...).</p>
+
+    <h3 style="font-size:1rem;font-weight:700;color:#F0F0FF;margin-bottom:20px;font-family:'Inter',sans-serif;">Colour Palette</h3>
+    <div class="ds-grid ds-grid-4" style="margin-bottom:40px;">
+      <div class="ds-swatch">
+        <div class="ds-swatch-color" style="background:#B3FF00;"></div>
+        <div class="ds-swatch-label"><div class="ds-swatch-name">Primary (Lime)</div><div class="ds-swatch-val">--primary · #B3FF00</div></div>
       </div>
-      <div class="color-swatch">
-        <div class="color-block" style="background:#c8ff26;"></div>
-        <div class="color-info"><div class="color-name">--primary-dark</div><div class="color-hex">#c8ff26</div></div>
+      <div class="ds-swatch">
+        <div class="ds-swatch-color" style="background:#7C3AED;"></div>
+        <div class="ds-swatch-label"><div class="ds-swatch-name">Secondary (Violet)</div><div class="ds-swatch-val">--secondary · #7C3AED</div></div>
       </div>
-      <div class="color-swatch">
-        <div class="color-block" style="background:#7C3AED;"></div>
-        <div class="color-info"><div class="color-name">--secondary</div><div class="color-hex">#7C3AED</div></div>
+      <div class="ds-swatch">
+        <div class="ds-swatch-color" style="background:#00F5FF;"></div>
+        <div class="ds-swatch-label"><div class="ds-swatch-name">Accent (Cyan)</div><div class="ds-swatch-val">--accent · #00F5FF</div></div>
       </div>
-      <div class="color-swatch">
-        <div class="color-block" style="background:#00F5FF;"></div>
-        <div class="color-info"><div class="color-name">--accent</div><div class="color-hex">#00F5FF</div></div>
+      <div class="ds-swatch">
+        <div class="ds-swatch-color" style="background:#0D0D14;border:1px solid rgba(255,255,255,0.1);"></div>
+        <div class="ds-swatch-label"><div class="ds-swatch-name">Background</div><div class="ds-swatch-val">--bg · #0D0D14</div></div>
       </div>
-      <div class="color-swatch">
-        <div class="color-block" style="background:#0D0D14;"></div>
-        <div class="color-info"><div class="color-name">--bg</div><div class="color-hex">#0D0D14</div></div>
+      <div class="ds-swatch">
+        <div class="ds-swatch-color" style="background:#13131F;"></div>
+        <div class="ds-swatch-label"><div class="ds-swatch-name">Card Surface</div><div class="ds-swatch-val">--bg-card · #13131F</div></div>
       </div>
-      <div class="color-swatch">
-        <div class="color-block" style="background:#13131F;"></div>
-        <div class="color-info"><div class="color-name">--bg-surface</div><div class="color-hex">#13131F</div></div>
+      <div class="ds-swatch">
+        <div class="ds-swatch-color" style="background:#09090F;"></div>
+        <div class="ds-swatch-label"><div class="ds-swatch-name">BG Dark</div><div class="ds-swatch-val">--bg-dark · #09090F</div></div>
       </div>
-      <div class="color-swatch">
-        <div class="color-block" style="background:#09090F;"></div>
-        <div class="color-info"><div class="color-name">--bg-soft</div><div class="color-hex">#09090F</div></div>
+      <div class="ds-swatch">
+        <div class="ds-swatch-color" style="background:#F0F0FF;"></div>
+        <div class="ds-swatch-label"><div class="ds-swatch-name" style="color:#0D0D14;">Text Heading</div><div class="ds-swatch-val">--text-heading · #F0F0FF</div></div>
       </div>
-      <div class="color-swatch">
-        <div class="color-block" style="background:#F0F0FF;"></div>
-        <div class="color-info"><div class="color-name">--text-heading</div><div class="color-hex">#F0F0FF</div></div>
+      <div class="ds-swatch">
+        <div class="ds-swatch-color" style="background:#6B7280;"></div>
+        <div class="ds-swatch-label"><div class="ds-swatch-name">Text Muted</div><div class="ds-swatch-val">--text-muted · #6B7280</div></div>
       </div>
-      <div class="color-swatch">
-        <div class="color-block" style="background:rgba(240,240,255,0.85);"></div>
-        <div class="color-info"><div class="color-name">--text</div><div class="color-hex">rgba(240,240,255,.85)</div></div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-block" style="background:#6B7280;"></div>
-        <div class="color-info"><div class="color-name">--text-muted</div><div class="color-hex">#6B7280</div></div>
-      </div>
+    </div>
+
+    <h3 style="font-size:1rem;font-weight:700;color:#F0F0FF;margin-bottom:20px;font-family:'Inter',sans-serif;">Full Token Reference</h3>
+    <div style="background:#13131F;border:1px solid rgba(255,255,255,0.06);border-radius:14px;overflow:hidden;margin-bottom:32px;">
+      <table class="ds-token-table">
+        <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td>--primary</td><td>#B3FF00</td><td>Buttons, links, accents, logo</td></tr>
+          <tr><td>--primary-dark</td><td>#c8ff26</td><td>Button hover state</td></tr>
+          <tr><td>--primary-glow</td><td>rgba(179,255,0,0.4)</td><td>Box-shadow glow</td></tr>
+          <tr><td>--primary-dim</td><td>rgba(179,255,0,0.08)</td><td>Subtle lime backgrounds</td></tr>
+          <tr><td>--secondary</td><td>#7C3AED</td><td>Social links, violet accents</td></tr>
+          <tr><td>--accent</td><td>#00F5FF</td><td>Cyan highlights</td></tr>
+          <tr><td>--bg</td><td>#0D0D14</td><td>Page background</td></tr>
+          <tr><td>--bg-card</td><td>#13131F</td><td>Card / surface backgrounds</td></tr>
+          <tr><td>--bg-dark</td><td>#09090F</td><td>Deeper sections</td></tr>
+          <tr><td>--text-heading</td><td>#F0F0FF</td><td>H1–H4 colours</td></tr>
+          <tr><td>--text</td><td>rgba(240,240,255,0.85)</td><td>Body text</td></tr>
+          <tr><td>--text-muted</td><td>#6B7280</td><td>Secondary text, labels</td></tr>
+          <tr><td>--text-on-primary</td><td>#0D0D14</td><td>Text on lime buttons</td></tr>
+          <tr><td>--border-color</td><td>rgba(179,255,0,0.15)</td><td>Lime-tinted borders</td></tr>
+          <tr><td>--border-subtle</td><td>rgba(255,255,255,0.06)</td><td>Neutral card borders</td></tr>
+          <tr><td>--glow-lime</td><td>0 0 30px rgba(179,255,0,0.35)</td><td>Lime box-shadow glow</td></tr>
+          <tr><td>--glow-violet</td><td>0 0 30px rgba(124,58,237,0.45)</td><td>Violet box-shadow glow</td></tr>
+          <tr><td>--radius</td><td>14px</td><td>Standard corners</td></tr>
+          <tr><td>--radius-sm</td><td>8px</td><td>Small elements</td></tr>
+          <tr><td>--radius-lg</td><td>20px</td><td>Cards, large containers</td></tr>
+          <tr><td>--radius-btn</td><td>50px</td><td>Pill buttons</td></tr>
+          <tr><td>--shadow-primary</td><td>0 8px 30px rgba(179,255,0,0.45)</td><td>Lime button hover shadow</td></tr>
+          <tr><td>--transition</td><td>0.25s cubic-bezier(0.4,0,0.2,1)</td><td>Default transition</td></tr>
+          <tr><td>--nav-h</td><td>68px</td><td>Navbar height for offsets</td></tr>
+          <tr><td>--max-width</td><td>1180px</td><td>Container max-width</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
-  <!-- TYPOGRAPHY -->
+
+  <!-- ═══════ TYPOGRAPHY ═══════ -->
   <section class="ds-section" id="typography">
-    <h2 class="ds-section-title">Typography</h2>
-    <p class="ds-section-desc">// heading_font: Berkshire Swash — body_font: Inter — monospace accents throughout</p>
-    <div class="type-samples">
-      <div class="type-row">
-        <div class="type-label">H1 / 52px<br>Berkshire Swash</div>
-        <div class="t-h1">AI That Actually Works</div>
-      </div>
-      <div class="type-row">
-        <div class="type-label">H2 / 38px<br>Berkshire Swash</div>
-        <div class="t-h2">Scale with Intelligence</div>
-      </div>
-      <div class="type-row">
-        <div class="type-label">H3 / 26px<br>Berkshire Swash</div>
-        <div class="t-h3">AI Automation Agency Austin</div>
-      </div>
-      <div class="type-row">
-        <div class="type-label">H4 / 20px<br>Berkshire Swash</div>
-        <div class="t-h4">Our Core Solutions</div>
-      </div>
-      <div class="type-row">
-        <div class="type-label">Body / 16px<br>Inter 400</div>
-        <div class="t-body">We help forward-thinking businesses unlock growth through AI automation, machine learning pipelines, and data-driven marketing strategies deployed at scale from Austin to everywhere.</div>
-      </div>
-      <div class="type-row">
-        <div class="type-label">Small / 13px<br>Inter muted</div>
-        <div class="t-small">Results based on aggregated client data. Individual outcomes will vary based on industry, starting baseline, and implementation quality.</div>
-      </div>
-      <div class="type-row">
-        <div class="type-label">Mono / 13px<br>system-mono</div>
-        <div class="t-mono">--primary: #B3FF00; → model.train(data);</div>
-      </div>
-      <div class="type-row">
-        <div class="type-label">Accent / 16px<br>Inter cyan</div>
-        <div class="t-accent">→ 200+ AI automations built and deployed</div>
-      </div>
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Typography</h2>
+    <p class="ds-sub">Berkshire Swash for headings · Inter for body text. Fluid sizing with clamp() from 320px → 1920px viewport.</p>
+
+    <div class="ds-type-row">
+      <div class="ds-type-meta">--text-hero<br>H1</div>
+      <h1 style="font-size:var(--text-hero);color:var(--text-heading);line-height:1.06;margin:0;">The AI Agency <span class="hl-lime">Austin</span> Trusts</h1>
+    </div>
+    <div class="ds-type-row">
+      <div class="ds-type-meta">--text-4xl<br>H2</div>
+      <h2 style="font-size:var(--text-4xl);color:var(--text-heading);margin:0;">Section Heading Level Two</h2>
+    </div>
+    <div class="ds-type-row">
+      <div class="ds-type-meta">--text-2xl<br>H3</div>
+      <h3 style="font-size:var(--text-2xl);color:var(--text-heading);margin:0;">Card Title or Sub-section</h3>
+    </div>
+    <div class="ds-type-row">
+      <div class="ds-type-meta">--text-xl<br>H4</div>
+      <h4 style="font-family:'Inter',sans-serif;font-weight:700;font-size:var(--text-xl);color:var(--text-heading);margin:0;">Feature Name or Label</h4>
+    </div>
+    <div class="ds-type-row">
+      <div class="ds-type-meta">--text-base<br>Body</div>
+      <p style="font-size:var(--text-base);color:var(--text);line-height:1.65;max-width:520px;margin:0;">Lumo builds machine-learning-powered growth systems for forward-thinking US businesses. Every campaign is instrumented, every dollar is accountable.</p>
+    </div>
+    <div class="ds-type-row">
+      <div class="ds-type-meta">--text-sm<br>Small</div>
+      <p style="font-size:var(--text-sm);color:var(--text-muted);line-height:1.6;margin:0;">Supporting copy, captions, footer text, and form labels at smaller sizes.</p>
+    </div>
+    <div class="ds-type-row">
+      <div class="ds-type-meta">--text-xs<br>Caption</div>
+      <p style="font-size:var(--text-xs);color:var(--text-muted);letter-spacing:0.06em;margin:0;">SECTION LABEL · UPPERCASE EYEBROW · BADGE TEXT</p>
+    </div>
+
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;">
+      <span class="hl-lime" style="font-size:1.4rem;font-weight:700;">.hl-lime</span>
+      <span class="hl-violet" style="font-size:1.4rem;font-weight:700;">.hl-violet</span>
+      <span class="hl-cyan" style="font-size:1.4rem;font-weight:700;">.hl-cyan</span>
+      <span class="gradient-text" style="font-size:1.4rem;font-weight:700;">.gradient-text</span>
+      <span class="gradient-text-violet" style="font-size:1.4rem;font-weight:700;">.gradient-text-violet</span>
+      <span class="gradient-text-cyan" style="font-size:1.4rem;font-weight:700;">.gradient-text-cyan</span>
     </div>
   </section>
 
-  <!-- BUTTONS -->
+
+  <!-- ═══════ BUTTONS ═══════ -->
   <section class="ds-section" id="buttons">
-    <h2 class="ds-section-title">Buttons</h2>
-    <p class="ds-section-desc">// hover all buttons to see interaction states — radius: 50px pill shape</p>
-    <div class="btn-grid">
-      <div class="btn-item">
-        <button class="btn btn-primary">Get Started</button>
-        <div class="btn-label">.btn-primary</div>
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Buttons</h2>
+    <p class="ds-sub">Base class .btn + modifier. Lime has dark text (--text-on-primary = #0D0D14). Min-height 48px for accessibility. Pill shape --radius-btn: 50px.</p>
+
+    <div class="ds-preview">
+      <div class="ds-btn-row">
+        <a href="#" class="btn btn-primary">Get Started →</a>
+        <a href="#" class="btn btn-ghost">Learn More</a>
+        <a href="#" class="btn btn-violet">Violet CTA</a>
+        <a href="#" class="btn btn-primary btn-sm">Small Lime</a>
+        <a href="#" class="btn btn-ghost btn-sm">Small Ghost</a>
       </div>
-      <div class="btn-item">
-        <button class="btn btn-ghost">View Solutions</button>
-        <div class="btn-label">.btn-ghost (neon border)</div>
-      </div>
-      <div class="btn-item">
-        <button class="btn btn-accent">Book a Demo</button>
-        <div class="btn-label">.btn-accent (cyan)</div>
-      </div>
-      <div class="btn-item">
-        <button class="btn btn-secondary">Learn More</button>
-        <div class="btn-label">.btn-secondary</div>
-      </div>
-      <div class="btn-item">
-        <button class="btn btn-primary btn-sm">Deploy Now</button>
-        <div class="btn-label">.btn-primary.btn-sm</div>
-      </div>
-      <div class="btn-item">
-        <button class="btn btn-ghost btn-sm">Docs →</button>
-        <div class="btn-label">.btn-ghost.btn-sm</div>
-      </div>
+    </div>
+    <div class="ds-code">.btn.btn-primary / .btn-lime — #B3FF00 bg, #0D0D14 text, pill shape, lime glow on hover<br>.btn.btn-ghost — transparent, rgba border → lime on hover<br>.btn.btn-violet — violet bg, white text, violet glow on hover<br>.btn-sm — compact: 10px/22px padding, min-height 40px</div>
+  </section>
+
+
+  <!-- ═══════ LABELS ═══════ -->
+  <section class="ds-section" id="labels">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Section Labels &amp; Eyebrows</h2>
+    <p class="ds-sub">.section-eyebrow has a leading lime line. .section-label is badge-style. Both are uppercase with wide tracking.</p>
+    <div class="ds-preview">
+      <span class="section-eyebrow">Our Services</span>
+      <h2 class="section-title">AI-Powered Growth for <span class="hl-lime">US Businesses</span></h2>
+      <p class="section-sub">Everything you need to dominate organic and paid channels with machine-learning infrastructure.</p>
+      <span class="section-label" style="margin-top:24px;">Also works as inline badge-label</span>
     </div>
   </section>
 
-  <!-- CARDS -->
+
+  <!-- ═══════ NAVBAR ═══════ -->
+  <section class="ds-section" id="navbar-preview">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Navbar</h2>
+    <p class="ds-sub">Fixed, glass-morphism with backdrop-filter:blur(16px). Lime logo with text-shadow glow. .scrolled class added by JS.</p>
+    <div class="ds-preview" style="padding:0;overflow:hidden;">
+      <nav style="background:rgba(13,13,20,0.97);border-bottom:1px solid rgba(179,255,0,0.12);">
+        <div class="nav-inner">
+          <a href="#" class="nav-logo">Lumo<span style="color:rgba(179,255,0,0.6);">.</span></a>
+          <ul class="nav-links">
+            <li><a href="#">Services</a></li>
+            <li><a href="#" class="active">About</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+          <div class="nav-cta-wrap">
+            <a href="#" class="btn btn-ghost btn-sm">Sign In</a>
+            <a href="#" class="btn btn-primary btn-sm">Get Started</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="ds-code">.navbar — position:fixed; backdrop-filter:blur(16px); z-index:var(--z-sticky)<br>.navbar.scrolled — stronger bg, added on scroll via JS<br>.nav-logo — Berkshire Swash, var(--logo-color), text-shadow lime glow<br>.nav-links a.active — color:var(--primary)</div>
+  </section>
+
+
+  <!-- ═══════ SERVICE CARDS ═══════ -->
   <section class="ds-section" id="cards">
-    <h2 class="ds-section-title">Cards</h2>
-    <p class="ds-section-desc">// service card / pricing card / data sidebar — hover to see glow state</p>
-    <div class="cards-grid">
-      <!-- Service Card -->
-      <div class="card">
-        <div class="card-icon">AI</div>
-        <div class="card-title">AI Marketing Automation</div>
-        <div class="card-text">Deploy intelligent automation pipelines that qualify leads, personalise outreach, and optimise campaigns 24/7 — without adding headcount.</div>
-        <div style="margin-top:18px;"><button class="btn btn-ghost btn-sm">Explore →</button></div>
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Service Cards</h2>
+    <p class="ds-sub">.service-card in a .services-grid (4-col → 2-col → 1-col). Lime border + glow on hover, translateY(-5px).</p>
+    <div class="services-grid" style="margin-bottom:16px;">
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <div class="service-title">AI SEO</div>
+        <div class="service-desc">Machine-learning keyword clustering and content briefs that rank 40% faster than traditional methods.</div>
+        <a href="#" class="service-link">Learn more →</a>
       </div>
-      <!-- Pricing Card -->
-      <div class="card card-pricing">
-        <div style="margin-bottom:8px;"><span class="badge badge-accent">MOST POPULAR</span></div>
-        <div class="card-title">Growth</div>
-        <div class="price">$3,000<span style="font-size:16px;color:var(--text-muted);font-family:monospace;">/mo</span></div>
-        <ul>
-          <li>Full AI automation stack</li>
-          <li>Real-time analytics dashboard</li>
-          <li>Custom ML model deployment</li>
-          <li>Dedicated AI engineer</li>
-        </ul>
-        <button class="btn btn-primary" style="width:100%;margin-top:4px;">Start Building</button>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <div class="service-title">GEO Optimization</div>
+        <div class="service-desc">Appear in AI Overviews, Perplexity, and ChatGPT answers. Generative engine presence built in.</div>
+        <a href="#" class="service-link">Learn more →</a>
       </div>
-      <!-- Aside Card -->
-      <div class="card card-aside">
-        <div class="aside-heading">// system_stats</div>
-        <div class="stats-bar" style="background:transparent;border:none;padding:0;gap:8px;">
-          <div><div class="stat-val">200+</div><div class="stat-lbl">automations</div></div>
-          <div><div class="stat-val">150+</div><div class="stat-lbl">clients_scaled</div></div>
-          <div><div class="stat-val">$30M</div><div class="stat-lbl">revenue_unlocked</div></div>
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <div class="service-title">Google Ads PPC</div>
+        <div class="service-desc">Performance Max and Search campaigns with automated bidding tuned to your target ROAS goals.</div>
+        <a href="#" class="service-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔮</div>
+        <div class="service-title">AI Automations</div>
+        <div class="service-desc">Custom n8n/Make workflows, voice AI, and CRM integrations that save 20+ hours per week.</div>
+        <a href="#" class="service-link">Learn more →</a>
+      </div>
+    </div>
+    <div class="ds-code">.services-grid — repeat(4,1fr) → repeat(2,1fr) @1024px → 1fr @560px<br>.service-card — bg-card, border-subtle, hover: lime border + glow, translateY(-5px)</div>
+  </section>
+
+
+  <!-- ═══════ TESTIMONIALS ═══════ -->
+  <section class="ds-section" id="testimonials">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Testimonial Cards</h2>
+    <p class="ds-sub">.testimonials-grid (3-col → 1-col). Stars in lime. Quote in italics. Avatar gradient circle.</p>
+    <div class="testimonials-grid" style="margin-bottom:16px;">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Lumo tripled our organic traffic in 4 months. The AI content briefs are genuinely better than anything we had before."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#B3FF00,#7fbb00);color:#0D0D14;">JK</div>
+          <div><div class="testi-name">James K.</div><div class="testi-co">Founder, TechScale SaaS</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"8.2x ROAS on Meta Ads within the first 60 days. The team genuinely understands performance marketing at scale."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#7C3AED,#4c1d95);color:#fff;">SR</div>
+          <div><div class="testi-name">Sarah R.</div><div class="testi-co">CMO, eComm Brand</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"The AI automation system saves my team 25 hours a week. Couldn't run operations without it now."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#00F5FF,#0088aa);color:#0D0D14;">ML</div>
+          <div><div class="testi-name">Marcus L.</div><div class="testi-co">CEO, LogiFlow Inc.</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- COMPONENTS -->
-  <section class="ds-section" id="components">
-    <h2 class="ds-section-title">Components</h2>
-    <p class="ds-section-desc">// UI atoms — badges, FAQ, pills, breadcrumbs, stats</p>
 
-    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// badges</h3>
-    <div class="comp-row">
-      <span class="badge badge-primary">AI-Native</span>
-      <span class="badge badge-accent">LIVE</span>
-      <span class="badge badge-secondary">ML Model</span>
-      <span class="badge badge-muted">Austin TX</span>
-      <span class="badge badge-primary">✓ Deployed</span>
-    </div>
-
-    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// faq</h3>
-    <div class="faq-item">
-      <div class="faq-q">How quickly can you deploy an AI automation?</div>
-      <div class="faq-a">Most automation pipelines go live within 2–3 weeks. Complex custom ML deployments typically take 4–8 weeks depending on data requirements and integration depth.</div>
-    </div>
-    <div class="faq-item" style="margin-bottom:24px;">
-      <div class="faq-q">What industries does Lumo specialise in?</div>
-      <div class="faq-a">We work across SaaS, e-commerce, fintech, and professional services. Our AI systems are industry-agnostic and trained on your specific business data for maximum relevance.</div>
-    </div>
-
-    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// nearby_cities</h3>
-    <div class="comp-row">
-      <div class="nearby-pills">
-        <a href="#" class="pill">Round Rock</a>
-        <a href="#" class="pill">Cedar Park</a>
-        <a href="#" class="pill">Georgetown</a>
-        <a href="#" class="pill">San Marcos</a>
+  <!-- ═══════ PRICING ═══════ -->
+  <section class="ds-section" id="pricing">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Pricing Cards</h2>
+    <p class="ds-sub">.pricing-card · .featured adds lime top-border gradient line and stronger glow. Berkshire Swash price number.</p>
+    <div class="ds-grid ds-grid-3" style="margin-bottom:16px;">
+      <div class="pricing-card">
+        <div class="pricing-name">Starter</div>
+        <div class="pricing-price">$1,200</div>
+        <div class="pricing-period">per month · USD</div>
+        <ul class="pricing-features">
+          <li class="pricing-feature">Core SEO or Ads management</li>
+          <li class="pricing-feature">Monthly reporting dashboard</li>
+          <li class="pricing-feature">Up to 2 channels</li>
+        </ul>
+        <a href="#" class="btn btn-ghost" style="width:100%;">Get Starter</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-name">Growth</div>
+        <div class="pricing-price">$3,000</div>
+        <div class="pricing-period">per month · USD</div>
+        <ul class="pricing-features">
+          <li class="pricing-feature">Multi-channel growth package</li>
+          <li class="pricing-feature">SEO + Paid Ads + GEO</li>
+          <li class="pricing-feature">Bi-weekly strategy calls</li>
+          <li class="pricing-feature">AI content production</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="width:100%;">Get Growth</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-name">Scale</div>
+        <div class="pricing-price">$6,500</div>
+        <div class="pricing-period">per month · USD</div>
+        <ul class="pricing-features">
+          <li class="pricing-feature">Full-stack AI marketing suite</li>
+          <li class="pricing-feature">All channels + AI Automations</li>
+          <li class="pricing-feature">Dedicated AI engineer</li>
+          <li class="pricing-feature">Custom dashboards + API access</li>
+        </ul>
+        <a href="#" class="btn btn-ghost" style="width:100%;">Get Scale</a>
       </div>
     </div>
+  </section>
 
-    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// breadcrumb</h3>
-    <div class="comp-row">
-      <nav class="breadcrumb">
-        <a href="#">home</a>
-        <span>/</span>
-        <a href="#">services</a>
-        <span>/</span>
-        <a href="#">austin</a>
-        <span>/</span>
-        <span style="color:var(--text);">ai-automation-agency-austin</span>
-      </nav>
-    </div>
 
-    <h3 style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;font-family:monospace;">// stats_bar</h3>
-    <div class="stats-bar">
-      <div><div class="stat-val">200+</div><div class="stat-lbl">AI Automations Built</div></div>
-      <div><div class="stat-val">150+</div><div class="stat-lbl">Clients Scaled</div></div>
-      <div><div class="stat-val">$30M+</div><div class="stat-lbl">Revenue Unlocked</div></div>
+  <!-- ═══════ FAQ ═══════ -->
+  <section class="ds-section" id="faq">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">FAQ Component</h2>
+    <p class="ds-sub">&lt;details&gt;/&lt;summary&gt; pattern. Border turns lime on [open]. Plus icon rotates 45° to × via CSS transform.</p>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>What makes Lumo different from other digital agencies?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke-width="2" stroke-linecap="round"><line x1="6" y1="2" x2="6" y2="10"/><line x1="2" y1="6" x2="10" y2="6"/></svg></span>
+        </summary>
+        <div class="faq-body">Lumo builds marketing on machine-learning infrastructure. Every campaign is instrumented with AI-powered attribution, automated bidding, and content systems that compound over time.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How quickly will I see results?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke-width="2" stroke-linecap="round"><line x1="6" y1="2" x2="6" y2="10"/><line x1="2" y1="6" x2="10" y2="6"/></svg></span>
+        </summary>
+        <div class="faq-body">Paid ads typically show movement within 2–3 weeks. SEO traffic gains appear at 4–8 weeks and compound significantly at 3–6 months.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work with businesses outside Austin?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke-width="2" stroke-linecap="round"><line x1="6" y1="2" x2="6" y2="10"/><line x1="2" y1="6" x2="10" y2="6"/></svg></span>
+        </summary>
+        <div class="faq-body">Absolutely — we serve clients across all 50 US states. Particular concentration in New York, Los Angeles, Chicago, San Francisco, Seattle, and Miami.</div>
+      </details>
     </div>
   </section>
 
-  <!-- GRADIENTS & SHADOWS -->
-  <section class="ds-section" id="gradients">
-    <h2 class="ds-section-title">Gradients &amp; Shadows</h2>
-    <p class="ds-section-desc">// visual output of gradient and shadow tokens</p>
-    <div class="grad-grid" style="margin-bottom:20px;">
-      <div class="grad-block" style="background:#B3FF00;color:#0D0D14;">--gradient-primary (#B3FF00)</div>
-      <div class="grad-block" style="background:linear-gradient(160deg, #09090F 0%, #13131F 60%, #0D0D14 100%);color:rgba(179,255,0,0.7);">--hero-bg</div>
-      <div class="grad-block" style="background:radial-gradient(ellipse at top,rgba(179,255,0,0.3),transparent 70%);">--primary-glow radial</div>
-      <div class="grad-block" style="background:linear-gradient(135deg,#7C3AED,#B3FF00);color:#0D0D14;">secondary → primary</div>
+
+  <!-- ═══════ NEW COMPONENTS ═══════ -->
+  <section class="ds-section" id="new-components">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">New Components</h2>
+    <p class="ds-sub">Author Bio, TL;DR Block, Link Cluster, Comparison Table, Industry Badges — for content-rich local and blog pages.</p>
+
+    <!-- Author Bio -->
+    <h3 style="font-size:1rem;font-weight:700;color:#F0F0FF;margin-bottom:16px;font-family:'Inter',sans-serif;">.author-bio</h3>
+    <div class="author-bio">
+      <div class="author-bio-avatar">MR</div>
+      <div>
+        <div class="author-bio-name">Marcus Rivera</div>
+        <div class="author-bio-role">Head of AI Strategy · Lumo AI Agency</div>
+        <div class="author-bio-text">Marcus has 9 years in growth marketing and led AI automation projects for 50+ US SaaS companies. He writes on GEO, machine-learning attribution, and performance SEO for forward-thinking businesses.</div>
+      </div>
     </div>
-    <div class="grad-grid">
-      <div class="shadow-demo" style="box-shadow:0 4px 24px rgba(0,0,0,0.6);">--shadow<br>0 4px 24px rgba(0,0,0,0.6)</div>
-      <div class="shadow-demo" style="box-shadow:0 0 40px rgba(179,255,0,0.2);">--shadow-lg<br>0 0 40px rgba(179,255,0,0.2)</div>
-      <div class="shadow-demo" style="box-shadow:0 8px 30px rgba(179,255,0,0.45);">--shadow-primary<br>0 8px 30px rgba(179,255,0,0.45)</div>
+    <div class="ds-code">.author-bio — flex row, bg-card, border-subtle, border-radius-lg<br>.author-bio-avatar — 64px circle, lime initial, dark bg<br>.author-bio-role — lime uppercase label</div>
+
+    <!-- TL;DR Block -->
+    <h3 style="font-size:1rem;font-weight:700;color:#F0F0FF;margin-bottom:16px;margin-top:40px;font-family:'Inter',sans-serif;">.tldr-block</h3>
+    <div class="tldr-block">
+      <div class="tldr-label">TL;DR</div>
+      <p>AI-powered SEO in Austin means faster ranking cycles, machine-learning content briefs, and automated schema — not just keyword stuffing. Here is what actually works in 2026.</p>
+    </div>
+    <div class="tldr-block">
+      <div class="tldr-label">Key Takeaways</div>
+      <ul>
+        <li>GEO-first content appears in AI Overviews within 6–10 weeks</li>
+        <li>AI-written briefs reduce content production time by 65%</li>
+        <li>Automated internal linking boosts crawl efficiency by 30%</li>
+      </ul>
+    </div>
+    <div class="ds-code">.tldr-block — lime left-border (4px), subtle lime bg, border-radius-right<br>.tldr-label — uppercase, lime, with leading line via ::before<br>Supports p and ul children</div>
+
+    <!-- Link Cluster -->
+    <h3 style="font-size:1rem;font-weight:700;color:#F0F0FF;margin-bottom:16px;margin-top:40px;font-family:'Inter',sans-serif;">.link-cluster</h3>
+    <div class="link-cluster">
+      <div class="link-cluster-title">Related Services in Austin</div>
+      <div class="link-cluster-list">
+        <a href="#" class="link-cluster-item">SEO Agency Austin</a>
+        <a href="#" class="link-cluster-item">Google Ads Austin</a>
+        <a href="#" class="link-cluster-item">AI Automations Austin</a>
+        <a href="#" class="link-cluster-item">GEO Optimization Austin</a>
+        <a href="#" class="link-cluster-item">Web Design Austin</a>
+      </div>
+    </div>
+    <div class="ds-code">.link-cluster — bg-dark, border-subtle, internal linking block for local pages<br>.link-cluster-item — hover: lime border + subtle bg, arrow prefix via ::before</div>
+
+    <!-- Comparison Table -->
+    <h3 style="font-size:1rem;font-weight:700;color:#F0F0FF;margin-bottom:16px;margin-top:40px;font-family:'Inter',sans-serif;">.comparison-table</h3>
+    <div class="comparison-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="highlight">Lumo AI Agency</th>
+            <th>Traditional Agency</th>
+            <th>Freelancer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI-powered content briefs</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>GEO / AI Overview optimisation</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Automated reporting dashboards</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+          </tr>
+          <tr>
+            <td>Custom AI automations</td>
+            <td class="highlight"><span class="check">✓</span></td>
+            <td><span class="cross">✗</span></td>
+            <td>Sometimes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ds-code">.comparison-table — rounded wrapper, border-subtle<br>th.highlight / td.highlight — lime tint for Lumo column<br>.check — lime ✓ · .cross — muted ✗</div>
+
+    <!-- Industry Badges -->
+    <h3 style="font-size:1rem;font-weight:700;color:#F0F0FF;margin-bottom:16px;margin-top:40px;font-family:'Inter',sans-serif;">.industry-badge</h3>
+    <div class="industry-badge-wrap" style="margin-bottom:16px;">
+      <span class="industry-badge">SaaS</span>
+      <span class="industry-badge">eCommerce</span>
+      <span class="industry-badge">Healthcare</span>
+      <span class="industry-badge">Real Estate</span>
+      <span class="industry-badge violet">AI / Tech</span>
+      <span class="industry-badge violet">Finance</span>
+      <span class="industry-badge cyan">Legal</span>
+      <span class="industry-badge cyan">Home Services</span>
+    </div>
+    <div class="ds-code">.industry-badge — default: lime<br>.industry-badge.violet — violet variant<br>.industry-badge.cyan — cyan variant<br>.industry-badge-wrap — flex row, flex-wrap, gap:8px</div>
+
+    <!-- Chips -->
+    <h3 style="font-size:1rem;font-weight:700;color:#F0F0FF;margin-bottom:16px;margin-top:40px;font-family:'Inter',sans-serif;">.chip</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;">
+      <span class="chip chip-lime">🤖 AI-Powered</span>
+      <span class="chip chip-lime">⚡ GEO Ready</span>
+      <span class="chip chip-violet">🔮 ML Attribution</span>
+      <span class="chip chip-violet">📊 Automated Reports</span>
+      <span class="chip chip-cyan">🌐 US-Wide</span>
+      <span class="chip chip-cyan">🔒 ROAS Focused</span>
+    </div>
+    <div class="ds-code">.chip.chip-lime / .chip-violet / .chip-cyan — pill badge variants</div>
+  </section>
+
+
+  <!-- ═══════ STATS BAR ═══════ -->
+  <section class="ds-section" id="stats">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Stats Bar</h2>
+    <p class="ds-sub">.stats-bar full-width section. 4-col with lime vertical dividers. Fluid Berkshire Swash numbers with colour modifiers.</p>
+  </section>
+</div>
+
+<!-- Stats Bar (full-width demo) -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num-big lime">300+</div>
+        <div class="stat-label-big">US businesses served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num-big violet">200+</div>
+        <div class="stat-label-big">AI automations built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num-big cyan">$30M+</div>
+        <div class="stat-label-big">client revenue unlocked</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num-big lime">8.7x</div>
+        <div class="stat-label-big">average ROAS</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ═══════ PAGE HERO ═══════ -->
+  <section class="ds-section" id="page-hero">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Page Hero (Interior Pages)</h2>
+    <p class="ds-sub">.page-hero — accounts for --nav-h (68px) top offset. Used on local/service/blog pages instead of full-screen hero.</p>
+  </section>
+</div>
+
+<div class="page-hero" style="margin-bottom:0;">
+  <div class="container">
+    <span class="section-eyebrow">SEO Services</span>
+    <h1>SEO Agency <span class="hl-lime">Austin</span></h1>
+    <p>AI-powered search engine optimisation for Austin businesses. Rank faster, compound traffic, dominate local SERPs.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;">
+      <a href="#" class="btn btn-primary">Get Free Audit</a>
+      <a href="#" class="btn btn-ghost">View Case Studies</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ═══════ UTILITIES ═══════ -->
+  <section class="ds-section" id="utilities">
+    <span class="ds-rule"></span>
+    <h2 class="ds-heading">Utilities</h2>
+    <p class="ds-sub">Text colour helpers, gradient text, glow shadows, accessibility classes, section labels, responsive display toggles.</p>
+    <div class="ds-preview">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div><span class="section-eyebrow">section-eyebrow</span> — leading lime line via ::before</div>
+        <div><span class="section-label">section-label</span> — badge-style uppercase (used inline)</div>
+        <div><span class="gradient-text" style="font-size:1.3rem;font-weight:800;">.gradient-text</span> — lime gradient clip</div>
+        <div><span class="gradient-text-violet" style="font-size:1.3rem;font-weight:800;">.gradient-text-violet</span> — violet gradient clip</div>
+        <div><span class="gradient-text-cyan" style="font-size:1.3rem;font-weight:800;">.gradient-text-cyan</span> — cyan gradient clip</div>
+        <div><span class="hl-lime" style="font-size:1.1rem;font-weight:700;">.hl-lime</span> · <span class="hl-violet" style="font-size:1.1rem;font-weight:700;">.hl-violet</span> · <span class="hl-cyan" style="font-size:1.1rem;font-weight:700;">.hl-cyan</span> — inline colour helpers</div>
+        <div><span class="glow-lime hl-lime" style="font-size:1.1rem;font-weight:700;">.glow-lime</span> · <span class="glow-violet hl-violet" style="font-size:1.1rem;font-weight:700;">.glow-violet</span> — text-shadow glows</div>
+        <div><span class="text-muted">.text-muted — secondary muted text colour</span></div>
+        <div><code style="font-family:monospace;font-size:0.82rem;color:#B3FF00;">.sr-only</code> — screen-reader only (visually hidden, 1×1px)</div>
+        <div><code style="font-family:monospace;font-size:0.82rem;color:#B3FF00;">.skip-nav</code> — skip to content, visible on :focus</div>
+        <div><code style="font-family:monospace;font-size:0.82rem;color:#B3FF00;">.hide-mobile</code> — hidden ≤768px &nbsp;·&nbsp; <code style="color:#B3FF00;">.show-mobile</code> — hidden ≥769px</div>
+        <div><code style="font-family:monospace;font-size:0.82rem;color:#B3FF00;">.progress-bar</code> — lime read-progress bar, fixed top</div>
+        <div><code style="font-family:monospace;font-size:0.82rem;color:#B3FF00;">.scroll-top</code> — fixed lime button, opacity controlled by JS .visible class</div>
+      </div>
     </div>
   </section>
 
-  <!-- TOKENS TABLE -->
-  <section class="ds-section" id="tokens">
-    <h2 class="ds-section-title">Design Tokens</h2>
-    <p class="ds-section-desc">// complete :root CSS custom properties reference</p>
-    <table class="tokens-table">
-      <thead>
-        <tr><th>Token</th><th>Value</th><th>Preview</th></tr>
-      </thead>
-      <tbody>
-        <tr class="token-section-row"><td colspan="3">Brand Colors</td></tr>
-        <tr><td class="token-name">--primary</td><td>#B3FF00</td><td><span class="token-dot" style="background:#B3FF00;"></span></td></tr>
-        <tr><td class="token-name">--primary-dark</td><td>#c8ff26</td><td><span class="token-dot" style="background:#c8ff26;"></span></td></tr>
-        <tr><td class="token-name">--primary-glow</td><td>rgba(179,255,0,0.4)</td><td><span class="token-dot" style="background:rgba(179,255,0,0.4);"></span></td></tr>
-        <tr><td class="token-name">--secondary</td><td>#7C3AED</td><td><span class="token-dot" style="background:#7C3AED;"></span></td></tr>
-        <tr><td class="token-name">--accent</td><td>#00F5FF</td><td><span class="token-dot" style="background:#00F5FF;"></span></td></tr>
-        <tr class="token-section-row"><td colspan="3">Backgrounds</td></tr>
-        <tr><td class="token-name">--bg</td><td>#0D0D14</td><td><span class="token-dot" style="background:#0D0D14;border-color:#333;"></span></td></tr>
-        <tr><td class="token-name">--bg-surface</td><td>#13131F</td><td><span class="token-dot" style="background:#13131F;border-color:#333;"></span></td></tr>
-        <tr><td class="token-name">--bg-soft</td><td>#09090F</td><td><span class="token-dot" style="background:#09090F;border-color:#333;"></span></td></tr>
-        <tr><td class="token-name">--dark</td><td>#13131F</td><td><span class="token-dot" style="background:#13131F;border-color:#333;"></span></td></tr>
-        <tr><td class="token-name">--hero-bg</td><td>linear-gradient(160deg,#09090F,#13131F,#0D0D14)</td><td><span class="token-dot" style="background:linear-gradient(160deg,#09090F,#13131F,#0D0D14);border-color:#333;"></span></td></tr>
-        <tr class="token-section-row"><td colspan="3">Text</td></tr>
-        <tr><td class="token-name">--text-heading</td><td>#F0F0FF</td><td><span class="token-dot" style="background:#F0F0FF;"></span></td></tr>
-        <tr><td class="token-name">--text</td><td>rgba(240,240,255,0.85)</td><td><span class="token-dot" style="background:rgba(240,240,255,0.85);"></span></td></tr>
-        <tr><td class="token-name">--text-muted</td><td>#6B7280</td><td><span class="token-dot" style="background:#6B7280;"></span></td></tr>
-        <tr><td class="token-name">--text-on-primary</td><td>#0D0D14</td><td><span class="token-dot" style="background:#0D0D14;border-color:#333;"></span></td></tr>
-        <tr><td class="token-name">--logo-color</td><td>#B3FF00</td><td><span class="token-dot" style="background:#B3FF00;"></span></td></tr>
-        <tr class="token-section-row"><td colspan="3">Borders &amp; Gradients</td></tr>
-        <tr><td class="token-name">--border-color</td><td>rgba(179,255,0,0.15)</td><td><span class="token-dot" style="background:rgba(179,255,0,0.15);border-color:#333;"></span></td></tr>
-        <tr><td class="token-name">--gradient-primary</td><td>var(--primary) → #B3FF00</td><td><span class="token-dot" style="background:#B3FF00;"></span></td></tr>
-        <tr class="token-section-row"><td colspan="3">Shape</td></tr>
-        <tr><td class="token-name">--radius</td><td>14px</td><td>—</td></tr>
-        <tr><td class="token-name">--radius-sm</td><td>8px</td><td>—</td></tr>
-        <tr><td class="token-name">--radius-lg</td><td>20px</td><td>—</td></tr>
-        <tr><td class="token-name">--radius-btn</td><td>50px (pill)</td><td>—</td></tr>
-        <tr class="token-section-row"><td colspan="3">Shadows</td></tr>
-        <tr><td class="token-name">--shadow</td><td>0 4px 24px rgba(0,0,0,0.6)</td><td>—</td></tr>
-        <tr><td class="token-name">--shadow-lg</td><td>0 0 40px rgba(179,255,0,0.2)</td><td>—</td></tr>
-        <tr><td class="token-name">--shadow-primary</td><td>0 8px 30px rgba(179,255,0,0.45)</td><td>—</td></tr>
-        <tr class="token-section-row"><td colspan="3">Motion</td></tr>
-        <tr><td class="token-name">--transition</td><td>0.25s cubic-bezier(0.4,0,0.2,1)</td><td>—</td></tr>
-        <tr class="token-section-row"><td colspan="3">Typography</td></tr>
-        <tr><td class="token-name">--font-heading</td><td>'Berkshire Swash', serif</td><td>—</td></tr>
-        <tr><td class="token-name">--font-body</td><td>'Inter', sans-serif</td><td>—</td></tr>
-      </tbody>
-    </table>
-  </section>
+</div>
 
-</main>
-
-<footer class="ds-footer">
-  lumoaiagency.com · Austin, TX · AI-Native Design System v1.0 · Generated 2026-03-09
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">Lumo.</a>
+        <p class="footer-tagline">AI-powered growth for forward-thinking US businesses. Every campaign, every dollar, fully instrumented.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="X / Twitter">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">AI SEO</a></li>
+          <li><a href="#">GEO Optimization</a></li>
+          <li><a href="#">Google Ads</a></li>
+          <li><a href="#">Meta Ads</a></li>
+          <li><a href="#">AI Automations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Lumo</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">hello@lumoaiagency.com</a></li>
+          <li><a href="#">600 Congress Ave, Austin TX</a></li>
+          <li><a href="#">Free Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Lumo AI Agency. All rights reserved. <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      <span class="footer-badge">
+        <span class="footer-badge-dot"></span>
+        All systems operational
+      </span>
+    </div>
+  </div>
 </footer>
 
 </body>
