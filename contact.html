@@ -492,8 +492,8 @@
   scrollTopBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
 
   // Form submission
-  var form=
-  document.getElementById('contact-form-el').addEventListener('submit', async function(e) {
+  var form=document.getElementById('contact-form-el');
+  form.addEventListener('submit', async function(e) {
     e.preventDefault();
     var btn = this.querySelector('button[type="submit"]');
     var orig = btn.textContent;
@@ -522,13 +522,7 @@
       btn.textContent = 'Error — try again';
       btn.disabled = false;
     }
-  }.bind(document.getElementById('contact-form-el')));
-      if(valid){
-        form.style.display='none';
-        successMsg.style.display='block';
-      }
-    });
-  }
+  });
 })();
 </script>
 <script defer src="/assets/js/contact-protection.js"></script>
