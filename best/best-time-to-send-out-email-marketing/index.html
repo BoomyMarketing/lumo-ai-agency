@@ -67,7 +67,7 @@
 }
 </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why can't a single send time work across multiple US time zones?", "acceptedAnswer": {"@type": "Answer", "text": "Because one campaign goes out at one absolute moment, and that moment is a different local time everywhere. A 10am Eastern blast reaches a California subscriber at 7am \u2014 before their workday \u2014 and a Hawaii subscriber at 4am. The continental US spans four time zones (six including Alaska and Hawaii), so any single send time is right for one region and wrong for the rest. Sending out email to a national list demands per-zone timing, not one clock."}}, {"@type": "Question", "name": "What is AI send-time travel?", "acceptedAnswer": {"@type": "Answer", "text": "Send-time travel is automated, time-zone-aware delivery: you schedule a campaign once for a target local time, and the system staggers actual sending so each subscriber receives it at that time in their own zone. AI takes it further by combining the time-zone layer with each subscriber's learned personal peak \u2014 so delivery is right both for their region and their individual habits, with no manual scheduling per zone."}}, {"@type": "Question", "name": "What if I don't have time-zone data on my subscribers?", "acceptedAnswer": {"@type": "Answer", "text": "AI can infer it. From a subscriber's historical open timestamps, signup IP region, or engagement pattern, the model estimates their likely time zone even when no explicit field exists, then schedules delivery accordingly. This is a major advantage over manual time-zone sending, which simply skips subscribers with missing data and defaults them to the wrong clock."}}, {"@type": "Question", "name": "Does batching the send by time zone help deliverability?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Staggering a large send across time zones spreads outbound volume over a window instead of firing everything in one spike, which looks more natural to mailbox providers and reduces the risk of tripping rate limits or spam heuristics. So zone-staggered, AI-automated sending improves both engagement (right local time) and inbox placement (smoother volume) at once."}}, {"@type": "Question", "name": "How does Lumo automate time-zone send timing?", "acceptedAnswer": {"@type": "Answer", "text": "Lumo's AI combines time-zone send-time travel with per-subscriber learning: it infers or reads each subscriber's zone, layers their individual peak hour on top, and delivers every campaign at the right local moment automatically \u2014 no per-zone scheduling, no manual list splits. For national US lists this captures the local-time lift that a single fixed send leaves entirely on the table."}}]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://lumoaiagency.com/#localbusiness", "name": "Lumo AI Agency", "telephone": "+1-512-800-0100", "email": "hello@lumoaiagency.com", "address": {"@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US"}, "url": "https://lumoaiagency.com"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://lumoaiagency.com/#localbusiness", "name": "Lumo AI Agency", "telephone": "+1-512-800-0100", "email": "hello@lumoaiagency.com", "url": "https://lumoaiagency.com"}</script>
   <style>:root {
   --primary: #B3FF00; --bg: #0D0D14; --bg-card: #13131F; --text-heading: #F0F0FF;
   --text: #D0D0E0; --text-muted: #6B7280; --text-on-primary: #0D0D14;
@@ -143,7 +143,7 @@ a { color: var(--primary); }
       <li><a href="/ppc-agency/">PPC</a></li>
       <li><a href="/ai-automation-agency/">AI Automation</a></li>
       <li><a href="/industries/">Industries</a></li>
-      <li><a href="/contact.html" class="nav-cta">Free Audit</a></li>
+      <li><a href="/contact" class="nav-cta">Free Audit</a></li>
     </ul>
   </div>
 </nav>
@@ -196,7 +196,7 @@ a { color: var(--primary); }
   <div class="cta-banner">
     <h2>Reach Every Time Zone at the Right Hour</h2>
     <p>Book a free email AI audit and see how send-time travel plus per-subscriber learning gets your national list the right local hour automatically — even for contacts with no time-zone data.</p>
-    <a href="/contact.html" class="btn-primary">Book your free AI audit &rarr;</a>
+    <a href="/contact" class="btn-primary">Book your free AI audit &rarr;</a>
   </div>
 </div>
 </main>
@@ -215,10 +215,10 @@ a { color: var(--primary); }
     </div>
     <div class="footer-col">
       <h4>Company</h4>
-      <a href="/about.html">About Lumo</a>
+      <a href="/about">About Lumo</a>
       <a href="/industries/">Industries</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy-policy">Privacy Policy</a>
     </div>
   </div>
   <div class="footer-bottom">
