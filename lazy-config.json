@@ -2,7 +2,8 @@
   "site": {
     "name": "Lumo AI Agency",
     "domain": "lumoaiagency.com",
-    "language": "en-US"
+    "language": "en-US",
+    "country": "US"
   },
   "contact": {
     "email": "hello@lumoaiagency.com",
